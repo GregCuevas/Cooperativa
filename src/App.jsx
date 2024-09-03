@@ -1,4 +1,5 @@
 import React from "react";
+import { Outlet } from "react-router-dom";
 const App = () => {
   return (
     <>
@@ -30,6 +31,7 @@ const App = () => {
           clipRule="evenodd"
         />
       </svg>
+      <Outlet />
     </>
   );
 };
