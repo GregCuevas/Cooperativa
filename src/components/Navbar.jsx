@@ -227,7 +227,7 @@ const Navbar = () => {
               <X size={28} />
             </button>
           </div>
-          <ul className="flex flex-col items-start w-full p-4 space-y-2 bg-white">
+          <ul className="flex flex-col items-start flex-grow w-full p-4 space-y-2 bg-white">
             <li>
               <Link
                 to="/"
