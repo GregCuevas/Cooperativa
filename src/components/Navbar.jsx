@@ -37,6 +37,16 @@ const Navbar = () => {
     };
   }, [dropdownRef]);
 
+  const [isOpens, setIsOpens] = useState(false); // Manejar el estado del menú móvil
+  const [activeDropdowns, setActiveDropdowns] = useState(null); // Manejar los submenús
+
+  const toggleDropdowns = (key) => {
+    if (activeDropdowns === key) {
+      setActiveDropdowns(null); // Cierra el submenú si ya está abierto
+    } else {
+      setActiveDropdowns(key); // Abre el nuevo submenú
+    }
+  };
   return (
     <nav className="bg-white shadow-lg">
       <div className="max-w-full px-4 mx-auto">
@@ -208,7 +218,7 @@ const Navbar = () => {
 
         {/* Mobile Menu */}
         <div
-          className={`lg:hidden fixed top-0 right-0 w-3/4 h-full bg-white text-[#f8961e] transform transition-transform duration-300 ${
+          className={`border rounded-lg lg:hidden fixed top-0 right-0 w-3/4 h-full bg-white text-[#f8961e] transform transition-transform duration-300 ${
             isOpen ? "translate-x-0" : "translate-x-full"
           }`}
         >
@@ -217,23 +227,23 @@ const Navbar = () => {
               <X size={28} />
             </button>
           </div>
-          <ul className="flex flex-col items-start w-full p-4 space-y-2 bg-white border rounded-lg shadow-lg">
+          <ul className="flex flex-col items-start w-full p-4 space-y-2 bg-white">
             <li>
               <Link
                 to="/"
-                className="text-[#09bc8a] font-bold hover:text-[#f8961e] transition-colors"
+                className=" hover:text-[#f8961e] transition-colors flex justify-between items-center w-full text-[#09bc8a] font-bold px-4 py-2"
               >
                 Inicio
               </Link>
             </li>
             <li className="relative w-full">
               <button
-                onClick={() => toggleDropdown("nosotros")}
+                onClick={() => toggleDropdowns("nosotros")}
                 className="flex justify-between items-center w-full text-[#09bc8a] font-bold px-4 py-2 hover:bg-gray-100 rounded transition-colors"
               >
                 Nosotros <ChevronDown size={17} />
               </button>
-              {activeDropdown === "nosotros" && (
+              {activeDropdowns === "nosotros" && (
                 <div className="absolute left-0 z-50 w-full mt-2 bg-white border rounded-lg shadow-lg">
                   <Link
                     to="/nosotros/historia"
@@ -253,12 +263,12 @@ const Navbar = () => {
 
             <li className="relative w-full">
               <button
-                onClick={() => toggleDropdown("servicios")}
+                onClick={() => toggleDropdowns("servicios")}
                 className="flex justify-between items-center w-full text-[#09bc8a] font-bold px-4 py-2 hover:bg-gray-100 rounded transition-colors"
               >
                 Servicios <ChevronDown size={17} />
               </button>
-              {activeDropdown === "servicios" && (
+              {activeDropdowns === "servicios" && (
                 <div className="absolute left-0 z-50 w-full mt-2 bg-white border rounded-lg shadow-lg">
                   <Link
                     to="/servicios/servicio1"
@@ -278,12 +288,12 @@ const Navbar = () => {
 
             <li className="relative w-full">
               <button
-                onClick={() => toggleDropdown("socios")}
+                onClick={() => toggleDropdowns("socios")}
                 className="flex justify-between items-center w-full text-[#09bc8a] font-bold px-4 py-2 hover:bg-gray-100 rounded transition-colors"
               >
                 Socios <ChevronDown size={17} />
               </button>
-              {activeDropdown === "socios" && (
+              {activeDropdowns === "socios" && (
                 <div className="absolute left-0 z-50 w-full mt-2 bg-white border rounded-lg shadow-lg">
                   <Link
                     to="/socios/informacion"
@@ -303,12 +313,12 @@ const Navbar = () => {
 
             <li className="relative w-full">
               <button
-                onClick={() => toggleDropdown("prensa")}
+                onClick={() => toggleDropdowns("prensa")}
                 className="flex justify-between items-center w-full text-[#09bc8a] font-bold px-4 py-2 hover:bg-gray-100 rounded transition-colors"
               >
                 Prensa <ChevronDown size={17} />
               </button>
-              {activeDropdown === "prensa" && (
+              {activeDropdowns === "prensa" && (
                 <div className="absolute left-0 z-50 w-full mt-2 bg-white border rounded-lg shadow-lg">
                   <Link
                     to="/prensa"
@@ -328,12 +338,12 @@ const Navbar = () => {
 
             <li className="relative w-full">
               <button
-                onClick={() => toggleDropdown("inversionistas")}
+                onClick={() => toggleDropdowns("inversionistas")}
                 className="flex justify-between items-center w-full text-[#09bc8a] font-bold px-4 py-2 hover:bg-gray-100 rounded transition-colors"
               >
                 Inversionistas <ChevronDown size={17} />
               </button>
-              {activeDropdown === "inversionistas" && (
+              {activeDropdowns === "inversionistas" && (
                 <div className="absolute left-0 z-50 w-full mt-2 bg-white border rounded-lg shadow-lg">
                   <Link
                     to="/inversionistas/informacion"
