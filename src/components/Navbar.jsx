@@ -1,129 +1,366 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Logo from "../assets/logo.png";
-import { X, Menu, Search } from "lucide-react";
+import { X, Menu, Search, ChevronDown } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState(null); // Manejar el dropdown activo
+  const dropdownRef = useRef(null);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
 
+  const toggleDropdown = (key) => {
+    if (activeDropdown === key) {
+      setActiveDropdown(null); // Cierra si ya está abierto
+    } else {
+      setActiveDropdown(key); // Abre el nuevo dropdown
+    }
+  };
+
+  // Manejar el clic fuera del menú
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setActiveDropdown(null); // Cerrar dropdown si se hace clic fuera
+      }
+    };
+
+    // Agregar el evento de clic al documento
+    document.addEventListener("mousedown", handleClickOutside);
+
+    // Limpiar el evento al desmontar el componente
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [dropdownRef]);
+
   return (
-    <nav className="bg-gradient-to-r from-[#f8961e] to-[#09bc8a] p-4 shadow-lg">
-      <div className="container flex items-center justify-between mx-auto">
-        {/* Logo on the left */}
-        <div className="flex items-center">
-          <img
-            src={Logo}
-            alt="Cooperativa Logo"
-            className="h-14 sm:h-14 md:h-16 lg:h-20"
-          />
-        </div>
+    <nav className="bg-white shadow-lg">
+      <div className="max-w-full px-4 mx-auto">
+        <div className="flex items-center justify-between h-16">
+          {/* Logo */}
+          <div className="flex items-center">
+            <img src={Logo} alt="Cooperativa Logo" className="h-16" />
+          </div>
 
-        {/* Centered Links (only for large screens) */}
-        <div className="hidden space-x-8 font-semibold text-white lg:flex">
-          <Link to="/" className="hover:underline">
-            Inicio
-          </Link>
-          <Link to="/nosotros" className="hover:underline">
-            Nosotros
-          </Link>
-          <Link to="/servicios" className="hover:underline">
-            Servicios
-          </Link>
-          <Link to="/socios" className="hover:underline">
-            Socios
-          </Link>
-          <Link to="/prensa" className="hover:underline">
-            Prensa
-          </Link>
-          <Link to="/inversionistas" className="hover:underline">
-            Inversionistas
-          </Link>
-        </div>
-
-        {/* Icons for Search and Menu on the right */}
-        <div className="flex items-center space-x-4">
-          <button className="text-white hover:text-gray-300">
-            <Search size={28} />
-          </button>
-          <button onClick={toggleMenu} className="text-white">
-            {isOpen ? <X size={28} /> : <Menu size={28} />}
-          </button>
-        </div>
-      </div>
-
-      {/* Mobile Menu */}
-      <div
-        className={`lg:hidden fixed top-0 right-0 w-3/4 h-full bg-white text-[#f8961e] transform transition-transform duration-300 ${
-          isOpen ? "translate-x-0" : "translate-x-full"
-        }`}
-      >
-        <div className="flex justify-end p-4">
-          <button onClick={toggleMenu}>
-            <X size={28} />
-          </button>
-        </div>
-        <ul className="flex flex-col items-start p-6 space-y-6">
-          <li>
-            <Link
-              to="/"
-              className="text-[#09bc8a] font-bold hover:text-[#f8961e] transition-colors"
-            >
+          {/* Centered Links */}
+          <div
+            className="hidden font-semibold text-black space-x-9 lg:flex"
+            ref={dropdownRef}
+          >
+            <Link to="/" className="hover:text-[#09bc8a]">
               Inicio
             </Link>
-          </li>
-          <li>
-            <Link
-              to="/nosotros"
-              className="text-[#09bc8a] font-bold hover:text-[#f8961e] transition-colors"
-            >
-              Nosotros
-            </Link>
-          </li>
-          <li>
-            <Link
-              to="/servicios"
-              className="text-[#09bc8a] font-bold hover:text-[#f8961e] transition-colors"
-            >
-              Servicios
-            </Link>
-          </li>
-          <li>
-            <Link
-              to="/socios"
-              className="text-[#09bc8a] font-bold hover:text-[#f8961e] transition-colors"
-            >
-              Socios
-            </Link>
-          </li>
-          <li>
-            <Link
-              to="/prensa"
-              className="text-[#09bc8a] font-bold hover:text-[#f8961e] transition-colors"
-            >
-              Prensa
-            </Link>
-          </li>
-          <li>
-            <Link
-              to="/inversionistas"
-              className="text-[#09bc8a] font-bold hover:text-[#f8961e] transition-colors"
-            >
-              Inversionistas
-            </Link>
-          </li>
-          <li>
+
+            {/* Dropdowns */}
+            <div className="relative">
+              <button
+                onClick={() => toggleDropdown("nosotros")}
+                className="flex items-center space-x-1 hover:text-[#09bc8a] "
+              >
+                Nosotros <ChevronDown size={17} />
+              </button>
+              {activeDropdown === "nosotros" && (
+                <div className="absolute w-48 mt-2 bg-white border rounded-lg shadow-lg">
+                  <Link
+                    to="/nosotros"
+                    className="block px-4 py-2 hover:bg-gray-100"
+                  >
+                    Historia
+                  </Link>
+                  <Link
+                    to="/nosotros"
+                    className="block px-4 py-2 hover:bg-gray-100"
+                  >
+                    Misión
+                  </Link>
+                </div>
+              )}
+            </div>
+
+            <div className="relative">
+              <button
+                onClick={() => toggleDropdown("servicios")}
+                className="flex items-center space-x-1 hover:text-[#09bc8a]"
+              >
+                Servicios <ChevronDown size={17} />
+              </button>
+              {activeDropdown === "servicios" && (
+                <div className="absolute w-48 mt-2 bg-white border rounded-lg shadow-lg">
+                  <Link
+                    to="/servicios"
+                    className="block px-4 py-2 hover:bg-gray-100"
+                  >
+                    Servicio 1
+                  </Link>
+                  <Link
+                    to="/servicios"
+                    className="block px-4 py-2 hover:bg-gray-100"
+                  >
+                    Servicio 2
+                  </Link>
+                </div>
+              )}
+            </div>
+
+            <div className="relative">
+              <button
+                onClick={() => toggleDropdown("socios")}
+                className="flex items-center space-x-1 hover:text-[#09bc8a] "
+              >
+                Socios <ChevronDown size={17} />
+              </button>
+              {activeDropdown === "socios" && (
+                <div className="absolute w-48 mt-2 bg-white border rounded-lg shadow-lg">
+                  <Link
+                    to="/socios"
+                    className="block px-4 py-2 hover:bg-gray-100"
+                  >
+                    Información
+                  </Link>
+                  <Link
+                    to="/socios"
+                    className="block px-4 py-2 hover:bg-gray-100"
+                  >
+                    Beneficios
+                  </Link>
+                </div>
+              )}
+            </div>
+
+            <div className="relative">
+              <button
+                onClick={() => toggleDropdown("prensa")}
+                className="flex items-center space-x-1 hover:text-[#09bc8a] "
+              >
+                Prensa <ChevronDown size={17} />
+              </button>
+              {activeDropdown === "prensa" && (
+                <div className="absolute w-48 mt-2 bg-white border rounded-lg shadow-lg">
+                  <Link
+                    to="/socios"
+                    className="block px-4 py-2 hover:bg-gray-100"
+                  >
+                    Información
+                  </Link>
+                  <Link
+                    to="/socios"
+                    className="block px-4 py-2 hover:bg-gray-100"
+                  >
+                    Beneficios
+                  </Link>
+                </div>
+              )}
+            </div>
+
+            <div className="relative">
+              <button
+                onClick={() => toggleDropdown("inversionistas")}
+                className="flex items-center space-x-1 hover:text-[#09bc8a]"
+              >
+                Inversionistas <ChevronDown size={17} />
+              </button>
+              {activeDropdown === "inversionistas" && (
+                <div className="absolute w-48 mt-2 bg-white border rounded-lg shadow-lg">
+                  <Link
+                    to="/inversionistas"
+                    className="block px-4 py-2 hover:bg-gray-100"
+                  >
+                    Información
+                  </Link>
+                  <Link
+                    to="/inversionistas"
+                    className="block px-4 py-2 hover:bg-gray-100"
+                  >
+                    Proyectos
+                  </Link>
+                </div>
+              )}
+            </div>
+          </div>
+
+          {/* Call-to-action Button */}
+          <div className="items-center hidden space-x-4 lg:flex">
+            <button className="text-[#09bc8a] ">
+              <Search size={28} />
+            </button>
             <Link
               to="/contactos"
-              className="bg-[#09bc8a] text-white px-4 py-2 rounded-full font-bold"
+              className="text-white  px-4 py-2 rounded-full font-semibold bg-[#09bc8a] hover:text-white transition-all duration-300"
             >
               Contáctanos
             </Link>
-          </li>
-        </ul>
+          </div>
+
+          {/* Mobile Search and Menu Icons */}
+          <div className="flex items-center space-x-3 lg:hidden">
+            <button onClick={toggleMenu} className="text-[#09bc8a]">
+              {isOpen ? <X size={28} /> : <Menu size={28} />}
+            </button>
+            <button className="text-[#09bc8a]">
+              <Search size={28} />
+            </button>
+          </div>
+        </div>
+
+        {/* Mobile Menu */}
+        <div
+          className={`lg:hidden fixed top-0 right-0 w-3/4 h-full bg-white text-[#f8961e] transform transition-transform duration-300 ${
+            isOpen ? "translate-x-0" : "translate-x-full"
+          }`}
+        >
+          <div className="flex justify-end p-4">
+            <button onClick={toggleMenu}>
+              <X size={28} />
+            </button>
+          </div>
+          <ul className="flex flex-col items-start w-full p-4 space-y-2 bg-white border rounded-lg shadow-lg">
+            <li>
+              <Link
+                to="/"
+                className="text-[#09bc8a] font-bold hover:text-[#f8961e] transition-colors"
+              >
+                Inicio
+              </Link>
+            </li>
+            <li className="relative w-full">
+              <button
+                onClick={() => toggleDropdown("nosotros")}
+                className="flex justify-between items-center w-full text-[#09bc8a] font-bold px-4 py-2 hover:bg-gray-100 rounded transition-colors"
+              >
+                Nosotros <ChevronDown size={17} />
+              </button>
+              {activeDropdown === "nosotros" && (
+                <div className="absolute left-0 z-50 w-full mt-2 bg-white border rounded-lg shadow-lg">
+                  <Link
+                    to="/nosotros/historia"
+                    className="block px-4 py-2 hover:bg-gray-100"
+                  >
+                    Historia
+                  </Link>
+                  <Link
+                    to="/nosotros/mision"
+                    className="block px-4 py-2 hover:bg-gray-100"
+                  >
+                    Misión
+                  </Link>
+                </div>
+              )}
+            </li>
+
+            <li className="relative w-full">
+              <button
+                onClick={() => toggleDropdown("servicios")}
+                className="flex justify-between items-center w-full text-[#09bc8a] font-bold px-4 py-2 hover:bg-gray-100 rounded transition-colors"
+              >
+                Servicios <ChevronDown size={17} />
+              </button>
+              {activeDropdown === "servicios" && (
+                <div className="absolute left-0 z-50 w-full mt-2 bg-white border rounded-lg shadow-lg">
+                  <Link
+                    to="/servicios/servicio1"
+                    className="block px-4 py-2 hover:bg-gray-100"
+                  >
+                    Servicio 1
+                  </Link>
+                  <Link
+                    to="/servicios/servicio2"
+                    className="block px-4 py-2 hover:bg-gray-100"
+                  >
+                    Servicio 2
+                  </Link>
+                </div>
+              )}
+            </li>
+
+            <li className="relative w-full">
+              <button
+                onClick={() => toggleDropdown("socios")}
+                className="flex justify-between items-center w-full text-[#09bc8a] font-bold px-4 py-2 hover:bg-gray-100 rounded transition-colors"
+              >
+                Socios <ChevronDown size={17} />
+              </button>
+              {activeDropdown === "socios" && (
+                <div className="absolute left-0 z-50 w-full mt-2 bg-white border rounded-lg shadow-lg">
+                  <Link
+                    to="/socios/informacion"
+                    className="block px-4 py-2 hover:bg-gray-100"
+                  >
+                    Información
+                  </Link>
+                  <Link
+                    to="/socios/beneficios"
+                    className="block px-4 py-2 hover:bg-gray-100"
+                  >
+                    Beneficios
+                  </Link>
+                </div>
+              )}
+            </li>
+
+            <li className="relative w-full">
+              <button
+                onClick={() => toggleDropdown("prensa")}
+                className="flex justify-between items-center w-full text-[#09bc8a] font-bold px-4 py-2 hover:bg-gray-100 rounded transition-colors"
+              >
+                Prensa <ChevronDown size={17} />
+              </button>
+              {activeDropdown === "prensa" && (
+                <div className="absolute left-0 z-50 w-full mt-2 bg-white border rounded-lg shadow-lg">
+                  <Link
+                    to="/prensa"
+                    className="block px-4 py-2 hover:bg-gray-100"
+                  >
+                    Noticias
+                  </Link>
+                  <Link
+                    to="/prensa/eventos"
+                    className="block px-4 py-2 hover:bg-gray-100"
+                  >
+                    Eventos
+                  </Link>
+                </div>
+              )}
+            </li>
+
+            <li className="relative w-full">
+              <button
+                onClick={() => toggleDropdown("inversionistas")}
+                className="flex justify-between items-center w-full text-[#09bc8a] font-bold px-4 py-2 hover:bg-gray-100 rounded transition-colors"
+              >
+                Inversionistas <ChevronDown size={17} />
+              </button>
+              {activeDropdown === "inversionistas" && (
+                <div className="absolute left-0 z-50 w-full mt-2 bg-white border rounded-lg shadow-lg">
+                  <Link
+                    to="/inversionistas/informacion"
+                    className="block px-4 py-2 hover:bg-gray-100"
+                  >
+                    Información
+                  </Link>
+                  <Link
+                    to="/inversionistas/proyectos"
+                    className="block px-4 py-2 hover:bg-gray-100"
+                  >
+                    Proyectos
+                  </Link>
+                </div>
+              )}
+            </li>
+
+            <li className="relative w-full">
+              <Link
+                to="/contactos"
+                className="block w-full bg-[#09bc8a] text-white px-4 py-2 rounded-full font-bold text-center hover:bg-[#f8961e] transition-colors"
+              >
+                Contáctanos
+              </Link>
+            </li>
+          </ul>
+        </div>
       </div>
     </nav>
   );
