@@ -11,96 +11,116 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="flex items-center justify-between text-black bg-white shadow-sm ">
-      <div className="text-xl font-bold">
-        <img
-          src={Logo}
-          alt=""
-          className="h-20 sm:h-14 md:h-16 lg:h-20 xl:h-24"
-        />
-      </div>
+    <nav className="bg-gradient-to-r from-[#f8961e] to-[#09bc8a] p-4 shadow-lg">
+      <div className="container flex items-center justify-between mx-auto">
+        {/* Logo on the left */}
+        <div className="flex items-center">
+          <img
+            src={Logo}
+            alt="Cooperativa Logo"
+            className="h-14 sm:h-14 md:h-16 lg:h-20"
+          />
+        </div>
 
-      <div className="hidden space-x-12 font-sans md:flex">
-        <Link href="/" className="hover:text-gray-400">
-          Home
-        </Link>
-        <Link href="/nosotros" className="hover:text-gray-400">
-          Nosotros
-        </Link>
-        <Link href="/servicios" className="hover:text-gray-400">
-          Servicios
-        </Link>
-        <Link href="/socios" className="hover:text-gray-400">
-          Socios
-        </Link>
-        <Link href="/prensa" className="hover:text-gray-400">
-          Prensa
-        </Link>
-        <Link href="/inversionista" className="hover:text-gray-400">
-          Inversionistas
-        </Link>
-        <Link href="/contactos" className="hover:text-gray-400">
-          Contactos
-        </Link>
-      </div>
+        {/* Centered Links (only for large screens) */}
+        <div className="hidden space-x-8 font-semibold text-white lg:flex">
+          <Link to="/" className="hover:underline">
+            Inicio
+          </Link>
+          <Link to="/nosotros" className="hover:underline">
+            Nosotros
+          </Link>
+          <Link to="/servicios" className="hover:underline">
+            Servicios
+          </Link>
+          <Link to="/socios" className="hover:underline">
+            Socios
+          </Link>
+          <Link to="/prensa" className="hover:underline">
+            Prensa
+          </Link>
+          <Link to="/inversionistas" className="hover:underline">
+            Inversionistas
+          </Link>
+        </div>
 
-      <div className="flex items-center space-x-4">
-        {/* Search Icon */}
-        <Link href="#" className=" hover:text-gray-400">
-          <Search size={28} className="lg:m-10" />
-        </Link>
-
-        {/* Burger Menu Icon */}
-        <button onClick={toggleMenu} className="md:hidden">
-          {isOpen ? <X /> : <Menu className="mr-3" />}
-        </button>
+        {/* Icons for Search and Menu on the right */}
+        <div className="flex items-center space-x-4">
+          <button className="text-white hover:text-gray-300">
+            <Search size={28} />
+          </button>
+          <button onClick={toggleMenu} className="text-white">
+            {isOpen ? <X size={28} /> : <Menu size={28} />}
+          </button>
+        </div>
       </div>
 
       {/* Mobile Menu */}
       <div
-        className={`fixed top-0 right-0 w-64 h-full bg-gray-800 text-white transform transition-transform ${
+        className={`lg:hidden fixed top-0 right-0 w-3/4 h-full bg-white text-[#f8961e] transform transition-transform duration-300 ${
           isOpen ? "translate-x-0" : "translate-x-full"
-        } md:hidden`}
+        }`}
       >
         <div className="flex justify-end p-4">
           <button onClick={toggleMenu}>
-            <X />
+            <X size={28} />
           </button>
         </div>
-        <ul className="flex flex-col items-start p-4 space-y-4">
+        <ul className="flex flex-col items-start p-6 space-y-6">
           <li>
-            <Link href="/" className="hover:text-gray-400">
-              Home
+            <Link
+              to="/"
+              className="text-[#09bc8a] font-bold hover:text-[#f8961e] transition-colors"
+            >
+              Inicio
             </Link>
           </li>
           <li>
-            <Link href="/about" className="hover:text-gray-400">
-              About Us
+            <Link
+              to="/nosotros"
+              className="text-[#09bc8a] font-bold hover:text-[#f8961e] transition-colors"
+            >
+              Nosotros
             </Link>
           </li>
           <li>
-            <Link href="/services" className="hover:text-gray-400">
-              Services
+            <Link
+              to="/servicios"
+              className="text-[#09bc8a] font-bold hover:text-[#f8961e] transition-colors"
+            >
+              Servicios
             </Link>
           </li>
           <li>
-            <Link href="/partners" className="hover:text-gray-400">
-              Partners
+            <Link
+              to="/socios"
+              className="text-[#09bc8a] font-bold hover:text-[#f8961e] transition-colors"
+            >
+              Socios
             </Link>
           </li>
           <li>
-            <Link href="/press" className="hover:text-gray-400">
-              Press
+            <Link
+              to="/prensa"
+              className="text-[#09bc8a] font-bold hover:text-[#f8961e] transition-colors"
+            >
+              Prensa
             </Link>
           </li>
           <li>
-            <Link href="/investors" className="hover:text-gray-400">
-              Investors
+            <Link
+              to="/inversionistas"
+              className="text-[#09bc8a] font-bold hover:text-[#f8961e] transition-colors"
+            >
+              Inversionistas
             </Link>
           </li>
           <li>
-            <Link href="/contacts" className="hover:text-gray-400">
-              Contacts
+            <Link
+              to="/contactos"
+              className="bg-[#09bc8a] text-white px-4 py-2 rounded-full font-bold"
+            >
+              Contáctanos
             </Link>
           </li>
         </ul>
