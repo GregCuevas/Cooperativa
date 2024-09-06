@@ -1,0 +1,73 @@
+import { Button } from "@/components/ui/button";
+import { ArrowRight } from "lucide-react";
+
+const blogPosts = [
+  {
+    icon: "/placeholder.svg?height=80&width=80",
+    category: "Category",
+    readTime: "4 min. read",
+    title: "Blog Post Heading",
+    description:
+      "We've done it carefully and simply. Combined with the ingredients makes for beautiful landings.",
+  },
+  {
+    icon: "/placeholder.svg?height=80&width=80",
+    category: "Category",
+    readTime: "4 min. read",
+    title: "Blog Post Heading",
+    description:
+      "We've done it carefully and simply. Combined with the ingredients makes for beautiful landings.",
+  },
+  {
+    icon: "/placeholder.svg?height=80&width=80",
+    category: "Category",
+    readTime: "4 min. read",
+    title: "Blog Post Heading",
+    description:
+      "We've done it carefully and simply. Combined with the ingredients makes for beautiful landings.",
+  },
+];
+
+export default function BlogSection() {
+  return (
+    <section className="flex items-center justify-center w-full px-4 py-12">
+      <div className="max-w-6xl mx-auto">
+        <div className="flex flex-col items-center justify-between mb-12">
+          <h2 className="mb-4 text-3xl font-bold tracking-tighter sm:text-5xl">
+            Blog
+          </h2>
+          <Button variant="outline">See More</Button>
+        </div>
+        <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
+          {blogPosts.map((post, index) => (
+            <div key={index} className="relative flex flex-col space-y-2 group">
+              <div className="flex items-center justify-center h-48 p-4 bg-gray-100 rounded-lg">
+                <img
+                  src={post.icon}
+                  alt="Blog post icon"
+                  className="object-cover w-20 h-20"
+                  width={80}
+                  height={80}
+                />
+              </div>
+              <div className="flex items-center space-x-2 text-sm text-gray-500">
+                <span className="font-medium">{post.category}</span>
+                <span>•</span>
+                <span>{post.readTime}</span>
+              </div>
+              <h3 className="text-xl font-bold">{post.title}</h3>
+              <p className="text-gray-500">{post.description}</p>
+              <Button
+                variant="link"
+                className="h-auto p-0 font-semibold text-blue-600"
+              >
+                Read More
+                <ArrowRight className="w-4 h-4 ml-2" />
+              </Button>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
