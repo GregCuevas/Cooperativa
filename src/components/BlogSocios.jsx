@@ -1,5 +1,5 @@
 import React from "react";
-import { Briefcase, Code, User } from "lucide-react";
+import { Briefcase, User } from "lucide-react";
 import Empresa from "../assets/empresa.jpg";
 import Socio from "../assets/socio.png";
 

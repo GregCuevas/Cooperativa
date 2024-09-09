@@ -5,7 +5,7 @@ import Graduate from "../assets/graduate.jpg";
 import Money from "../assets/money.jpg";
 const blogPosts = [
   {
-    icon: { Tele },
+    icon: Tele,
     category: "Category",
     readTime: "2 min. read",
     title: "Telecomunicaciones",
@@ -13,7 +13,7 @@ const blogPosts = [
       "Para ampliar las telecomunicaciones en zonas rurales, nos enfocamos en promover el desarrollo educativo.",
   },
   {
-    icon: { Graduate },
+    icon: Graduate,
     category: "Category",
     readTime: "1 min. read",
     title: "Educación",
@@ -21,7 +21,7 @@ const blogPosts = [
       "Comprometidos con un objetivo compartido, Coopebred facilita el acceso equitativo a la tecnología 5G para todos.",
   },
   {
-    icon: { Money },
+    icon: Money,
     category: "Category",
     readTime: "3 min. read",
     title: "Financiamiento",
