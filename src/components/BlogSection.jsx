@@ -28,7 +28,7 @@ const blogPosts = [
   },
 ];
 
-export default function BlogSection() {
+const BlogSection = () => {
   return (
     <section className="flex items-center justify-center w-full px-4 py-12">
       <div className="mx-auto max-w-7xl">
@@ -36,7 +36,7 @@ export default function BlogSection() {
           <h2 className="mb-4 text-3xl font-bold tracking-tighter sm:text-5xl">
             Conectamos áreas rurales con innovación digital
           </h2>
-          <p>
+          <p className="text-lg text-center text-slate-600">
             Impulsamos telecomunicaciones, educación y financiación para su
             desarrollo.
           </p>
@@ -71,4 +71,5 @@ export default function BlogSection() {
       </div>
     </section>
   );
-}
+};
+export default BlogSection;

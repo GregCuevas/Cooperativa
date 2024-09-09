@@ -48,7 +48,7 @@ const Action = () => {
 
 const HeroSection = () => {
   return (
-    <section className="flex flex-col items-center justify-between p-8 mt-2 text-black md:flex-row md:p-16">
+    <section className="flex flex-col items-center justify-between p-8 text-black md:flex-row md:p-16">
       <div className="md:w-5/12 lg:w-4/12">
         <h3 className="mb-4 text-2xl font-extrabold text-gray-900 md:text-4xl lg:text-5xl">
           Bienvenido a Coopebred

@@ -3,6 +3,7 @@ import Navbar from "../components/Navbar";
 import HeroSection from "../components/HeroSection";
 import FeatureSection from "../components/FeatureSection";
 import BlogSection from "../components/BlogSection";
+import BlogSocios from "../components/BlogSocios";
 const Home = () => {
   return (
     <>
@@ -10,6 +11,7 @@ const Home = () => {
       <HeroSection />
       <FeatureSection />
       <BlogSection />
+      <BlogSocios />
     </>
   );
 };
