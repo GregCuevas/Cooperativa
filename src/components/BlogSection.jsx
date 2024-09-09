@@ -5,7 +5,7 @@ const blogPosts = [
   {
     icon: "../src/assets/tele.png",
     category: "Category",
-    readTime: "4 min. read",
+    readTime: "2 min. read",
     title: "Telecomunicaciones",
     description:
       "Para ampliar las telecomunicaciones en zonas rurales, nos enfocamos en promover el desarrollo educativo.",
@@ -13,7 +13,7 @@ const blogPosts = [
   {
     icon: "../src/assets/graduate.jpg",
     category: "Category",
-    readTime: "4 min. read",
+    readTime: "1 min. read",
     title: "Educación",
     description:
       "Comprometidos con un objetivo compartido, Coopebred facilita el acceso equitativo a la tecnología 5G para todos.",
@@ -21,7 +21,7 @@ const blogPosts = [
   {
     icon: "../src/assets/money.jpg",
     category: "Category",
-    readTime: "4 min. read",
+    readTime: "3 min. read",
     title: "Financiamiento",
     description:
       "Con las soluciones de COOPEDUCATE, las familias en áreas rurales acceden a diversas ventajas económicas.",
@@ -53,7 +53,7 @@ const BlogSection = () => {
               </div>
               <div className="flex items-center space-x-2 text-sm text-gray-500">
                 <span className="font-medium">{post.category}</span>
-                <span>•</span>
+                <span className="text-[#09bc8a]">•</span>
                 <span>{post.readTime}</span>
               </div>
               <h3 className="text-xl font-bold">{post.title}</h3>
