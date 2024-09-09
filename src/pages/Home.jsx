@@ -4,6 +4,7 @@ import HeroSection from "../components/HeroSection";
 import FeatureSection from "../components/FeatureSection";
 import BlogSection from "../components/BlogSection";
 import BlogSocios from "../components/BlogSocios";
+import CoopStats from "../components/CoopStats";
 const Home = () => {
   return (
     <>
@@ -12,6 +13,7 @@ const Home = () => {
       <FeatureSection />
       <BlogSection />
       <BlogSocios />
+      <CoopStats />
     </>
   );
 };

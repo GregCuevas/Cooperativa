@@ -7,7 +7,7 @@ const BlogSocios = () => {
   return (
     <section className="flex flex-col w-full gap-12 px-3 py-12 m-auto 2xl:py-16 max-w-screen-2xl sm:px-8 lg:px-16 xl:px-32">
       <h2 className="text-3xl font-bold text-center text-slate-900">
-        Socios Destacados
+        Nuestros Socios
       </h2>
 
       <p className="text-lg text-center text-slate-600">
