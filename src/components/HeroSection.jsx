@@ -8,12 +8,13 @@ import {
 } from "lucide-react"; // Icon from Lucide-react
 import { Button } from "@/components/ui/button";
 import home from "../assets/hero-section.png"; // Image from images folder
+
 const Action = () => {
   return (
     <div className="flex gap-3">
       <Button
         variant="default"
-        className="px-4 py-2 font-semibold text-white transition bg-green-500 rounded-full shadow-md hover:bg-green-600 "
+        className="px-4 py-2 font-semibold text-white transition bg-green-500 rounded-full shadow-md hover:bg-green-600"
       >
         <BadgeCheck className="w-5 h-5 mr-2" />
         Verificados
@@ -21,7 +22,7 @@ const Action = () => {
       <button
         type="button"
         aria-disabled="false"
-        class="group inline-flex items-center justify-center whitespace-nowrap rounded-lg py-2 align-middle text-sm font-semibold leading-none transition-none disabled:cursor-not-allowed stroke-[#09bc8a] px-2 text-[#0f0f0f] h-[42px] min-w-[42px] gap-2"
+        className="group inline-flex items-center justify-center whitespace-nowrap rounded-lg py-2 align-middle text-sm font-semibold leading-none transition-none disabled:cursor-not-allowed stroke-[#09bc8a] px-2 text-[#0f0f0f] h-[42px] min-w-[42px] gap-2"
       >
         <span>See More</span>
         <svg
@@ -29,14 +30,14 @@ const Action = () => {
           height="24"
           viewBox="0 0 24 24"
           fill="none"
-          stroke-width="1.5"
+          strokeWidth="1.5"
           xmlns="http://www.w3.org/2000/svg"
-          class="size-6 stroke-inherit"
+          className="size-6 stroke-inherit"
         >
           <path
             d="M11 16L15 12L11 8"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           ></path>
           <circle cx="12" cy="12" r="9"></circle>
         </svg>
@@ -48,7 +49,7 @@ const Action = () => {
 const HeroSection = () => {
   return (
     <section className="flex flex-col items-center justify-between p-8 mt-2 text-black md:flex-row md:p-16">
-      <div className="md:w-5/12 lg:w-4/12 ">
+      <div className="md:w-5/12 lg:w-4/12">
         <h3 className="mb-4 text-2xl font-extrabold text-gray-900 md:text-4xl lg:text-5xl">
           Bienvenido a Coopebred
         </h3>
