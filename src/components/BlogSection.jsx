@@ -8,7 +8,7 @@ const blogPosts = [
     readTime: "4 min. read",
     title: "Telecomunicaciones",
     description:
-      "We've done it carefully and simply. Combined with the ingredients makes for beautiful landings.",
+      "Para ampliar las telecomunicaciones en zonas rurales, nos enfocamos en promover el desarrollo educativo.",
   },
   {
     icon: "../src/assets/graduate.jpg",
@@ -16,7 +16,7 @@ const blogPosts = [
     readTime: "4 min. read",
     title: "Educación",
     description:
-      "We've done it carefully and simply. Combined with the ingredients makes for beautiful landings.",
+      "Comprometidos con un objetivo compartido, Coopebred facilita el acceso equitativo a la tecnología 5G para todos.",
   },
   {
     icon: "../src/assets/money.jpg",
@@ -24,7 +24,7 @@ const blogPosts = [
     readTime: "4 min. read",
     title: "Financiamiento",
     description:
-      "We've done it carefully and simply. Combined with the ingredients makes for beautiful landings.",
+      "Con las soluciones de COOPEDUCATE, las familias en áreas rurales acceden a diversas ventajas económicas.",
   },
 ];
 
@@ -33,7 +33,7 @@ const BlogSection = () => {
     <section className="flex items-center justify-center w-full px-4 py-12">
       <div className="mx-auto max-w-7xl">
         <div className="flex flex-col items-center justify-between mb-12">
-          <h2 className="mb-4 text-3xl font-bold tracking-tighter sm:text-5xl">
+          <h2 className="mb-4 text-3xl font-bold tracking-tighter text-center sm:text-5xl">
             Conectamos áreas rurales con innovación digital
           </h2>
           <p className="text-lg text-center text-slate-600">

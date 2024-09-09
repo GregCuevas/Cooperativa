@@ -7,14 +7,14 @@ import {
   BadgeCheck,
 } from "lucide-react"; // Icon from Lucide-react
 import { Button } from "@/components/ui/button";
-import home from "../assets/hero-section.png"; // Image from images folder
+import home from "../assets/ground.jpg"; // Image from images folder
 
 const Action = () => {
   return (
     <div className="flex gap-3">
       <Button
         variant="default"
-        className="px-4 py-2 font-semibold text-white transition bg-green-500 rounded-full shadow-md hover:bg-green-600"
+        className="px-4 py-2 font-semibold text-white transition bg-green-600 rounded-full shadow-md hover:bg-green-600"
       >
         <BadgeCheck className="w-5 h-5 mr-2" />
         Verificados
@@ -51,7 +51,7 @@ const HeroSection = () => {
     <section className="flex flex-col items-center justify-between p-8 text-black md:flex-row md:p-16">
       <div className="md:w-5/12 lg:w-4/12">
         <h3 className="mb-4 text-2xl font-extrabold text-gray-900 md:text-4xl lg:text-5xl">
-          Bienvenido a Coopebred
+          Innovación con Coopebred
         </h3>
         <p className="mb-8 text-base text-gray-700 md:text-lg lg:text-xl">
           El futuro de las cooperativas está aquí para ti. Disfruta de una

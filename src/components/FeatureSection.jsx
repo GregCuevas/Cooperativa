@@ -34,7 +34,7 @@ const FeatureSection = () => {
           Coopebred hace todo por ti.
         </h4>
         <h2 className="mb-10 text-4xl font-bold md:text-5xl">
-          Programa Coopeducate
+          Programa Coopebred
         </h2>
       </header>
       <div className="grid grid-cols-1 gap-40 md:grid-cols-3">

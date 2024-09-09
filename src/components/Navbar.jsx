@@ -71,7 +71,7 @@ const Navbar = () => {
                 onClick={() => toggleDropdown("nosotros")}
                 className="flex items-center space-x-1 hover:text-[#09bc8a] "
               >
-                Nosotros <ChevronDown size={17} />
+                Nosotros <ChevronDown size={17} color="#09bc8a" />
               </button>
               {activeDropdown === "nosotros" && (
                 <div className="absolute w-48 mt-2 bg-white border rounded-lg shadow-lg">
@@ -96,7 +96,7 @@ const Navbar = () => {
                 onClick={() => toggleDropdown("servicios")}
                 className="flex items-center space-x-1 hover:text-[#09bc8a]"
               >
-                Servicios <ChevronDown size={17} />
+                Servicios <ChevronDown size={17} color="#09bc8a" />
               </button>
               {activeDropdown === "servicios" && (
                 <div className="absolute w-48 mt-2 bg-white border rounded-lg shadow-lg">
@@ -121,7 +121,7 @@ const Navbar = () => {
                 onClick={() => toggleDropdown("socios")}
                 className="flex items-center space-x-1 hover:text-[#09bc8a] "
               >
-                Socios <ChevronDown size={17} />
+                Socios <ChevronDown size={17} color="#09bc8a" />
               </button>
               {activeDropdown === "socios" && (
                 <div className="absolute w-48 mt-2 bg-white border rounded-lg shadow-lg">
@@ -146,7 +146,7 @@ const Navbar = () => {
                 onClick={() => toggleDropdown("prensa")}
                 className="flex items-center space-x-1 hover:text-[#09bc8a] "
               >
-                Prensa <ChevronDown size={17} />
+                Prensa <ChevronDown size={17} color="#09bc8a" />
               </button>
               {activeDropdown === "prensa" && (
                 <div className="absolute w-48 mt-2 bg-white border rounded-lg shadow-lg">
@@ -171,7 +171,7 @@ const Navbar = () => {
                 onClick={() => toggleDropdown("inversionistas")}
                 className="flex items-center space-x-1 hover:text-[#09bc8a]"
               >
-                Inversionistas <ChevronDown size={17} />
+                Inversionistas <ChevronDown size={17} color="#09bc8a" />
               </button>
               {activeDropdown === "inversionistas" && (
                 <div className="absolute w-48 mt-2 bg-white border rounded-lg shadow-lg">
