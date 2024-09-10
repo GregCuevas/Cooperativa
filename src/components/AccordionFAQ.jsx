@@ -18,7 +18,7 @@ const AccordionFAQ = () => {
 
       <UIAccordion type="single" collapsible className="w-full max-w-2xl">
         <AccordionItem value="item-1">
-          <AccordionTrigger className="hover:text-[#f8961e] font-bold flex justify-between items-center whitespace-nowrap text-xs sm:text-sm md:text-base lg:text-lg">
+          <AccordionTrigger className="hover:text-[#f8961e] font-bold flex justify-between items-center whitespace-nowrap text-sm sm:text-sm md:text-base lg:text-lg">
             <span>¿Qué es Coopebred?</span>
           </AccordionTrigger>
           <AccordionContent>
@@ -30,7 +30,7 @@ const AccordionFAQ = () => {
         </AccordionItem>
 
         <AccordionItem value="item-2">
-          <AccordionTrigger className="hover:text-[#f8961e] font-bold flex justify-between items-center whitespace-nowrap text-xs sm:text-sm md:text-base lg:text-lg">
+          <AccordionTrigger className="hover:text-[#f8961e] font-bold flex justify-between items-center whitespace-nowrap text-sm sm:text-sm md:text-base lg:text-lg">
             <span>¿Qué servicios ofrece Coopebred?</span>
           </AccordionTrigger>
           <AccordionContent>
@@ -43,7 +43,7 @@ const AccordionFAQ = () => {
         </AccordionItem>
 
         <AccordionItem value="item-3">
-          <AccordionTrigger className="hover:text-[#f8961e] font-bold flex justify-between items-center whitespace-nowrap text-xs sm:text-sm md:text-base lg:text-lg">
+          <AccordionTrigger className="hover:text-[#f8961e] font-bold flex justify-between items-center whitespace-nowrap text-sm sm:text-sm md:text-base lg:text-lg">
             <span>¿Cómo puedo ser miembro de Coopebred?</span>
           </AccordionTrigger>
           <AccordionContent>
@@ -54,8 +54,18 @@ const AccordionFAQ = () => {
           </AccordionContent>
         </AccordionItem>
 
+        <AccordionItem value="item-5">
+          <AccordionTrigger className="hover:text-[#f8961e] font-bold flex justify-between items-center  text-sm sm:text-sm md:text-base lg:text-lg">
+            <span>¿Cómo contribuye Coopebred a la educación?</span>
+          </AccordionTrigger>
+          <AccordionContent>
+            Coopebred ofrece educación en línea para niveles primarios y
+            secundarios, con enfoque en inglés, y acceso a contenido educativo a
+            través de diversas plataformas para sus miembros.
+          </AccordionContent>
+        </AccordionItem>
         <AccordionItem value="item-4">
-          <AccordionTrigger className="hover:text-[#f8961e] font-bold flex justify-between items-center whitespace-nowrap text-xs sm:text-sm md:text-base lg:text-lg">
+          <AccordionTrigger className="hover:text-[#f8961e] font-bold flex justify-between items-center whitespace-nowrap text-sm sm:text-sm md:text-base lg:text-lg">
             <span>¿Cuáles son los requisitos para tomar un préstamo?</span>
           </AccordionTrigger>
           <AccordionContent>
@@ -63,17 +73,6 @@ const AccordionFAQ = () => {
             la cooperativa, presentar documentos que respalden tu capacidad de
             pago (como comprobantes de ingresos) y cumplir con los criterios
             establecidos según el tipo de préstamo.
-          </AccordionContent>
-        </AccordionItem>
-
-        <AccordionItem value="item-5">
-          <AccordionTrigger className="hover:text-[#f8961e] font-bold flex justify-between items-center  text-xs sm:text-sm md:text-base lg:text-lg">
-            <span>¿Cómo contribuye Coopebred a la educación?</span>
-          </AccordionTrigger>
-          <AccordionContent>
-            Coopebred ofrece educación en línea para niveles primarios y
-            secundarios, con enfoque en inglés, y acceso a contenido educativo a
-            través de diversas plataformas para sus miembros.
           </AccordionContent>
         </AccordionItem>
       </UIAccordion>

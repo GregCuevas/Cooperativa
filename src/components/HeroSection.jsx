@@ -11,7 +11,7 @@ import home from "../assets/ground.jpg"; // Image from images folder
 
 const Action = () => {
   return (
-    <div className="flex gap-3">
+    <div className="flex items-center gap-2">
       <Button
         variant="default"
         className="px-4 py-2 font-semibold text-white transition bg-green-600 rounded-full shadow-md hover:bg-green-600"
@@ -22,15 +22,14 @@ const Action = () => {
       <button
         type="button"
         aria-disabled="false"
-        className="group inline-flex items-center justify-center whitespace-nowrap rounded-full py-0 align-middle text-base font-semibold leading-none transition-none disabled:cursor-not-allowed stroke-[#09bc8a] px-4 text-[#0f0f0f] h-[48px] min-w-[48px] gap-2"
+        className="mt-1 group inline-flex items-center justify-center whitespace-nowrap rounded-full py-2 px-4 align-middle text-base font-semibold leading-none transition-none disabled:cursor-not-allowed stroke-[#09bc8a] text-[#0f0f0f] h-[48px] gap-1"
       >
-        <span>See More</span>
+        <span>Ver más</span>
         <ArrowRight className="w-5 h-5 stroke-[#09bc8a]" />
       </button>
     </div>
   );
 };
-
 const HeroSection = () => {
   return (
     <section className="flex flex-col items-center justify-between p-8 text-black md:flex-row md:p-16">
