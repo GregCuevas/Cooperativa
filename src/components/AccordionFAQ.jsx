@@ -19,37 +19,38 @@ const AccordionFAQ = () => {
       <UIAccordion type="single" collapsible className="w-full max-w-2xl">
         <AccordionItem value="item-1">
           <AccordionTrigger className="hover:text-[#f8961e] font-bold flex justify-between items-center whitespace-nowrap text-xs sm:text-sm md:text-base lg:text-lg">
-            <span>¿Cómo puedo pertenecer a su Cooperativa?</span>
+            <span>¿Qué es Coopebred?</span>
           </AccordionTrigger>
           <AccordionContent>
-            Para pertenecer a nuestra cooperativa, debes cumplir con los
-            requisitos de membresía, que generalmente incluyen ser mayor de edad
-            y completar el formulario de inscripción. Puedes acercarte a
-            cualquiera de nuestras oficinas para obtener más información.
+            Es una iniciativa cooperativa diseñada para reducir la brecha
+            digital en la República Dominicana. Se centra en ofrecer servicios
+            de telecomunicaciones asequibles y soluciones educativas integrales
+            a comunidades desatendidas, especialmente en áreas rurales.
           </AccordionContent>
         </AccordionItem>
 
         <AccordionItem value="item-2">
           <AccordionTrigger className="hover:text-[#f8961e] font-bold flex justify-between items-center whitespace-nowrap text-xs sm:text-sm md:text-base lg:text-lg">
-            <span>¿Cómo puedo solicitar un préstamo con ustedes?</span>
+            <span>¿Qué servicios ofrece Coopebred?</span>
           </AccordionTrigger>
           <AccordionContent>
-            Para solicitar un préstamo, debes ser miembro activo de la
-            cooperativa. Luego, puedes presentar tu solicitud junto con los
-            documentos requeridos, como identificación personal, comprobante de
-            ingresos y otros según el tipo de préstamo.
+            Ofrecemos servicios de telecomunicaciones, acceso a voz, datos y
+            video, productos tecnológicos Xiaomi, y servicios educativos en
+            colaboración con la Escuela MAVIR. También brinda contenido de
+            entretenimiento, incluyendo televisión, series, películas y
+            contenido educativo.
           </AccordionContent>
         </AccordionItem>
 
         <AccordionItem value="item-3">
           <AccordionTrigger className="hover:text-[#f8961e] font-bold flex justify-between items-center whitespace-nowrap text-xs sm:text-sm md:text-base lg:text-lg">
-            <span>¿Qué beneficios me dan?</span>
+            <span>¿Cómo puedo ser miembro de Coopebred?</span>
           </AccordionTrigger>
           <AccordionContent>
-            Como miembro de nuestra cooperativa, puedes acceder a una variedad
-            de beneficios, que incluyen tasas de interés competitivas en
-            préstamos, dividendos por tu participación, asesoría financiera y
-            más.
+            Para ser miembro de Coopebred, se puede elegir entre distintos
+            paquetes de membresía que ofrecen beneficios variados, como acceso a
+            servicios, productos y oportunidades financieras dentro de la
+            cooperativa.
           </AccordionContent>
         </AccordionItem>
 
@@ -67,15 +68,12 @@ const AccordionFAQ = () => {
 
         <AccordionItem value="item-5">
           <AccordionTrigger className="hover:text-[#f8961e] font-bold flex justify-between items-center  text-xs sm:text-sm md:text-base lg:text-lg">
-            <span>
-              ¿Cuáles son los requisitos para tomar un préstamo de vehículo?
-            </span>
+            <span>¿Cómo contribuye Coopebred a la educación?</span>
           </AccordionTrigger>
           <AccordionContent>
-            Para un préstamo de vehículo, además de ser miembro activo,
-            necesitas presentar una cotización del vehículo que deseas adquirir,
-            comprobantes de ingresos, y cumplir con los requisitos específicos
-            de financiamiento establecidos por la cooperativa.
+            Coopebred ofrece educación en línea para niveles primarios y
+            secundarios, con enfoque en inglés, y acceso a contenido educativo a
+            través de diversas plataformas para sus miembros.
           </AccordionContent>
         </AccordionItem>
       </UIAccordion>

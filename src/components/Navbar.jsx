@@ -79,13 +79,19 @@ const Navbar = () => {
                     to="/nosotros"
                     className="block px-4 py-2 hover:bg-gray-100"
                   >
+                    Perfil Institucional
+                  </Link>
+                  <Link
+                    to="/nosotros"
+                    className="block px-4 py-2 hover:bg-gray-100"
+                  >
                     Historia
                   </Link>
                   <Link
                     to="/nosotros"
                     className="block px-4 py-2 hover:bg-gray-100"
                   >
-                    Misión
+                    Convenios Institucionales
                   </Link>
                 </div>
               )}
@@ -104,13 +110,19 @@ const Navbar = () => {
                     to="/servicios"
                     className="block px-4 py-2 hover:bg-gray-100"
                   >
-                    Servicio 1
+                    Educación
                   </Link>
                   <Link
                     to="/servicios"
                     className="block px-4 py-2 hover:bg-gray-100"
                   >
-                    Servicio 2
+                    Telecomunicaciones
+                  </Link>
+                  <Link
+                    to="/servicios"
+                    className="block px-4 py-2 hover:bg-gray-100"
+                  >
+                    Financiamiento
                   </Link>
                 </div>
               )}
@@ -129,13 +141,13 @@ const Navbar = () => {
                     to="/socios"
                     className="block px-4 py-2 hover:bg-gray-100"
                   >
-                    Información
+                    Socio Único
                   </Link>
                   <Link
                     to="/socios"
                     className="block px-4 py-2 hover:bg-gray-100"
                   >
-                    Beneficios
+                    Socio Corporativo
                   </Link>
                 </div>
               )}
@@ -165,31 +177,9 @@ const Navbar = () => {
                 </div>
               )}
             </div>
-
-            <div className="relative">
-              <button
-                onClick={() => toggleDropdown("inversionistas")}
-                className="flex items-center space-x-1 hover:text-[#09bc8a]"
-              >
-                Inversionistas <ChevronDown size={17} color="#09bc8a" />
-              </button>
-              {activeDropdown === "inversionistas" && (
-                <div className="absolute w-48 mt-2 bg-white border rounded-lg shadow-lg">
-                  <Link
-                    to="/inversionistas"
-                    className="block px-4 py-2 hover:bg-gray-100"
-                  >
-                    Información
-                  </Link>
-                  <Link
-                    to="/inversionistas"
-                    className="block px-4 py-2 hover:bg-gray-100"
-                  >
-                    Proyectos
-                  </Link>
-                </div>
-              )}
-            </div>
+            <Link to="/about" className="hover:text-[#09bc8a]">
+              Sucursales
+            </Link>
           </div>
 
           {/* Call-to-action Button */}
