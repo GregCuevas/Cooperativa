@@ -153,30 +153,9 @@ const Navbar = () => {
               )}
             </div>
 
-            <div className="relative">
-              <button
-                onClick={() => toggleDropdown("prensa")}
-                className="flex items-center space-x-1 hover:text-[#09bc8a] "
-              >
-                Prensa <ChevronDown size={17} color="#09bc8a" />
-              </button>
-              {activeDropdown === "prensa" && (
-                <div className="absolute w-48 mt-2 bg-white border rounded-lg shadow-lg">
-                  <Link
-                    to="/socios"
-                    className="block px-4 py-2 hover:bg-gray-100"
-                  >
-                    Información
-                  </Link>
-                  <Link
-                    to="/socios"
-                    className="block px-4 py-2 hover:bg-gray-100"
-                  >
-                    Beneficios
-                  </Link>
-                </div>
-              )}
-            </div>
+            <Link to="/" className="hover:text-[#09bc8a]">
+              Prensa
+            </Link>
             <Link to="/about" className="hover:text-[#09bc8a]">
               Sucursales
             </Link>
@@ -239,13 +218,19 @@ const Navbar = () => {
                     to="/nosotros/historia"
                     className="block px-4 py-2 hover:bg-gray-100"
                   >
-                    Historia
+                    Perfil Institucional
                   </Link>
                   <Link
                     to="/nosotros/mision"
                     className="block px-4 py-2 hover:bg-gray-100"
                   >
-                    Misión
+                    Historia
+                  </Link>
+                  <Link
+                    to="/nosotros/historia"
+                    className="block px-4 py-2 hover:bg-gray-100"
+                  >
+                    Convenios Institucionales
                   </Link>
                 </div>
               )}
@@ -264,13 +249,19 @@ const Navbar = () => {
                     to="/servicios/servicio1"
                     className="block px-4 py-2 hover:bg-gray-100"
                   >
-                    Servicio 1
+                    Educación
                   </Link>
                   <Link
                     to="/servicios/servicio2"
                     className="block px-4 py-2 hover:bg-gray-100"
                   >
-                    Servicio 2
+                    Telecomunicaciones
+                  </Link>
+                  <Link
+                    to="/servicios/servicio1"
+                    className="block px-4 py-2 hover:bg-gray-100"
+                  >
+                    Financiamiento
                   </Link>
                 </div>
               )}
@@ -289,66 +280,28 @@ const Navbar = () => {
                     to="/socios/informacion"
                     className="block px-4 py-2 hover:bg-gray-100"
                   >
-                    Información
+                    Socio Único
                   </Link>
                   <Link
                     to="/socios/beneficios"
                     className="block px-4 py-2 hover:bg-gray-100"
                   >
-                    Beneficios
+                    Socio Corporativo
                   </Link>
                 </div>
               )}
             </li>
 
             <li className="relative w-full">
-              <button
-                onClick={() => toggleDropdowns("prensa")}
-                className="flex justify-between items-center w-full text-[#09bc8a] font-bold px-4 py-2 hover:bg-gray-100 rounded transition-colors"
-              >
-                Prensa <ChevronDown size={17} />
+              <button className="flex justify-between items-center w-full text-[#09bc8a] font-bold px-4 py-2 hover:bg-gray-100 rounded transition-colors">
+                <Link to="/">Prensa </Link>
               </button>
-              {activeDropdowns === "prensa" && (
-                <div className="absolute left-0 z-50 w-full mt-2 bg-white border rounded-lg shadow-lg">
-                  <Link
-                    to="/prensa"
-                    className="block px-4 py-2 hover:bg-gray-100"
-                  >
-                    Noticias
-                  </Link>
-                  <Link
-                    to="/prensa/eventos"
-                    className="block px-4 py-2 hover:bg-gray-100"
-                  >
-                    Eventos
-                  </Link>
-                </div>
-              )}
             </li>
 
             <li className="relative w-full">
-              <button
-                onClick={() => toggleDropdowns("inversionistas")}
-                className="flex justify-between items-center w-full text-[#09bc8a] font-bold px-4 py-2 hover:bg-gray-100 rounded transition-colors"
-              >
-                Inversionistas <ChevronDown size={17} />
+              <button className="flex justify-between items-center w-full text-[#09bc8a] font-bold px-4 py-2 hover:bg-gray-100 rounded transition-colors">
+                <Link to="/">Sucursales </Link>
               </button>
-              {activeDropdowns === "inversionistas" && (
-                <div className="absolute left-0 z-50 w-full mt-2 bg-white border rounded-lg shadow-lg">
-                  <Link
-                    to="/inversionistas/informacion"
-                    className="block px-4 py-2 hover:bg-gray-100"
-                  >
-                    Información
-                  </Link>
-                  <Link
-                    to="/inversionistas/proyectos"
-                    className="block px-4 py-2 hover:bg-gray-100"
-                  >
-                    Proyectos
-                  </Link>
-                </div>
-              )}
             </li>
 
             <li className="relative w-full">
