@@ -22,25 +22,10 @@ const Action = () => {
       <button
         type="button"
         aria-disabled="false"
-        className="group inline-flex items-center justify-center whitespace-nowrap rounded-lg py-2 align-middle text-sm font-semibold leading-none transition-none disabled:cursor-not-allowed stroke-[#09bc8a] px-2 text-[#0f0f0f] h-[42px] min-w-[42px] gap-2"
+        className="group inline-flex items-center justify-center whitespace-nowrap rounded-full py-0 align-middle text-base font-semibold leading-none transition-none disabled:cursor-not-allowed stroke-[#09bc8a] px-4 text-[#0f0f0f] h-[48px] min-w-[48px] gap-2"
       >
         <span>See More</span>
-        <svg
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          strokeWidth="1.5"
-          xmlns="http://www.w3.org/2000/svg"
-          className="size-6 stroke-inherit"
-        >
-          <path
-            d="M11 16L15 12L11 8"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          ></path>
-          <circle cx="12" cy="12" r="9"></circle>
-        </svg>
+        <ArrowRight className="w-5 h-5 stroke-[#09bc8a]" />
       </button>
     </div>
   );

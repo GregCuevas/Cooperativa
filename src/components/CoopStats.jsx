@@ -35,19 +35,19 @@ const CoopStats = () => {
       </div>
       <div className="flex flex-wrap justify-center gap-20">
         <div className="text-center">
-          <h1 className="text-6xl font-bold">
+          <h1 className="text-5xl font-bold lg:text-6xl">
             <CountUp end={257} duration={7} />+
           </h1>
           <p className="mt-2 text-xl">Proyectos Financiados</p>
         </div>
         <div className="text-center">
-          <h1 className="text-6xl font-bold">
+          <h1 className="text-5xl font-bold lg:text-6xl">
             <CountUp end={200} duration={7} />+
           </h1>
           <p className="mt-2 text-xl">Asociados</p>
         </div>
         <div className="text-center">
-          <h1 className="text-6xl font-bold">
+          <h1 className="text-5xl font-bold lg:text-6xl">
             <CountUp end={96} duration={7} />%
           </h1>
           <p className="mt-2 text-xl">Satisfacción de los Clientes</p>

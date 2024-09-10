@@ -6,6 +6,7 @@ import BlogSection from "../components/BlogSection";
 import BlogSocios from "../components/BlogSocios";
 import CoopStats from "../components/CoopStats";
 import Accordion from "../components/AccordionFAQ";
+
 const Home = () => {
   return (
     <>
