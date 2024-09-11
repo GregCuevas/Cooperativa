@@ -37,11 +37,11 @@ const LocationMap = () => {
   return (
     <div className="container px-4 py-8 mx-auto">
       {/* Div contenedor principal para administrar espacio */}
-      <div className="p-6 bg-white rounded-lg shadow-md">
+      <div className="p-6 ">
         {/* Nueva Sección - Encabezado */}
         <div className="mb-8 text-center">
           <div className="flex flex-col items-center justify-center space-y-2 md:space-x-2 md:flex-row">
-            <MapPin className="text-red-600" size={28} />
+            <MapPin className="text-red-500" size={28} />
             <h2 className="text-2xl font-bold text-gray-800 md:text-3xl">
               Nuestra ubicación
             </h2>
@@ -56,24 +56,27 @@ const LocationMap = () => {
 
           {/* Sección de información de contacto */}
           <div className="w-full space-y-6 md:w-1/3">
-            <h2 className="text-xl font-bold md:text-2xl">
-              Encuentra nuestra ubicación y la sucursal o cajero más cercano
+            <h2 className="text-xl font-bold text-center md:text-2xl">
+              Encuéntranos en la siguiente dirección
             </h2>
             <div className="flex items-center space-x-3">
               <MapPin className="text-green-600" size={24} />
-              <p>243 Heights Promenade, Brooklyn, NY, USA</p>
+              <p>
+                Edificio Lama Av. Winston Churchill 71, Santo Domingo, República
+                Dominicana.
+              </p>
             </div>
             <div className="flex items-center space-x-3">
               <Mail className="text-green-600" size={24} />
               <div>
-                <p>example@example.com</p>
+                <p>Coopebred@silkglobal.com</p>
                 <span className="text-sm text-gray-500">Soporte 24/7</span>
               </div>
             </div>
             <div className="flex items-center space-x-3">
               <Phone className="text-green-600" size={24} />
               <div>
-                <p>+1 452 123 1235</p>
+                <p>(829) 470 5898</p>
                 <span className="text-sm text-gray-500">Consulta Gratuita</span>
               </div>
             </div>

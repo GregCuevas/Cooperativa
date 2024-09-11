@@ -7,6 +7,7 @@ import BlogSocios from "../components/BlogSocios";
 import CoopStats from "../components/CoopStats";
 import Accordion from "../components/AccordionFAQ";
 import LocationMap from "../components/LocationMap";
+import LoanOptions from "../components/LoanOptions";
 const Home = () => {
   return (
     <>
@@ -16,6 +17,7 @@ const Home = () => {
       <BlogSection />
       <BlogSocios />
       <CoopStats />
+      <LoanOptions />
       <Accordion />
       <LocationMap />
     </>
