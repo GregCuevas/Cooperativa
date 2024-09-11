@@ -1,5 +1,5 @@
 import { ArrowRight, Wallet, Home, CarFront } from "lucide-react";
-
+import { Link } from "react-router-dom";
 const LoanOptions = () => {
   return (
     <div className="container max-w-4xl px-4 py-8 mx-auto">
@@ -37,9 +37,11 @@ const LoanOptions = () => {
               {item.title}
             </h2>
             <p className="mb-4 text-gray-600">{item.description}</p>
-            <button className="flex items-center justify-center w-12 h-12 text-white transition-colors bg-[#ffb41f] rounded-full hover:bg-[#ff9f1c] focus:ring-4 focus:ring-[#ffb703] focus:outline-none">
-              <ArrowRight className="w-6 h-6" />
-            </button>
+            <Link to="/calculadora">
+              <button className="flex items-center justify-center w-12 h-12 text-white transition-colors bg-[#ffb41f] rounded-full hover:bg-[#ff9f1c] focus:ring-4 focus:ring-[#ffb703] focus:outline-none">
+                <ArrowRight className="w-6 h-6" />
+              </button>
+            </Link>
           </div>
         ))}
       </div>

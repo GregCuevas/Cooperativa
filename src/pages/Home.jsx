@@ -8,6 +8,7 @@ import CoopStats from "../components/CoopStats";
 import Accordion from "../components/AccordionFAQ";
 import LocationMap from "../components/LocationMap";
 import LoanOptions from "../components/LoanOptions";
+import Footer from "../components/Footer";
 const Home = () => {
   return (
     <>
@@ -20,6 +21,7 @@ const Home = () => {
       <LoanOptions />
       <Accordion />
       <LocationMap />
+      <Footer />
     </>
   );
 };
