@@ -5,16 +5,16 @@ import {
   GraduationCap,
   CircleDollarSign,
   BadgeCheck,
-} from "lucide-react"; // Icon from Lucide-react
+} from "lucide-react"; // Iconos de Lucide-react
 import { Button } from "@/components/ui/button";
-import home from "../assets/ground.jpg"; // Image from images folder
+import home from "../assets/ground.jpg"; // Imagen del archivo de imágenes
 
 const Action = () => {
   return (
-    <div className="flex items-center gap-2">
+    <div className="flex items-center justify-center gap-4 mt-6 md:justify-start">
       <Button
         variant="default"
-        className="px-4 py-2 font-semibold text-white transition bg-green-600 rounded-full shadow-md hover:bg-green-600"
+        className="px-6 py-3 font-semibold text-white transition-all bg-green-600 rounded-full shadow-md hover:bg-green-700 focus:ring-4 focus:ring-green-500"
       >
         <BadgeCheck className="w-5 h-5 mr-2" />
         Verificados
@@ -22,27 +22,28 @@ const Action = () => {
       <button
         type="button"
         aria-disabled="false"
-        className="mt-1 group inline-flex items-center justify-center whitespace-nowrap rounded-full py-2 px-4 align-middle text-base font-semibold leading-none transition-none disabled:cursor-not-allowed stroke-[#09bc8a] text-[#0f0f0f] h-[48px] gap-1"
+        className="group flex items-center justify-center gap-2 whitespace-nowrap rounded-full py-3 px-6 text-base font-semibold text-[#09bc8a] transition-all hover:bg-green-50 hover:text-[#069770] focus:ring-4 focus:ring-[#09bc8a] focus:outline-none"
       >
         <span>Ver más</span>
-        <ArrowRight className="w-5 h-5 stroke-[#09bc8a]" />
+        <ArrowRight className="w-5 h-5 stroke-[#09bc8a] group-hover:stroke-[#069770]" />
       </button>
     </div>
   );
 };
+
 const HeroSection = () => {
   return (
-    <section className="flex flex-col items-center justify-between p-8 text-black md:flex-row md:p-16">
-      <div className="md:w-5/12 lg:w-4/12">
-        <h3 className="mb-4 text-2xl font-extrabold text-gray-900 md:text-4xl lg:text-5xl">
-          Innovación con Coopebred
+    <section className="flex flex-col items-center justify-between p-8 md:p-16 xl:px-32 2xl:px-48 md:flex-col lg:flex-row">
+      <div className="text-center md:w-full lg:w-4/12 md:text-center lg:text-left">
+        <h3 className="mb-6 text-3xl font-extrabold leading-tight text-gray-900 md:text-4xl lg:text-5xl">
+          Construyendo tu Futuro con Coopebred
         </h3>
-        <p className="mb-8 text-base text-gray-700 md:text-lg lg:text-xl">
+        <p className="mb-8 text-lg leading-relaxed text-gray-700 md:text-lg lg:text-xl">
           El futuro de las cooperativas está aquí para ti. Disfruta de una
           cooperativa que pone a sus socios primero. ¡Únete hoy y empieza a
           construir tu futuro con nosotros!
         </p>
-        <div className="flex items-center justify-start mb-8 space-x-4">
+        <div className="flex items-center justify-center mb-8 space-x-6 md:justify-center lg:justify-start">
           <PiggyBank color="#09bc8a" strokeWidth={1.5} size={40} />
           <GraduationCap color="#09bc8a" strokeWidth={1.5} size={40} />
           <CircleDollarSign color="#09bc8a" strokeWidth={1.5} size={40} />
@@ -51,11 +52,12 @@ const HeroSection = () => {
         <Action />
       </div>
 
-      <div className="mt-8 md:w-7/12 lg:w-6/12 md:mt-0">
+      {/* Añadí 'md:mt-12' para dar espacio adicional en tablets */}
+      <div className="flex justify-center mt-8 md:mt-7 md:w-full lg:w-6/12 ">
         <img
           src={home}
-          alt="Coop Image"
-          className="w-full max-w-[500px] mx-auto md:max-w-full rounded-lg shadow-lg"
+          alt="Imagen de la cooperativa"
+          className="w-full max-w-[400px] mx-auto md:max-w-full rounded-lg shadow-xl transition-transform duration-300 "
         />
       </div>
     </section>
