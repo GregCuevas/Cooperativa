@@ -11,7 +11,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 gap-8 md:grid-cols-5">
           <div className="col-span-1 md:col-span-2">
             <div className="flex flex-col items-start space-y-4 sm:flex-row sm:items-center sm:space-y-0 sm:space-x-4">
-              <div className="relative w-56 h-20">
+              <div className="w-56 h-20 ">
                 <img
                   src={Image}
                   alt="Coopebred Logo"
@@ -128,7 +128,7 @@ export default function Footer() {
                   href="mailto:coopeducate@silkglobal.com" // mailto: abre el cliente de correo
                   className="text-gray-600 hover:text-gray-900"
                 >
-                  coopeducate@silkglobal.com
+                  coopebred@silkglobal.com
                 </a>
               </li>
             </ul>

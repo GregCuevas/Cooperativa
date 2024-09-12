@@ -6,7 +6,7 @@ import Socio from "../assets/socio.png";
 const BlogSocios = () => {
   return (
     <section className="flex flex-col w-full gap-12 px-3 py-12 m-auto 2xl:py-16 max-w-screen-2xl sm:px-8 lg:px-16 xl:px-32">
-      <h2 className="text-4xl font-bold text-center text-slate-900">
+      <h2 className="text-3xl font-bold tracking-tighter text-center text-gray-700 sm:text-4xl">
         Nuestros Socios
       </h2>
 
@@ -63,9 +63,8 @@ const PostImageCard = ({ src, className, title, description, icon }) => {
 const PostDetails = () => {
   return (
     <p className="inline-flex items-center justify-start gap-2 text-slate-400">
-      <span className="text-xs leading-none">Negocios</span>
       <span className="size-1.5 rounded-full bg-[#f8961e]" />
-      <span className="text-xs leading-none">1 min. Leer</span>
+      <span className="text-xs leading-none">Negocios</span>
     </p>
   );
 };

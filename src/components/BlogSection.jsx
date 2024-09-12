@@ -6,24 +6,23 @@ import Money from "../assets/money.jpg";
 const blogPosts = [
   {
     icon: Tele,
-    category: "Category",
-    readTime: "2 min. read",
+    category: "Conectividad",
+
     title: "Telecomunicaciones",
     description:
       "Para ampliar las telecomunicaciones en zonas rurales, nos enfocamos en promover el desarrollo educativo.",
   },
   {
     icon: Graduate,
-    category: "Category",
-    readTime: "1 min. read",
+    category: "Equidad",
+
     title: "Educación",
     description:
       "Comprometidos con un objetivo compartido, Coopebred facilita el acceso equitativo a la tecnología 5G para todos.",
   },
   {
     icon: Money,
-    category: "Category",
-    readTime: "3 min. read",
+    category: "Acceso",
     title: "Financiamiento",
     description:
       "Con las soluciones de COOPEDUCATE, las familias en áreas rurales acceden a diversas ventajas económicas.",
@@ -35,7 +34,7 @@ const BlogSection = () => {
     <section className="flex items-center justify-center w-full px-4 py-12">
       <div className="mx-auto max-w-7xl">
         <div className="flex flex-col items-center justify-between mb-12">
-          <h2 className="mb-4 text-3xl font-bold tracking-tighter text-center sm:text-5xl">
+          <h2 className="mb-4 text-3xl font-bold tracking-tighter text-center text-gray-700 sm:text-5xl">
             Conectamos áreas rurales con innovación digital
           </h2>
           <p className="text-lg text-center text-slate-600">
@@ -54,9 +53,8 @@ const BlogSection = () => {
                 />
               </div>
               <div className="flex items-center space-x-2 text-sm text-gray-500">
-                <span className="font-medium">{post.category}</span>
                 <span className="text-[#09bc8a]">•</span>
-                <span>{post.readTime}</span>
+                <span className="font-medium">{post.category}</span>
               </div>
               <h3 className="text-xl font-bold">{post.title}</h3>
               <p className="text-gray-500">{post.description}</p>

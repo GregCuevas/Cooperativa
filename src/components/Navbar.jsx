@@ -76,19 +76,19 @@ const Navbar = () => {
               {activeDropdown === "nosotros" && (
                 <div className="absolute w-48 mt-2 bg-white border rounded-lg shadow-lg">
                   <Link
-                    to="/nosotros"
+                    to="/perfil-institucional"
                     className="block px-4 py-2 hover:bg-gray-100"
                   >
                     Perfil Institucional
                   </Link>
                   <Link
-                    to="/nosotros"
+                    to="/historia"
                     className="block px-4 py-2 hover:bg-gray-100"
                   >
                     Historia
                   </Link>
                   <Link
-                    to="/nosotros"
+                    to="/convenios-institucionales"
                     className="block px-4 py-2 hover:bg-gray-100"
                   >
                     Convenios Institucionales
@@ -107,19 +107,19 @@ const Navbar = () => {
               {activeDropdown === "servicios" && (
                 <div className="absolute w-48 mt-2 bg-white border rounded-lg shadow-lg">
                   <Link
-                    to="/servicios"
+                    to="/educacion"
                     className="block px-4 py-2 hover:bg-gray-100"
                   >
                     Educación
                   </Link>
                   <Link
-                    to="/servicios"
+                    to="/telecomunicaciones"
                     className="block px-4 py-2 hover:bg-gray-100"
                   >
                     Telecomunicaciones
                   </Link>
                   <Link
-                    to="/servicios"
+                    to="/financiamiento"
                     className="block px-4 py-2 hover:bg-gray-100"
                   >
                     Financiamiento

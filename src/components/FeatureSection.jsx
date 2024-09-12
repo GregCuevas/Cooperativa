@@ -33,7 +33,7 @@ const FeatureSection = () => {
         <h4 className="mb-4 text-base font-medium tracking-wide text-gray-500 uppercase">
           Coopebred hace todo por ti.
         </h4>
-        <h2 className="mb-10 text-4xl font-extrabold leading-tight text-gray-900 md:text-5xl">
+        <h2 className="mb-10 text-4xl font-bold text-gray-900 md:text-5xl">
           Programa Coopebred
         </h2>
       </header>
