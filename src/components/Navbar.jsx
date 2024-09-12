@@ -138,25 +138,25 @@ const Navbar = () => {
               {activeDropdown === "socios" && (
                 <div className="absolute w-48 mt-2 bg-white border rounded-lg shadow-lg">
                   <Link
-                    to="/socios"
+                    to="/socio-individual"
                     className="block px-4 py-2 hover:bg-gray-100"
                   >
-                    Socio Único
+                    Socio Individual
                   </Link>
                   <Link
-                    to="/socios"
+                    to="/socio-empresa"
                     className="block px-4 py-2 hover:bg-gray-100"
                   >
-                    Socio Corporativo
+                    Socio Empresa
                   </Link>
                 </div>
               )}
             </div>
 
-            <Link to="/" className="hover:text-[#09bc8a]">
+            <Link to="/prensa" className="hover:text-[#09bc8a]">
               Prensa
             </Link>
-            <Link to="/about" className="hover:text-[#09bc8a]">
+            <Link to="/sucursales" className="hover:text-[#09bc8a]">
               Sucursales
             </Link>
           </div>
@@ -277,16 +277,16 @@ const Navbar = () => {
               {activeDropdowns === "socios" && (
                 <div className="absolute left-0 z-50 w-full mt-2 bg-white border rounded-lg shadow-lg">
                   <Link
-                    to="/socios/informacion"
+                    to="/socios-individual"
                     className="block px-4 py-2 hover:bg-gray-100"
                   >
-                    Socio Único
+                    Socio Individual
                   </Link>
                   <Link
-                    to="/socios/beneficios"
+                    to="/socios-empresa"
                     className="block px-4 py-2 hover:bg-gray-100"
                   >
-                    Socio Corporativo
+                    Socio Empresa
                   </Link>
                 </div>
               )}

@@ -19,14 +19,14 @@ const BlogSocios = () => {
         <PostImageCard
           src={Socio}
           className="object-cover w-full h-auto transition-transform duration-300 hover:scale-105"
-          title="Socio único"
+          title="Socio Individual"
           description="Brindamos soluciones a medida para estudiantes y familias en comunidades rurales y urbanas desfavorecidas."
           icon={<User size={24} strokeWidth={1.5} />}
         />
         <PostImageCard
           src={Empresa}
           className="object-cover w-full h-auto transition-transform duration-300 hover:scale-105"
-          title="Socio corporativo"
+          title="Socio Empresa"
           description="Coopeducate ofrece varias formas de asociación, cada una con compromisos y servicios adaptados a sus beneficios y condiciones."
           icon={<Briefcase size={24} strokeWidth={1.5} />}
         />

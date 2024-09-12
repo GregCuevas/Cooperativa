@@ -4,10 +4,25 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 const AccordionFAQ = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    // Verifica si el hash en la URL es #preguntas-frecuentes
+    if (location.hash === "#preguntas-frecuentes") {
+      const element = document.getElementById("preguntas-frecuentes");
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  }, [location]);
   return (
-    <div className="flex flex-col items-center justify-center min-h-[60vh] p-4 md:p-6 bg-white m-2">
+    <div
+      id="preguntas-frecuentes"
+      className=" flex flex-col items-center justify-center min-h-[60vh] p-4 md:p-6 bg-white m-2"
+    >
       <h2 className="mb-4 text-3xl font-bold text-center md:text-3xl">
         Preguntas Frecuentes
       </h2>

@@ -16,7 +16,7 @@ export default function Footer() {
                   src={Image}
                   alt="Coopebred Logo"
                   layout="fill"
-                  objectFit="contain"
+                  style={{ objectFit: "cover" }}
                   className="rounded"
                 />
               </div>
@@ -31,13 +31,19 @@ export default function Footer() {
             <h3 className="font-semibold text-gray-900">Socios</h3>
             <ul className="mt-4 space-y-2">
               <li>
-                <Link href="#" className="text-gray-600 hover:text-gray-900">
-                  Socio único
+                <Link
+                  to="/socio-individual"
+                  className="text-gray-600 hover:text-gray-900"
+                >
+                  Socio Individual
                 </Link>
               </li>
               <li>
-                <Link href="#" className="text-gray-600 hover:text-gray-900">
-                  Socio corporativo
+                <Link
+                  to="/socio-empresa"
+                  className="text-gray-600 hover:text-gray-900"
+                >
+                  Socio Empresa
                 </Link>
               </li>
             </ul>
@@ -47,22 +53,39 @@ export default function Footer() {
             <h3 className="font-semibold text-gray-900">Enlaces rápidos</h3>
             <ul className="mt-4 space-y-2">
               <li>
-                <Link href="#" className="text-gray-600 hover:text-gray-900">
+                <Link to="/" className="text-gray-600 hover:text-gray-900">
                   Inicio
                 </Link>
               </li>
               <li>
-                <Link href="#" className="text-gray-600 hover:text-gray-900">
+                <Link
+                  to="/perfil-institucional"
+                  className="text-gray-600 hover:text-gray-900"
+                >
                   Perfil Institucional
                 </Link>
               </li>
               <li>
-                <Link href="#" className="text-gray-600 hover:text-gray-900">
+                <Link
+                  to="/historia"
+                  className="text-gray-600 hover:text-gray-900"
+                >
                   Historia
                 </Link>
               </li>
               <li>
-                <Link href="#" className="text-gray-600 hover:text-gray-900">
+                <Link
+                  to="/calculadora-prestamos"
+                  className="text-gray-600 hover:text-gray-900"
+                >
+                  Calculadora de Prestamos
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/acuerdos"
+                  className="text-gray-600 hover:text-gray-900"
+                >
                   Acuerdos Institucionales
                 </Link>
               </li>
@@ -73,24 +96,40 @@ export default function Footer() {
             <h3 className="font-semibold text-gray-900">Contactos</h3>
             <ul className="mt-4 space-y-2">
               <li>
-                <Link href="#" className="text-gray-600 hover:text-gray-900">
+                <Link
+                  to="https://api.whatsapp.com/send?phone=8294705898" // Incluye el número de teléfono en formato internacional (sin + ni espacios)
+                  className="text-gray-600 hover:text-gray-900"
+                  target="_blank" // Esto abrirá el enlace en una nueva pestaña
+                  rel="noopener noreferrer" // Buenas prácticas para seguridad
+                >
                   (829) 470 5898
                 </Link>
               </li>
               <li>
-                <Link href="#" className="text-gray-600 hover:text-gray-900">
+                <Link
+                  to="/#preguntas-frecuentes"
+                  className="text-gray-600 hover:text-gray-900"
+                >
                   Preguntas Frecuentes
                 </Link>
               </li>
               <li>
-                <Link href="#" className="text-gray-600 hover:text-gray-900">
+                <Link
+                  to="https://www.google.com/maps?q=Edificio+Lama,+Av.+Winston+Churchill+71,+Santo+Domingo" // URL de Google Maps con la dirección
+                  className="text-gray-600 hover:text-gray-900"
+                  target="_blank" // Esto abrirá el enlace en una nueva pestaña
+                  rel="noopener noreferrer" // Buenas prácticas para seguridad
+                >
                   Edificio Lama, Av. Winston Churchill 71, Santo Domingo
                 </Link>
               </li>
               <li>
-                <Link href="#" className="text-gray-600 hover:text-gray-900">
+                <a
+                  href="mailto:coopeducate@silkglobal.com" // mailto: abre el cliente de correo
+                  className="text-gray-600 hover:text-gray-900"
+                >
                   coopeducate@silkglobal.com
-                </Link>
+                </a>
               </li>
             </ul>
           </div>
