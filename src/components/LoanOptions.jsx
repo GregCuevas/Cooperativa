@@ -37,7 +37,7 @@ const LoanOptions = () => {
               {item.title}
             </h2>
             <p className="mb-4 text-gray-600">{item.description}</p>
-            <Link to="/calculadora">
+            <Link to="/calculadora-prestamos">
               <button className="flex items-center justify-center w-12 h-12 text-white transition-colors bg-[#ffb41f] rounded-full hover:bg-[#ff9f1c] focus:ring-4 focus:ring-[#ffb703] focus:outline-none">
                 <ArrowRight className="w-6 h-6" />
               </button>
