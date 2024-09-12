@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Navbar from "../components/Navbar";
-
+import Footer from "../components/Footer";
 const Loan = () => {
   const [monto, setMonto] = useState("");
   const [meses, setMeses] = useState("");
@@ -148,6 +148,7 @@ const Loan = () => {
           </div>
         </div>
       </div>
+      <Footer />
     </>
   );
 };

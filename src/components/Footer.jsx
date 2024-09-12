@@ -21,7 +21,7 @@ export default function Footer() {
                 />
               </div>
             </div>
-            <p className="max-w-md text-gray-600">
+            <p className="max-w-sm text-gray-600">
               Nuestro compromiso es reducir la brecha digital en la República
               Dominicana, priorizando el apoyo a las familias del ámbito
               educativo mediante soluciones específicas.
