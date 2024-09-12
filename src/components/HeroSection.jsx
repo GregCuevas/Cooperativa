@@ -22,7 +22,7 @@ const Action = () => {
       <button
         type="button"
         aria-disabled="false"
-        className="group flex items-center justify-center gap-2 whitespace-nowrap rounded-full py-3 px-6 text-base font-semibold text-[#09bc8a] transition-all hover:bg-green-50 hover:text-[#069770] focus:ring-4 focus:ring-[#09bc8a] focus:outline-none"
+        className="group flex items-center justify-center gap-2 whitespace-nowrap rounded-full py-3 px-6 text-base font-semibold text-[#09bc8a] transition-all hover:bg-green-50 hover:text-[#069770]  "
       >
         <span>Ver más</span>
         <ArrowRight className="w-5 h-5 stroke-[#09bc8a] group-hover:stroke-[#069770]" />

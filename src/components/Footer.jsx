@@ -1,6 +1,6 @@
 import Image from "../assets/logo.png";
 import { Link } from "react-router-dom";
-import { Facebook, Instagram, Dribbble, Github } from "lucide-react";
+import { Facebook, Instagram, Linkedin, MessageCircle } from "lucide-react";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -21,34 +21,23 @@ export default function Footer() {
                 />
               </div>
             </div>
-            <p className="max-w-xs text-gray-600">
+            <p className="max-w-md text-gray-600">
               Nuestro compromiso es reducir la brecha digital en la República
               Dominicana, priorizando el apoyo a las familias del ámbito
               educativo mediante soluciones específicas.
             </p>
           </div>
-
           <div>
-            <h3 className="font-semibold text-gray-900">Contactos</h3>
+            <h3 className="font-semibold text-gray-900">Socios</h3>
             <ul className="mt-4 space-y-2">
               <li>
                 <Link href="#" className="text-gray-600 hover:text-gray-900">
-                  (829) 470 5898
+                  Socio único
                 </Link>
               </li>
               <li>
                 <Link href="#" className="text-gray-600 hover:text-gray-900">
-                  coopeducate@silkglobal.com
-                </Link>
-              </li>
-              <li>
-                <Link href="#" className="text-gray-600 hover:text-gray-900">
-                  Edificio Lama, Av. Winston Churchill 71, Santo Domingo
-                </Link>
-              </li>
-              <li>
-                <Link href="#" className="text-gray-600 hover:text-gray-900">
-                  Preguntas Frecuentes
+                  Socio corporativo
                 </Link>
               </li>
             </ul>
@@ -81,16 +70,26 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="font-semibold text-gray-900">Socios</h3>
+            <h3 className="font-semibold text-gray-900">Contactos</h3>
             <ul className="mt-4 space-y-2">
               <li>
                 <Link href="#" className="text-gray-600 hover:text-gray-900">
-                  Socio único
+                  (829) 470 5898
                 </Link>
               </li>
               <li>
                 <Link href="#" className="text-gray-600 hover:text-gray-900">
-                  Socio corporativo
+                  Preguntas Frecuentes
+                </Link>
+              </li>
+              <li>
+                <Link href="#" className="text-gray-600 hover:text-gray-900">
+                  Edificio Lama, Av. Winston Churchill 71, Santo Domingo
+                </Link>
+              </li>
+              <li>
+                <Link href="#" className="text-gray-600 hover:text-gray-900">
+                  coopeducate@silkglobal.com
                 </Link>
               </li>
             </ul>
@@ -102,22 +101,35 @@ export default function Footer() {
             &copy; Coopebred {currentYear}
           </p>
           <div className="flex mt-4 space-x-6 sm:mt-0">
-            <Link href="#" className="text-gray-400 hover:text-gray-500">
+            <a
+              href="https://www.facebook.com/silkglobal?locale=es_LA"
+              className="text-gray-400 hover:text-gray-500"
+            >
               <span className="sr-only">Facebook</span>
               <Facebook className="w-6 h-6" />
-            </Link>
-            <Link href="#" className="text-gray-400 hover:text-gray-500">
+            </a>
+            <a
+              href="https://www.instagram.com/silkglobaldominicana/"
+              className="text-gray-400 hover:text-gray-500"
+            >
               <span className="sr-only">Instagram</span>
               <Instagram className="w-6 h-6" />
-            </Link>
-            <Link href="#" className="text-gray-400 hover:text-gray-500">
+            </a>
+            <a
+              href="https://www.linkedin.com/company/coopebred/"
+              className="text-gray-400 hover:text-gray-500"
+            >
               <span className="sr-only">Dribbble</span>
-              <Dribbble className="w-6 h-6" />
-            </Link>
-            <Link href="#" className="text-gray-400 hover:text-gray-500">
+              <Linkedin className="w-6 h-6" />
+            </a>
+            <a
+              href="https://wa.me/18294705898"
+              target="_blank"
+              className="text-gray-400 hover:text-gray-500"
+            >
               <span className="sr-only">GitHub</span>
-              <Github className="w-6 h-6" />
-            </Link>
+              <MessageCircle className="w-6 h-6" />
+            </a>
           </div>
         </div>
       </div>
