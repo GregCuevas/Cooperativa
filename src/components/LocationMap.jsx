@@ -37,7 +37,7 @@ const LocationMap = () => {
     <div className="container px-4 py-8 mx-auto font-inter">
       {/* Sección del título */}
       <div className="p-6 text-center">
-        <div className="flex flex-col items-center justify-center space-y-2 md:space-x-2 md:flex-row">
+        <div className="flex flex-col items-center justify-center space-y-2">
           <MapPin className="text-orange-500 animate-bounce" size={28} />
           <h2 className="text-3xl font-extrabold tracking-wide text-gray-900 transition-transform duration-300 ease-in-out transform md:text-4xl hover:scale-105">
             Nuestra ubicación
@@ -46,22 +46,18 @@ const LocationMap = () => {
       </div>
 
       {/* Contenedor principal con mapa e información */}
-      <div className="flex flex-wrap items-center justify-center md:flex-nowrap md:justify-start md:space-x-8">
+      <div className="flex flex-col items-center justify-center space-y-8">
         {/* Sección del mapa */}
-        <div className="w-full mb-8 md:w-2/3 md:mb-0">
+        <div className="w-full md:w-10/12">
           <div
             ref={mapContainerRef}
-            className="w-full rounded-lg shadow-lg h-80 md:h-96"
+            className="w-full mx-auto rounded-lg shadow-lg h-80 md:h-96"
           />
         </div>
 
         {/* Sección de información de contacto */}
-        <div className="w-full space-y-6 md:w-1/3">
-          <h2 className="text-3xl font-medium leading-snug tracking-normal text-center text-gray-800 transition-colors duration-300 md:text-4xl hover:text-orange-500 font-poppins">
-            Encuéntranos en la siguiente dirección
-          </h2>
-
-          <div className="flex items-center space-x-3">
+        <div className="w-full space-y-6 md:space-y-0 md:flex md:justify-between md:items-center md:space-x-6 md:w-10/12">
+          <div className="flex items-center space-x-3 md:flex-row md:items-center">
             <MapPin className="text-orange-600" size={24} />
             <p className="text-gray-700 transition-colors hover:text-orange-600">
               Edificio Lama Av. Winston Churchill 71, Santo Domingo, República
@@ -69,7 +65,7 @@ const LocationMap = () => {
             </p>
           </div>
 
-          <div className="flex items-center space-x-3">
+          <div className="flex items-center space-x-3 md:flex-row md:items-center">
             <Mail className="text-orange-600" size={24} />
             <div className="text-gray-700 transition-colors hover:text-orange-600">
               <p>Coopebred@silkglobal.com</p>
@@ -77,7 +73,7 @@ const LocationMap = () => {
             </div>
           </div>
 
-          <div className="flex items-center space-x-3">
+          <div className="flex items-center space-x-3 md:flex-row md:items-center">
             <Phone className="text-orange-600" size={24} />
             <div className="text-gray-700 transition-colors hover:text-orange-600">
               <p>(829) 470 5898</p>
