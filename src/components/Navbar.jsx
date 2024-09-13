@@ -87,12 +87,6 @@ const Navbar = () => {
                   >
                     Historia
                   </Link>
-                  <Link
-                    to="/convenios-institucionales"
-                    className="block px-4 py-2 hover:bg-gray-100"
-                  >
-                    Convenios Institucionales
-                  </Link>
                 </div>
               )}
             </div>
@@ -215,22 +209,16 @@ const Navbar = () => {
               {activeDropdowns === "nosotros" && (
                 <div className="absolute left-0 z-50 w-full mt-2 bg-white border rounded-lg shadow-lg">
                   <Link
-                    to="/nosotros/historia"
+                    to="/perfil-institucional"
                     className="block px-4 py-2 hover:bg-gray-100"
                   >
                     Perfil Institucional
                   </Link>
                   <Link
-                    to="/nosotros/mision"
+                    to="/historia"
                     className="block px-4 py-2 hover:bg-gray-100"
                   >
                     Historia
-                  </Link>
-                  <Link
-                    to="/nosotros/historia"
-                    className="block px-4 py-2 hover:bg-gray-100"
-                  >
-                    Convenios Institucionales
                   </Link>
                 </div>
               )}

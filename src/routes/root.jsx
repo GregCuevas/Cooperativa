@@ -4,8 +4,8 @@ import ScrollToTop from "../components/ScrollToTop";
 import Home from "../pages/Home";
 import About from "../pages/About";
 import Loan from "../pages/Loan";
-import Institucion from "../pages/Institucion";
 import Historia from "../pages/Historia";
+import Institucion from "../pages/Institucion";
 
 const Root = () => {
   return (
@@ -15,8 +15,8 @@ const Root = () => {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/calculadora-prestamos" element={<Loan />} />
-        <Route path="/perfil-institucional" element={<Institucion />} />
         <Route path="/historia" element={<Historia />} />
+        <Route path="/perfil-institucional" element={<Institucion />} />
       </Routes>
     </>
   );
