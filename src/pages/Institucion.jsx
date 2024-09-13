@@ -1,6 +1,7 @@
-import * as React from "react";
+import React from "react";
 import { Shield, Users, Briefcase } from "lucide-react";
 import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 import {
   Card,
   CardContent,
@@ -9,11 +10,11 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 
-export function Institucion() {
+export default function Institucion() {
   return (
     <>
       <Navbar />
-      <section className="py-12 bg-gray-100">
+      <section className="py-12 bg-white">
         <div className="container px-4 mx-auto text-center">
           {/* Título Principal */}
           <h2 className="mb-6 text-4xl font-bold text-gray-800">
@@ -74,6 +75,7 @@ export function Institucion() {
           </div>
         </div>
       </section>
+      <Footer />
     </>
   );
 }
