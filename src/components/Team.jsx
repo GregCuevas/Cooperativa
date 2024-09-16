@@ -1,4 +1,4 @@
-import { Facebook, Twitter, Instagram } from "lucide-react";
+import { Facebook, Linkedin, Instagram } from "lucide-react";
 
 const teamMembers = [
   {
@@ -8,7 +8,7 @@ const teamMembers = [
     bgColor: "bg-blue-100",
     socialLinks: {
       facebook: "https://facebook.com/james1",
-      twitter: "https://twitter.com/james1",
+      Linkedin: "https://twitter.com/james1",
       instagram: "https://instagram.com/james1",
     },
   },
@@ -19,7 +19,7 @@ const teamMembers = [
     bgColor: "bg-yellow-100",
     socialLinks: {
       facebook: "https://facebook.com/james2",
-      twitter: "https://twitter.com/james2",
+      Linkedin: "https://twitter.com/james2",
       instagram: "https://instagram.com/james2",
     },
   },
@@ -30,7 +30,7 @@ const teamMembers = [
     bgColor: "bg-purple-100",
     socialLinks: {
       facebook: "https://facebook.com/james3",
-      twitter: "https://twitter.com/james3",
+      Linkedin: "https://twitter.com/james3",
       instagram: "https://instagram.com/james3",
     },
   },
@@ -41,7 +41,7 @@ const teamMembers = [
     bgColor: "bg-pink-100",
     socialLinks: {
       facebook: "https://facebook.com/james4",
-      twitter: "https://twitter.com/james4",
+      Linkedin: "https://twitter.com/james4",
       instagram: "https://instagram.com/james4",
     },
   },
@@ -52,7 +52,7 @@ const teamMembers = [
     bgColor: "bg-blue-100",
     socialLinks: {
       facebook: "https://facebook.com/james1",
-      twitter: "https://twitter.com/james1",
+      Linkedin: "https://twitter.com/james1",
       instagram: "https://instagram.com/james1",
     },
   },
@@ -63,7 +63,7 @@ const teamMembers = [
     bgColor: "bg-blue-100",
     socialLinks: {
       facebook: "https://facebook.com/james1",
-      twitter: "https://twitter.com/james1",
+      Linkedin: "https://twitter.com/james1",
       instagram: "https://instagram.com/james1",
     },
   },
@@ -74,7 +74,7 @@ const teamMembers = [
     bgColor: "bg-blue-100",
     socialLinks: {
       facebook: "https://facebook.com/james1",
-      twitter: "https://twitter.com/james1",
+      Linkedin: "https://twitter.com/james1",
       instagram: "https://instagram.com/james1",
     },
   },
@@ -85,7 +85,7 @@ const teamMembers = [
     bgColor: "bg-blue-100",
     socialLinks: {
       facebook: "https://facebook.com/james1",
-      twitter: "https://twitter.com/james1",
+      Linkedin: "https://twitter.com/james1",
       instagram: "https://instagram.com/james1",
     },
   },
@@ -96,7 +96,7 @@ const teamMembers = [
     bgColor: "bg-blue-100",
     socialLinks: {
       facebook: "https://facebook.com/james1",
-      twitter: "https://twitter.com/james1",
+      Linkedin: "https://twitter.com/james1",
       instagram: "https://instagram.com/james1",
     },
   },
@@ -107,7 +107,7 @@ const teamMembers = [
     bgColor: "bg-blue-100",
     socialLinks: {
       facebook: "https://facebook.com/james1",
-      twitter: "https://twitter.com/james1",
+      Linkedin: "https://twitter.com/james1",
       instagram: "https://instagram.com/james1",
     },
   },
@@ -118,7 +118,7 @@ const teamMembers = [
     bgColor: "bg-blue-100",
     socialLinks: {
       facebook: "https://facebook.com/james1",
-      twitter: "https://twitter.com/james1",
+      Linkedin: "https://twitter.com/james1",
       instagram: "https://instagram.com/james1",
     },
   },
@@ -129,7 +129,7 @@ const teamMembers = [
     bgColor: "bg-blue-100",
     socialLinks: {
       facebook: "https://facebook.com/james1",
-      twitter: "https://twitter.com/james1",
+      Linkedin: "https://twitter.com/james1",
       instagram: "https://instagram.com/james1",
     },
   },
@@ -140,7 +140,7 @@ const teamMembers = [
     bgColor: "bg-blue-100",
     socialLinks: {
       facebook: "https://facebook.com/james1",
-      twitter: "https://twitter.com/james1",
+      Linkedin: "https://twitter.com/james1",
       instagram: "https://instagram.com/james1",
     },
   },
@@ -179,12 +179,12 @@ const Team = () => {
                 <Facebook size={20} />
               </a>
               <a
-                href={member.socialLinks.twitter}
+                href={member.socialLinks.Linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-gray-600"
               >
-                <Twitter size={20} />
+                <Linkedin size={20} />
               </a>
               <a
                 href={member.socialLinks.instagram}
