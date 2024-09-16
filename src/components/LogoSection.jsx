@@ -22,7 +22,7 @@ const LogoSection = () => {
                 index === 2 ? "col-span-2 sm:col-span-1" : ""
               }`}
             >
-              <div className="relative group">
+              <div className=" group">
                 <img
                   src={logo.url}
                   alt={`${logo.name} logo`}
