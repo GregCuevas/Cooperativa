@@ -30,7 +30,7 @@ export default function Institucion() {
           {/* Cards de Misión, Visión, Valores con estilo de bordes redondeados y sombra difusa */}
           <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
             {/* Misión */}
-            <Card className="border border-gray-200 rounded-lg shadow-[0_4px_20px_rgba(0,0,0,0.05)] bg-white">
+            <Card className="border rounded-lg shadow-[0_4px_20px_rgba(0,0,0,0.05)] bg-white border-t-4 border-orange-400">
               <CardHeader>
                 <Goal className="w-10 h-10 mx-auto mb-4 text-yellow-500" />
                 <CardTitle className="text-gray-900">Nuestra Misión</CardTitle>
@@ -44,7 +44,7 @@ export default function Institucion() {
             </Card>
 
             {/* Visión */}
-            <Card className="border border-gray-200 rounded-lg shadow-[0_4px_20px_rgba(0,0,0,0.05)] bg-white">
+            <Card className="border  rounded-lg shadow-[0_4px_20px_rgba(0,0,0,0.05)] bg-white border-t-4 border-orange-400">
               <CardHeader>
                 <Eye className="w-10 h-10 mx-auto mb-4 text-red-500" />
                 <CardTitle className="text-gray-900">Nuestra Visión</CardTitle>
@@ -57,7 +57,7 @@ export default function Institucion() {
             </Card>
 
             {/* Valores */}
-            <Card className="border border-gray-200 rounded-lg shadow-[0_4px_20px_rgba(0,0,0,0.05)] bg-white">
+            <Card className="border  rounded-lg shadow-[0_4px_20px_rgba(0,0,0,0.05)] bg-white border-t-4 border-orange-400">
               <CardHeader>
                 <Shield className="w-10 h-10 mx-auto mb-4 text-blue-500" />
                 <CardTitle className="text-gray-900">

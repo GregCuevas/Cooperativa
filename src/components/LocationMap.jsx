@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import mapboxgl from "mapbox-gl";
-import { MapPin, Mail, Phone } from "lucide-react";
+import { MapPin, Mail, Phone, MapPinned } from "lucide-react";
 import "mapbox-gl/dist/mapbox-gl.css";
 
 mapboxgl.accessToken = import.meta.env.VITE_MAPBOX_API_KEY;
@@ -38,7 +38,7 @@ const LocationMap = () => {
       {/* Sección del título */}
       <div className="p-6 text-center">
         <div className="flex flex-col items-center justify-center space-y-2">
-          <MapPin className="text-orange-500 animate-bounce" size={28} />
+          <MapPinned className="text-orange-500 animate-bounce" size={28} />
           <h2 className="text-3xl font-extrabold tracking-wide text-gray-900 transition-transform duration-300 ease-in-out transform md:text-4xl hover:scale-105">
             Nuestra ubicación
           </h2>
