@@ -68,12 +68,6 @@ const Loan = () => {
               >
                 <option value="">Elegir uno</option>
                 <option value="Préstamo de Consumo">Préstamo de Consumo</option>
-                <option value="Préstamo Hipotecario">
-                  Préstamo Hipotecario
-                </option>
-                <option value="Préstamo de Vehículos">
-                  Préstamo de Vehículos
-                </option>
               </select>
             </div>
 
