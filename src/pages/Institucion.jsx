@@ -1,5 +1,6 @@
 import React from "react";
-import { Shield, Users, Briefcase } from "lucide-react";
+import { Shield, Eye, Goal } from "lucide-react";
+import Team from "../components/Team";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import {
@@ -20,13 +21,10 @@ export default function Institucion() {
           <h2 className="mb-6 text-4xl font-bold text-gray-800">
             Somos Coopebred
           </h2>
-          <p className="mb-8 text-lg text-gray-600">
+          <p className="mb-8 text-lg text-center text-gray-600">
             La cooperativa que les pertenece. En el año 2024 surge con
-            determinación la Cooperativa Coopeducate, una entidad comprometida
-            con la reducción de la brecha digital en la República Dominicana.
-            Nuestro enfoque radica en brindar soluciones a las familias
-            vinculadas al ámbito educativo, facilitando el acceso a la
-            tecnología y recursos digitales.
+            determinación la Cooperativa Coopebred, una entidad comprometida con
+            la reducción de la brecha digital en la República Dominicana.
           </p>
 
           {/* Cards de Misión, Visión, Valores con estilo de bordes redondeados y sombra difusa */}
@@ -34,7 +32,7 @@ export default function Institucion() {
             {/* Misión */}
             <Card className="border border-gray-200 rounded-lg shadow-[0_4px_20px_rgba(0,0,0,0.05)] bg-white">
               <CardHeader>
-                <Briefcase className="w-10 h-10 mx-auto mb-4 text-yellow-500" />
+                <Goal className="w-10 h-10 mx-auto mb-4 text-yellow-500" />
                 <CardTitle className="text-gray-900">Nuestra Misión</CardTitle>
                 <CardDescription className="text-gray-700">
                   Facilitar el acceso equitativo a la tecnología y recursos
@@ -48,7 +46,7 @@ export default function Institucion() {
             {/* Visión */}
             <Card className="border border-gray-200 rounded-lg shadow-[0_4px_20px_rgba(0,0,0,0.05)] bg-white">
               <CardHeader>
-                <Users className="w-10 h-10 mx-auto mb-4 text-red-500" />
+                <Eye className="w-10 h-10 mx-auto mb-4 text-red-500" />
                 <CardTitle className="text-gray-900">Nuestra Visión</CardTitle>
                 <CardDescription className="text-gray-700">
                   Crear un entorno donde cada individuo tenga acceso a
@@ -61,7 +59,7 @@ export default function Institucion() {
             {/* Valores */}
             <Card className="border border-gray-200 rounded-lg shadow-[0_4px_20px_rgba(0,0,0,0.05)] bg-white">
               <CardHeader>
-                <Shield className="w-10 h-10 mx-auto mb-4 text-purple-500" />
+                <Shield className="w-10 h-10 mx-auto mb-4 text-blue-500" />
                 <CardTitle className="text-gray-900">
                   Nuestros Valores
                 </CardTitle>
@@ -73,6 +71,7 @@ export default function Institucion() {
               </CardHeader>
             </Card>
           </div>
+          <Team />
         </div>
       </section>
       <Footer />

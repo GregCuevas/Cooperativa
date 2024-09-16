@@ -44,7 +44,7 @@ const BlogSection = () => {
         </div>
         <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
           {blogPosts.map((post, index) => (
-            <div key={index} className="relative flex flex-col space-y-2 group">
+            <div key={index} className="flex flex-col space-y-2  group">
               <div className="flex items-center justify-center h-48 overflow-hidden bg-gray-100 rounded-lg">
                 <img
                   src={post.icon}

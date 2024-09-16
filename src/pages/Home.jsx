@@ -9,11 +9,13 @@ import Accordion from "../components/AccordionFAQ";
 import LocationMap from "../components/LocationMap";
 import LoanOptions from "../components/LoanOptions";
 import Footer from "../components/Footer";
+import LogoSection from "@/components/LogoSection";
 const Home = () => {
   return (
     <>
       <Navbar />
       <HeroSection />
+      <LogoSection />
       <FeatureSection />
       <BlogSection />
       <BlogSocios />

@@ -43,7 +43,7 @@ const FeatureSection = () => {
             key={index}
             className="flex flex-col items-center text-center group"
           >
-            <div className="flex items-center justify-center w-20 h-20 mb-6 bg-[#f8961e] rounded-full transition-transform transform group-hover:scale-110">
+            <div className="flex items-center justify-center w-20 h-20 mb-6 bg-[#f8961e] rounded-full transition-transform hover:scale-110">
               <feature.icon className="w-10 h-10 text-white" />
             </div>
             <h3 className="mb-4 text-2xl font-semibold text-gray-800 group-hover:text-[#f8961e] transition-colors">
