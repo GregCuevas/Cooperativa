@@ -18,7 +18,7 @@ export default function Institucion() {
         <div className="container px-4 mx-auto text-center">
           {/* Título Principal */}
           <h2 className="mb-6 text-4xl font-bold text-gray-800">
-            Somos CoopEducate
+            Somos Coopebred
           </h2>
           <p className="mb-8 text-lg text-gray-600">
             La cooperativa que les pertenece. En el año 2024 surge con
