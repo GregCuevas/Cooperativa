@@ -17,12 +17,15 @@ export default function Institucion() {
       <section className="py-12 bg-white">
         <div className="container px-4 mx-auto text-center">
           {/* Título Principal */}
-          <h2 className="mb-6 text-4xl font-bold text-gray-800">
+          <h2 className="mb-6 text-4xl font-bold text-center text-gray-800">
             Somos Coopebred
           </h2>
-          <p className="mb-8 text-lg text-center text-gray-600">
+          <p
+            className="mx-auto mb-8 text-lg text-center text-gray-600"
+            style={{ maxWidth: "600px", lineHeight: "1.5" }}
+          >
             La cooperativa que les pertenece. En el año 2024 surge con
-            determinación la Cooperativa Coopebred, una entidad comprometida con
+            determinación la cooperativa Coopebred, una entidad comprometida con
             la reducción de la brecha digital en la República Dominicana.
           </p>
 

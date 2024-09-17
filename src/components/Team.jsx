@@ -2,9 +2,10 @@ import { Facebook, Linkedin, Instagram } from "lucide-react";
 
 const teamMembers = [
   {
-    name: "Víctor Álvarez",
-    role: "Administración",
+    name: "Sergio Montanari",
+    role: "Presidente",
     image: "/placeholder.svg?height=200&width=200",
+    cargo: "Consejo Administración",
     bgColor: "bg-gray-100",
     socialLinks: {
       facebook: "https://facebook.com/james1",
@@ -13,9 +14,10 @@ const teamMembers = [
     },
   },
   {
-    name: "Sergio Montanari",
-    role: "Administración",
+    name: "Edison Rodríguez",
+    role: "Vicepresidente",
     image: "/placeholder.svg?height=200&width=200",
+    cargo: "Consejo de Administración",
     bgColor: "bg-gray-100",
     socialLinks: {
       facebook: "https://facebook.com/james2",
@@ -24,9 +26,10 @@ const teamMembers = [
     },
   },
   {
-    name: "Cristian Flores",
-    role: "Administración",
+    name: "María Isabel",
+    role: "Secretaria",
     image: "/placeholder.svg?height=200&width=200",
+    cargo: "Consejo de Administración",
     bgColor: "bg-gray-100",
     socialLinks: {
       facebook: "https://facebook.com/james3",
@@ -35,9 +38,10 @@ const teamMembers = [
     },
   },
   {
-    name: "Maria I. Garcia",
-    role: "Administración",
+    name: "Anlly Elinoy ",
+    role: "Tesorera",
     image: "/placeholder.svg?height=200&width=200",
+    cargo: "Consejo de Administración",
     bgColor: "bg-gray-100",
     socialLinks: {
       facebook: "https://facebook.com/james4",
@@ -46,9 +50,10 @@ const teamMembers = [
     },
   },
   {
-    name: "Francisco Payam",
-    role: "Administración",
+    name: "Zulinel Brito ",
+    role: "Vocal",
     image: "/placeholder.svg?height=200&width=200",
+    cargo: "Consejo de Administración",
     bgColor: "bg-gray-100",
     socialLinks: {
       facebook: "https://facebook.com/james1",
@@ -57,9 +62,10 @@ const teamMembers = [
     },
   },
   {
-    name: "Edison Rodriguez",
-    role: "Administración",
+    name: "Cristian Alberto ",
+    role: "Primer suplente",
     image: "/placeholder.svg?height=200&width=200",
+    cargo: "Consejo de Administración",
     bgColor: "bg-gray-100",
     socialLinks: {
       facebook: "https://facebook.com/james1",
@@ -68,9 +74,10 @@ const teamMembers = [
     },
   },
   {
-    name: "Tomas Martinez",
-    role: "Administración",
+    name: "Juan Valentín ",
+    role: "Segundo suplente",
     image: "/placeholder.svg?height=200&width=200",
+    cargo: "Consejo de Administración",
     bgColor: "bg-gray-100",
     socialLinks: {
       facebook: "https://facebook.com/james1",
@@ -79,9 +86,10 @@ const teamMembers = [
     },
   },
   {
-    name: "Zulinel Brito",
-    role: "Vigilancia",
+    name: "Tomas Amauris",
+    role: "Presidente",
     image: "/placeholder.svg?height=200&width=200",
+    cargo: "Consejo de Vigilancia",
     bgColor: "bg-gray-100",
     socialLinks: {
       facebook: "https://facebook.com/james1",
@@ -90,9 +98,10 @@ const teamMembers = [
     },
   },
   {
-    name: "Julio Baez",
-    role: "Vigilancia",
+    name: "María Salcedo",
+    role: "Secretaria",
     image: "/placeholder.svg?height=200&width=200",
+    cargo: "Consejo de Vigilancia",
     bgColor: "bg-gray-100",
     socialLinks: {
       facebook: "https://facebook.com/james1",
@@ -101,9 +110,10 @@ const teamMembers = [
     },
   },
   {
-    name: "Víctor Durán",
-    role: "Vigilancia",
+    name: "Zunilda Altagracia ",
+    role: "Vocal",
     image: "/placeholder.svg?height=200&width=200",
+    cargo: "Consejo de Vigilancia",
     bgColor: "bg-gray-100",
     socialLinks: {
       facebook: "https://facebook.com/james1",
@@ -112,9 +122,10 @@ const teamMembers = [
     },
   },
   {
-    name: "Anlly Marte",
-    role: "Crédito",
+    name: "Víctor Álvarez ",
+    role: "Primer suplente",
     image: "/placeholder.svg?height=200&width=200",
+    cargo: "Consejo de Viligancia",
     bgColor: "bg-gray-100",
     socialLinks: {
       facebook: "https://facebook.com/james1",
@@ -123,9 +134,10 @@ const teamMembers = [
     },
   },
   {
-    name: "Maria Salcedo",
-    role: "Crédito",
+    name: "Stefano Andreani",
+    role: "Segundo suplente",
     image: "/placeholder.svg?height=200&width=200",
+    cargo: "Consejo de Vigilancia",
     bgColor: "bg-gray-100",
     socialLinks: {
       facebook: "https://facebook.com/james1",
@@ -134,9 +146,46 @@ const teamMembers = [
     },
   },
   {
-    name: "Juan S. Cabrera",
-    role: "Educación y Beca",
+    name: "Natalya Kosnikova",
+    role: "Presidente",
     image: "/placeholder.svg?height=200&width=200",
+    cargo: "Consejo de Crédito",
+    bgColor: "bg-gray-100",
+    socialLinks: {
+      facebook: "https://facebook.com/james1",
+      Linkedin: "https://twitter.com/james1",
+      instagram: "https://instagram.com/james1",
+    },
+  },
+  {
+    name: "José Heredia",
+    role: "Secretario",
+    image: "/placeholder.svg?height=200&width=200",
+    cargo: "Consejo de Crédito",
+    bgColor: "bg-gray-100",
+    socialLinks: {
+      facebook: "https://facebook.com/james1",
+      Linkedin: "https://twitter.com/james1",
+      instagram: "https://instagram.com/james1",
+    },
+  },
+  {
+    name: "Rafael Bienvenido",
+    role: "Vocal",
+    image: "/placeholder.svg?height=200&width=200",
+    cargo: "Consejo de Crédito",
+    bgColor: "bg-gray-100",
+    socialLinks: {
+      facebook: "https://facebook.com/james1",
+      Linkedin: "https://twitter.com/james1",
+      instagram: "https://instagram.com/james1",
+    },
+  },
+  {
+    name: "Junior Rafael",
+    role: "Suplente",
+    image: "/placeholder.svg?height=200&width=200",
+    cargo: "Consejo de Crédito",
     bgColor: "bg-gray-100",
     socialLinks: {
       facebook: "https://facebook.com/james1",
@@ -167,8 +216,11 @@ const Team = () => {
                 className="object-cover w-full h-full "
               />
             </div>
+
             <h3 className="text-xl font-semibold">{member.name}</h3>
+            <p className="mb-4 text-gray-600">{member.cargo}</p>
             <p className="mb-4 text-gray-600">{member.role}</p>
+
             <div className="flex space-x-4">
               <a
                 href={member.socialLinks.facebook}
