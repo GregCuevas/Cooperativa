@@ -29,9 +29,9 @@ export default function Institucion() {
           {/* Cards de Misión, Visión, Valores con estilo de bordes redondeados y sombra difusa */}
           <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
             {/* Misión */}
-            <Card className="border rounded-lg shadow-[0_4px_20px_rgba(0,0,0,0.05)] bg-white border-t-4 border-orange-400">
+            <Card className="border rounded-lg shadow-[0_4px_20px_rgba(0,0,0,0.05)] bg-white border-t-2 border-[#ff9100]">
               <CardHeader>
-                <Goal className="w-10 h-10 mx-auto mb-4 text-yellow-500" />
+                <Goal className="w-10 h-10 mx-auto mb-4 text-[#ff9100]" />
                 <CardTitle className="text-gray-900">Nuestra Misión</CardTitle>
                 <CardDescription className="text-gray-700">
                   Facilitar el acceso equitativo a la tecnología y recursos
@@ -43,9 +43,9 @@ export default function Institucion() {
             </Card>
 
             {/* Visión */}
-            <Card className="border  rounded-lg shadow-[0_4px_20px_rgba(0,0,0,0.05)] bg-white border-t-4 border-orange-400">
+            <Card className="border  rounded-lg shadow-[0_4px_20px_rgba(0,0,0,0.05)] bg-white border-t-2 border-[#ff9100]">
               <CardHeader>
-                <Eye className="w-10 h-10 mx-auto mb-4 text-red-500" />
+                <Eye className="w-10 h-10 mx-auto mb-4 text-[#ff9100]" />
                 <CardTitle className="text-gray-900">Nuestra Visión</CardTitle>
                 <CardDescription className="text-gray-700">
                   Crear un entorno donde cada individuo tenga acceso a
@@ -56,9 +56,9 @@ export default function Institucion() {
             </Card>
 
             {/* Valores */}
-            <Card className="border  rounded-lg shadow-[0_4px_20px_rgba(0,0,0,0.05)] bg-white border-t-4 border-orange-400">
+            <Card className="border  rounded-lg shadow-[0_4px_20px_rgba(0,0,0,0.05)] bg-white border-t-2 border-[#ff9100]">
               <CardHeader>
-                <Shield className="w-10 h-10 mx-auto mb-4 text-blue-500" />
+                <Shield className="w-10 h-10 mx-auto mb-4 text-[#ff9100]" />
                 <CardTitle className="text-gray-900">
                   Nuestros Valores
                 </CardTitle>

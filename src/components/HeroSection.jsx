@@ -7,7 +7,7 @@ import {
 } from "lucide-react"; // Iconos de Lucide-react
 import { Button } from "@/components/ui/button";
 import home from "../assets/ground.jpg"; // Imagen del archivo de imágenes
-
+import { Link } from "react-router-dom";
 const Action = () => {
   return (
     <div className="flex items-center justify-center gap-4 mt-6 md:justify-start">
@@ -18,14 +18,16 @@ const Action = () => {
         <BadgeCheck className="w-5 h-5 mr-2" />
         Verificados
       </Button>
-      <button
-        type="button"
-        aria-disabled="false"
-        className="group flex items-center justify-center gap-2 whitespace-nowrap rounded-full py-3 px-6 text-base font-semibold text-[#09bc8a] transition-all hover:bg-green-50 hover:text-[#069770]  "
-      >
-        <span>Ver más</span>
-        <ArrowRight className="w-5 h-5 stroke-[#09bc8a] group-hover:stroke-[#069770]" />
-      </button>
+      <Link to="/perfil-institucional">
+        <button
+          type="button"
+          aria-disabled="false"
+          className="group flex items-center justify-center gap-2 whitespace-nowrap rounded-full py-3 px-6 text-base font-semibold text-[#09bc8a] transition-all hover:bg-green-50 hover:text-[#069770]  "
+        >
+          <span>Ver más</span>
+          <ArrowRight className="w-5 h-5 stroke-[#09bc8a] group-hover:stroke-[#069770]" />
+        </button>
+      </Link>
     </div>
   );
 };
