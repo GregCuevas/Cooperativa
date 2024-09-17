@@ -52,9 +52,11 @@ const Navbar = () => {
       <div className="max-w-full px-4 mx-auto">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <div className="flex items-center">
-            <img src={Logo} alt="Cooperativa Logo" className="h-16" />
-          </div>
+          <Link to="/">
+            <div className="flex items-center">
+              <img src={Logo} alt="Cooperativa Logo" className="h-16" />
+            </div>
+          </Link>
 
           {/* Centered Links */}
           <div

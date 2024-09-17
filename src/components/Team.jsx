@@ -5,7 +5,7 @@ const teamMembers = [
     name: "Víctor Álvarez",
     role: "Administración",
     image: "/placeholder.svg?height=200&width=200",
-    bgColor: "bg-blue-100",
+    bgColor: "bg-gray-100",
     socialLinks: {
       facebook: "https://facebook.com/james1",
       Linkedin: "https://twitter.com/james1",
@@ -16,7 +16,7 @@ const teamMembers = [
     name: "Sergio Montanari",
     role: "Administración",
     image: "/placeholder.svg?height=200&width=200",
-    bgColor: "bg-yellow-100",
+    bgColor: "bg-gray-100",
     socialLinks: {
       facebook: "https://facebook.com/james2",
       Linkedin: "https://twitter.com/james2",
@@ -27,7 +27,7 @@ const teamMembers = [
     name: "Cristian Flores",
     role: "Administración",
     image: "/placeholder.svg?height=200&width=200",
-    bgColor: "bg-purple-100",
+    bgColor: "bg-gray-100",
     socialLinks: {
       facebook: "https://facebook.com/james3",
       Linkedin: "https://twitter.com/james3",
@@ -38,7 +38,7 @@ const teamMembers = [
     name: "Maria I. Garcia",
     role: "Administración",
     image: "/placeholder.svg?height=200&width=200",
-    bgColor: "bg-pink-100",
+    bgColor: "bg-gray-100",
     socialLinks: {
       facebook: "https://facebook.com/james4",
       Linkedin: "https://twitter.com/james4",
@@ -49,7 +49,7 @@ const teamMembers = [
     name: "Francisco Payam",
     role: "Administración",
     image: "/placeholder.svg?height=200&width=200",
-    bgColor: "bg-blue-100",
+    bgColor: "bg-gray-100",
     socialLinks: {
       facebook: "https://facebook.com/james1",
       Linkedin: "https://twitter.com/james1",
@@ -60,7 +60,7 @@ const teamMembers = [
     name: "Edison Rodriguez",
     role: "Administración",
     image: "/placeholder.svg?height=200&width=200",
-    bgColor: "bg-blue-100",
+    bgColor: "bg-gray-100",
     socialLinks: {
       facebook: "https://facebook.com/james1",
       Linkedin: "https://twitter.com/james1",
@@ -71,7 +71,7 @@ const teamMembers = [
     name: "Tomas Martinez",
     role: "Administración",
     image: "/placeholder.svg?height=200&width=200",
-    bgColor: "bg-blue-100",
+    bgColor: "bg-gray-100",
     socialLinks: {
       facebook: "https://facebook.com/james1",
       Linkedin: "https://twitter.com/james1",
@@ -82,7 +82,7 @@ const teamMembers = [
     name: "Zulinel Brito",
     role: "Vigilancia",
     image: "/placeholder.svg?height=200&width=200",
-    bgColor: "bg-blue-100",
+    bgColor: "bg-gray-100",
     socialLinks: {
       facebook: "https://facebook.com/james1",
       Linkedin: "https://twitter.com/james1",
@@ -93,7 +93,7 @@ const teamMembers = [
     name: "Julio Baez",
     role: "Vigilancia",
     image: "/placeholder.svg?height=200&width=200",
-    bgColor: "bg-blue-100",
+    bgColor: "bg-gray-100",
     socialLinks: {
       facebook: "https://facebook.com/james1",
       Linkedin: "https://twitter.com/james1",
@@ -104,7 +104,7 @@ const teamMembers = [
     name: "Víctor Durán",
     role: "Vigilancia",
     image: "/placeholder.svg?height=200&width=200",
-    bgColor: "bg-blue-100",
+    bgColor: "bg-gray-100",
     socialLinks: {
       facebook: "https://facebook.com/james1",
       Linkedin: "https://twitter.com/james1",
@@ -115,7 +115,7 @@ const teamMembers = [
     name: "Anlly Marte",
     role: "Crédito",
     image: "/placeholder.svg?height=200&width=200",
-    bgColor: "bg-blue-100",
+    bgColor: "bg-gray-100",
     socialLinks: {
       facebook: "https://facebook.com/james1",
       Linkedin: "https://twitter.com/james1",
@@ -126,7 +126,7 @@ const teamMembers = [
     name: "Maria Salcedo",
     role: "Crédito",
     image: "/placeholder.svg?height=200&width=200",
-    bgColor: "bg-blue-100",
+    bgColor: "bg-gray-100",
     socialLinks: {
       facebook: "https://facebook.com/james1",
       Linkedin: "https://twitter.com/james1",
@@ -137,7 +137,7 @@ const teamMembers = [
     name: "Juan S. Cabrera",
     role: "Educación y Beca",
     image: "/placeholder.svg?height=200&width=200",
-    bgColor: "bg-blue-100",
+    bgColor: "bg-gray-100",
     socialLinks: {
       facebook: "https://facebook.com/james1",
       Linkedin: "https://twitter.com/james1",
@@ -163,7 +163,7 @@ const Team = () => {
             >
               <img
                 src={member.image}
-                alt={member.name}
+                alt=""
                 className="object-cover w-full h-full "
               />
             </div>
