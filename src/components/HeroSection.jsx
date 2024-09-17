@@ -8,6 +8,7 @@ import {
 import { Button } from "@/components/ui/button";
 import home from "../assets/ground.jpg"; // Imagen del archivo de imágenes
 import { Link } from "react-router-dom";
+
 const Action = () => {
   return (
     <div className="flex items-center justify-center gap-4 mt-6 md:justify-start">
