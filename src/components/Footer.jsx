@@ -81,14 +81,6 @@ export default function Footer() {
                   Calculadora de Prestamos
                 </Link>
               </li>
-              <li>
-                <Link
-                  to="/acuerdos"
-                  className="text-gray-600 hover:text-gray-900"
-                >
-                  Acuerdos Institucionales
-                </Link>
-              </li>
             </ul>
           </div>
 
@@ -126,7 +118,7 @@ export default function Footer() {
               <li>
                 <a
                   href="mailto:coopeducate@silkglobal.com" // mailto: abre el cliente de correo
-                  className="text-gray-600 hover:text-gray-900"
+                  className="text-gray-600 break-words hover:text-gray-900"
                 >
                   coopebred@silkglobal.com
                 </a>
