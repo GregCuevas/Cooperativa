@@ -58,7 +58,7 @@ const timelineData = [
   },
 ];
 
-export default function Component() {
+const Historia = () => {
   return (
     <div className="flex items-center justify-center min-h-screen bg-white p-7">
       <div className="w-full max-w-4xl">
@@ -107,4 +107,5 @@ export default function Component() {
       </div>
     </div>
   );
-}
+};
+export default Historia;
