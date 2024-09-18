@@ -37,8 +37,8 @@ const HeroSection = () => {
   return (
     <section className="flex flex-col items-center justify-between p-8 md:p-16 xl:px-32 2xl:px-48 md:flex-col lg:flex-row">
       <div className="text-center md:w-full lg:w-4/12 md:text-center lg:text-left">
-        <h3 className="mb-6 text-3xl font-extrabold leading-tight text-gray-900 md:text-4xl lg:text-5xl">
-          Construyendo tu Futuro con Coopebred
+        <h3 className="mb-6 text-3xl font-extrabold text-gray-900 md:text-4xl lg:text-3xl">
+          Construyendo tu futuro con Coopebred
         </h3>
         <p className="mb-8 text-lg leading-relaxed text-gray-700 md:text-lg lg:text-xl">
           El futuro de las cooperativas está aquí para ti. Disfruta de una

@@ -14,44 +14,80 @@ const Navbar = () => {
   };
 
   const topMenuItems = [
-    { name: "HAZTE SOCIO", link: "/hazte-socio" },
-    { name: "SUCURSALES", link: "/sucursales" },
-    { name: "CONTÁCTANOS", link: "/contactanos" },
-    { name: "PREGUNTAS FRECUENTES", link: "/preguntas-frecuentes" },
-    { name: "APP MÓVIL", link: "/app-movil" },
+    { name: "Inicio", link: "/" },
+    { name: "Sucursales", link: "/sucursales" },
+    { name: "Contáctanos", link: "/contactanos" },
+    { name: "Preguntas Frecuentes", link: "/#preguntas-frecuentes" },
+    { name: "Hazte Socio", link: "/app-movil" },
   ];
 
   const bottomMenuItems = [
     {
-      name: "PRODUCTOS Y SERVICIOS",
+      name: "SERVICIOS",
       link: "/productos-y-servicios",
       hasSubmenu: true,
+      submenuItems: [
+        { name: "Educación", link: "/eduacion" },
+        { name: "Telecomunicaciones", link: "/telecomunicaciones" },
+        { name: "Financiamiento", link: "/financiamiento" },
+      ],
     },
-    { name: "CONÓCENOS", link: "/conocenos", hasSubmenu: true },
-    { name: "DESEMPEÑO SOCIAL", link: "/desempeno-social", hasSubmenu: true },
+    {
+      name: "CONÓCENOS",
+      link: "",
+      hasSubmenu: true,
+      submenuItems: [
+        { name: "Historia", link: "/historia" },
+        { name: "Perfil Institucional", link: "/perfil-institucional" },
+      ],
+    },
+    {
+      name: "DESEMPEÑO SOCIAL",
+      link: "/desempeno-social",
+      hasSubmenu: true,
+      submenuItems: [
+        { name: "Proyectos Comunitarios", link: "/desempeno/proyectos" },
+        { name: "Impacto Social", link: "/desempeno/impacto" },
+        { name: "Reportes Anuales", link: "/desempeno/reportes" },
+      ],
+    },
     {
       name: "PUBLICACIONES Y NOVEDADES",
       link: "/publicaciones-y-novedades",
       hasSubmenu: true,
+      submenuItems: [
+        { name: "Blog", link: "/publicaciones/blog" },
+        { name: "Noticias", link: "/publicaciones/noticias" },
+        { name: "Eventos", link: "/publicaciones/eventos" },
+      ],
     },
-    { name: "PREVENCIÓN", link: "/prevencion", hasSubmenu: true },
-    { name: "CRECEMOS POR TI", link: "/crecemos-por-ti" },
+    {
+      name: "PREVENCIÓN",
+      link: "/prevencion",
+      hasSubmenu: true,
+      submenuItems: [
+        { name: "Seguridad Financiera", link: "/prevencion/seguridad" },
+        { name: "Educación Financiera", link: "/prevencion/educacion" },
+        { name: "Consejos", link: "/prevencion/consejos" },
+      ],
+    },
+    { name: "PRÉSTAMOS", link: "/calculadora-prestamos" },
   ];
 
   return (
     <nav className="w-full bg-white shadow-sm">
-      <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+      <div className="max-w-6xl px-4 mx-auto sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20 lg:h-20">
           <div className="flex items-center flex-shrink-0">
             <img className="w-auto h-12 lg:h-16" src={Logo} alt="Logo" />
           </div>
           <div className="items-center justify-center flex-1 hidden lg:flex">
-            <div className="flex space-x-4">
+            <div className="flex space-x-6 ">
               {topMenuItems.map((item) => (
                 <Link
                   key={item.name}
                   to={item.link}
-                  className="px-3 py-2 text-sm font-bold text-[#f8961e] rounded-md hover:bg-orange-100 "
+                  className="px-3 py-2 font-semibold  text-[#f8961e] rounded-md hover:bg-orange-100 "
                 >
                   {item.name}
                 </Link>
@@ -59,7 +95,7 @@ const Navbar = () => {
             </div>
           </div>
           <div className="items-center hidden lg:flex">
-            <button className="flex items-center px-4 py-2 text-sm font-medium text-white bg-green-500 rounded-md hover:bg-green-600">
+            <button className="flex items-center px-4 py-2 font-semibold text-white bg-green-500 rounded-md hover:bg-green-600">
               Buscar
               <Search className="w-4 h-4 ml-2" />
             </button>
@@ -81,13 +117,13 @@ const Navbar = () => {
         </div>
       </div>
       <div className="hidden bg-green-500 lg:block">
-        <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+        <div className="max-w-6xl px-4 mx-auto sm:px-6 lg:px-8">
           <div className="flex space-x-8">
             {bottomMenuItems.map((item) => (
               <div key={item.name} className="relative group">
                 <Link
                   to={item.link}
-                  className="inline-flex items-center px-3 py-2 text-sm font-medium text-white rounded-md hover:bg-green-600"
+                  className="inline-flex items-center px-3 py-4 text-sm font-semibold text-white rounded-md hover:bg-green-600"
                 >
                   {item.name}
                   {item.hasSubmenu && <ChevronDown className="w-4 h-4 ml-1" />}
@@ -95,24 +131,15 @@ const Navbar = () => {
                 {item.hasSubmenu && (
                   <div className="absolute left-0 invisible w-48 mt-2 transition-all duration-300 ease-in-out bg-white rounded-md shadow-lg opacity-0 ring-1 ring-black ring-opacity-5 group-hover:opacity-100 group-hover:visible">
                     <div className="py-1">
-                      <Link
-                        to="#"
-                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                      >
-                        Submenu Item 1
-                      </Link>
-                      <Link
-                        to="#"
-                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                      >
-                        Submenu Item 2
-                      </Link>
-                      <Link
-                        to="#"
-                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                      >
-                        Submenu Item 3
-                      </Link>
+                      {item.submenuItems.map((subItem) => (
+                        <Link
+                          key={subItem.name}
+                          to={subItem.link}
+                          className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                        >
+                          {subItem.name}
+                        </Link>
+                      ))}
                     </div>
                   </div>
                 )}
@@ -147,24 +174,16 @@ const Navbar = () => {
                 </button>
                 {item.hasSubmenu && activeDropdown === item.name && (
                   <div className="pl-4 space-y-1">
-                    <Link
-                      to="#"
-                      className="block px-3 py-2 text-base font-medium text-white rounded-md hover:bg-green-600"
-                    >
-                      Submenu Item 1
-                    </Link>
-                    <Link
-                      to="#"
-                      className="block px-3 py-2 text-base font-medium text-white rounded-md hover:bg-green-600"
-                    >
-                      Submenu Item 2
-                    </Link>
-                    <Link
-                      to="#"
-                      className="block px-3 py-2 text-base font-medium text-white rounded-md hover:bg-green-600"
-                    >
-                      Submenu Item 3
-                    </Link>
+                    {item.submenuItems.map((subItem) => (
+                      <Link
+                        key={subItem.name}
+                        to={subItem.link}
+                        className="block px-3 py-2 text-base font-medium text-white rounded-md hover:bg-green-600"
+                        onClick={toggleMenu}
+                      >
+                        {subItem.name}
+                      </Link>
+                    ))}
                   </div>
                 )}
               </div>

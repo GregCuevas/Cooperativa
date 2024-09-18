@@ -13,7 +13,9 @@ const LogoSection = () => {
   return (
     <section className="flex justify-center w-full py-8 md:py-12 lg:py-16 bg-background">
       <div className="container px-4 mx-auto md:px-6">
-        <h2 className="mb-8 text-2xl font-semibold text-center text-foreground"></h2>
+        <h2 className="mb-8 text-2xl font-extrabold text-center text-[#bfc0c0] ">
+          Aliados estratégicos que fortalecen nuestra visión
+        </h2>
         <div className="grid items-center justify-center grid-cols-2 gap-8 sm:grid-cols-3">
           {logos.map((logo, index) => (
             <div
