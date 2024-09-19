@@ -22,8 +22,8 @@ export default function Homepage() {
       </div>
 
       {/* Text container */}
-      <div className="w-full h-full md:absolute md:inset-0 md:flex md:items-center md:pl-20 lg:pl-48">
-        <div className="bg-[#f8961e] bg-opacity-90 text-white p-8 w-full md:w-[400px] lg:w-[500px] md:h-[95%] md:flex md:flex-col md:justify-center">
+      <div className="w-full h-full md:absolute md:inset-0 md:flex md:items-center md:pl-20 lg:pl-32">
+        <div className="bg-[#f8961e] bg-opacity-90 text-white p-8 w-full md:w-[640px] lg:w-[495px] md:h-[95%] md:flex md:flex-col md:justify-center">
           <h1 className="text-3xl font-bold md:text-4xl lg:text-5xl">
             Coopebred transformando tu futuro
           </h1>
