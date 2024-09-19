@@ -75,7 +75,7 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="w-full bg-white shadow-sm">
+    <nav className="w-full bg-white shadow-md">
       <div className="max-w-6xl px-4 mx-auto sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20 lg:h-20">
           <div className="flex items-center flex-shrink-0">
@@ -118,7 +118,7 @@ const Navbar = () => {
       </div>
       <div className="hidden bg-green-500 lg:block">
         <div className="max-w-6xl px-4 mx-auto sm:px-6 lg:px-8">
-          <div className="flex space-x-8">
+          <div className="relative z-40 flex space-x-8">
             {bottomMenuItems.map((item) => (
               <div key={item.name} className="relative group">
                 <Link

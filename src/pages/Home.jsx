@@ -1,6 +1,5 @@
 import React from "react";
 import Navbar from "../components/Navbar";
-import HeroSection from "../components/HeroSection";
 import FeatureSection from "../components/FeatureSection";
 import BlogSection from "../components/BlogSection";
 import BlogSocios from "../components/BlogSocios";
@@ -9,12 +8,14 @@ import Accordion from "../components/AccordionFAQ";
 import LocationMap from "../components/LocationMap";
 import LoanOptions from "../components/LoanOptions";
 import Footer from "../components/Footer";
-import LogoSection from "@/components/LogoSection";
+import LogoSection from "../components/LogoSection";
+import Homepage from "../components/HomePage";
+
 const Home = () => {
   return (
     <>
       <Navbar />
-      <HeroSection />
+      <Homepage />
       <LogoSection />
       <FeatureSection />
       <BlogSection />
