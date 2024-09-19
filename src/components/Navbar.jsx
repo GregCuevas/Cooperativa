@@ -42,13 +42,12 @@ const Navbar = () => {
       ],
     },
     {
-      name: "DESEMPEÑO SOCIAL",
-      link: "/desempeno-social",
+      name: "SOCIOS",
+      link: "/socios",
       hasSubmenu: true,
       submenuItems: [
-        { name: "Proyectos Comunitarios", link: "/desempeno/proyectos" },
-        { name: "Impacto Social", link: "/desempeno/impacto" },
-        { name: "Reportes Anuales", link: "/desempeno/reportes" },
+        { name: "Socio Individual", link: "/socio-individual" },
+        { name: "Socio Empresa", link: "/socio-empresa" },
       ],
     },
     {
