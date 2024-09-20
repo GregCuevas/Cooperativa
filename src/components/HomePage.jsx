@@ -27,7 +27,7 @@ export default function Homepage() {
           <h1 className="text-3xl font-bold md:text-4xl lg:text-5xl">
             COOPEBRED
           </h1>
-          <p className="mt-4 mb-4 text-lg md:text-xl">
+          <p className="mt-4 mb-8 text-lg md:text-xl">
             La combinación de tecnología, aprendizaje y financiamiento para que
             todas las familias puedan tener las mismas oportunidades.
           </p>
@@ -36,7 +36,7 @@ export default function Homepage() {
             <GraduationCap color="#15803d" strokeWidth={1.5} size={40} />
             <CircleDollarSign color="#15803d" strokeWidth={1.5} size={40} />
           </div>
-          <div className="flex items-center justify-center gap-4 mt-6 md:justify-start">
+          <div className="flex items-center justify-center gap-4 mt-7 md:justify-start">
             <Button
               variant="default"
               className="px-6 py-3 font-semibold text-white transition-all bg-green-600 rounded-full shadow-md hover:bg-green-700 focus:ring-4 focus:ring-green-500"
