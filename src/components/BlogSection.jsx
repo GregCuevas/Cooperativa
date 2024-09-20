@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import Tele from "../assets/tele.png";
-import Graduate from "../assets/graduate.jpg";
+import Educación from "../assets/educacion.jpg";
 import Money from "../assets/money.jpg";
 const blogPosts = [
   {
@@ -13,7 +13,7 @@ const blogPosts = [
       "Para ampliar las telecomunicaciones en zonas rurales, nos enfocamos en promover el desarrollo educativo.",
   },
   {
-    icon: Graduate,
+    icon: Educación,
     category: "Equidad",
 
     title: "Educación",
