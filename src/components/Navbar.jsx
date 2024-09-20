@@ -154,7 +154,7 @@ const Navbar = () => {
               <Link
                 key={item.name}
                 to={item.link}
-                className="block px-3 py-2 text-base font-medium text-orange-400 rounded-md hover:bg-orange-50"
+                className="block px-3 py-2 font-semibold text-orange-400 rounded-md hover:bg-orange-50"
                 onClick={toggleMenu}
               >
                 {item.name}
@@ -166,7 +166,7 @@ const Navbar = () => {
               <div key={item.name}>
                 <button
                   onClick={() => toggleDropdown(item.name)}
-                  className="inline-flex items-center justify-between w-full px-3 py-2 text-base font-medium text-left text-white rounded-md hover:bg-green-600"
+                  className="inline-flex items-center justify-between w-full px-3 py-2 font-semibold text-left text-white rounded-md hover:bg-green-600"
                 >
                   {item.name}
                   {item.hasSubmenu && <ChevronDown className="w-4 h-4 ml-1" />}
@@ -177,7 +177,7 @@ const Navbar = () => {
                       <Link
                         key={subItem.name}
                         to={subItem.link}
-                        className="block px-3 py-2 text-base font-medium text-white rounded-md hover:bg-green-600"
+                        className="block px-3 py-2 font-semibold text-white rounded-md hover:bg-green-600"
                         onClick={toggleMenu}
                       >
                         {subItem.name}
@@ -189,7 +189,7 @@ const Navbar = () => {
             ))}
           </div>
           <div className="px-4 py-3">
-            <button className="flex items-center justify-center w-full px-4 py-2 text-base font-medium text-white transition-all duration-300 ease-in-out bg-green-500 rounded-md hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-offset-2">
+            <button className="flex items-center justify-center w-full px-4 py-2 font-medium text-white transition-all duration-300 ease-in-out bg-green-500 rounded-md hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-offset-2">
               Buscar
               <Search className="w-5 h-5 ml-2" />
             </button>
