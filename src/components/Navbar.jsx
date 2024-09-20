@@ -81,7 +81,7 @@ const Navbar = () => {
             <img className="w-auto h-12 lg:h-16" src={Logo} alt="Logo" />
           </div>
           <div className="items-center justify-center flex-1 hidden lg:flex">
-            <div className="flex space-x-6 ">
+            <div className="flex space-x-5 ">
               {topMenuItems.map((item) => (
                 <Link
                   key={item.name}
