@@ -133,14 +133,14 @@ export default function Footer() {
           </p>
           <div className="flex mt-4 space-x-6 sm:mt-0">
             <a
-              href="https://www.facebook.com/silkglobal?locale=es_LA"
+              href="https://www.facebook.com/share/FDpqCHedhxkchRdW/?mibextid=LQQJ4d"
               className="text-gray-400 hover:text-gray-500"
             >
               <span className="sr-only">Facebook</span>
               <Facebook className="w-6 h-6" />
             </a>
             <a
-              href="https://www.instagram.com/silkglobaldominicana/"
+              href="https://www.instagram.com/coopebred?igsh=MTFra3VvbnU3a2lwZg%3D%3D"
               className="text-gray-400 hover:text-gray-500"
             >
               <span className="sr-only">Instagram</span>
