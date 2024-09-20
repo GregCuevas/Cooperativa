@@ -51,7 +51,7 @@ const Navbar = () => {
       ],
     },
     {
-      name: "PUBLICACIONES Y NOVEDADES",
+      name: "PUBLICACIONES",
       link: "/publicaciones-y-novedades",
       hasSubmenu: true,
       submenuItems: [
@@ -116,7 +116,7 @@ const Navbar = () => {
         </div>
       </div>
       <div className="hidden bg-green-500 lg:block">
-        <div className="max-w-6xl px-4 mx-auto sm:px-6 lg:px-8">
+        <div className="max-w-6xl px-4 mx-auto sm:px-6 lg:px-36">
           <div className="relative z-40 flex space-x-8">
             {bottomMenuItems.map((item) => (
               <div key={item.name} className="relative group">

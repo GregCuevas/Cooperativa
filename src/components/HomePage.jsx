@@ -1,5 +1,5 @@
 import React from "react";
-import Home from "../assets/ground.jpg";
+import Home from "../assets/ground.png";
 import { Link } from "react-router-dom"; // Adjust this path if necessary
 import {
   ArrowRight,
