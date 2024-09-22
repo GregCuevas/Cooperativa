@@ -1,6 +1,6 @@
 import React from "react";
 import telecom from "../assets/miTelecom.jpg"; // Imagen del archivo de imágenes
-import silkglobal from "../assets/silkglobal.jpeg";
+import silkglobal from "../assets/silkglobal.jpg";
 import mistore from "../assets/miStore.jpg"; // Imagen del archivo de imágenes
 
 const LogoSection = () => {

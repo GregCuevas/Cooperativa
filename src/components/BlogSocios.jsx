@@ -1,7 +1,7 @@
 import React from "react";
 import { Briefcase, User } from "lucide-react";
-import Empresa from "../assets/empresa.jpg";
-import Socio from "../assets/socio.png";
+import Empresarios from "../assets/empresarios.jpg";
+import Socio from "../assets/socio.jpg";
 
 const BlogSocios = () => {
   return (
@@ -18,16 +18,16 @@ const BlogSocios = () => {
       <div className="grid w-full grid-flow-row gap-x-0 gap-y-12 md:justify-items-center md:gap-6 lg:grid-cols-2">
         <PostImageCard
           src={Socio}
-          className="object-cover w-full h-auto transition-transform duration-300 hover:scale-105"
+          className="object-cover w-full transition-transform duration-300 hover:scale-105 h-96"
           title="Socio Individual"
           description="Brindamos soluciones a medida para estudiantes y familias en comunidades rurales y urbanas desfavorecidas."
           icon={<User size={24} strokeWidth={1.5} />}
         />
         <PostImageCard
-          src={Empresa}
-          className="object-cover w-full h-auto transition-transform duration-300 hover:scale-105"
+          src={Empresarios}
+          className="object-cover w-full transition-transform duration-300 hover:scale-105 h-96"
           title="Socio Empresa"
-          description="Coopeducate ofrece varias formas de asociación, cada una con compromisos y servicios adaptados a sus beneficios y condiciones."
+          description="Coopebred ofrece varias formas de asociación, cada una con compromisos y servicios adaptados a sus beneficios y condiciones."
           icon={<Briefcase size={24} strokeWidth={1.5} />}
         />
       </div>

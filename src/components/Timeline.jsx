@@ -1,12 +1,14 @@
 import React from "react";
 import Unared from "../assets/unared.png";
-import Silkglobal from "../assets/silkglobal.jpeg";
+import Silkglobal from "../assets/silkglobal.jpg";
 import Trofeo from "../assets/medalla.jpg";
 import Coopebred from "../assets/logo.png";
+import Cable from "../assets/cable.jpg";
+import China from "../assets/china.jpg";
 const Timeline = () => {
   const timelineEvents = [
     {
-      year: 2004,
+      year: 2006,
       title: "Silkglobal Dominicana Fundada",
       description:
         "Inicio de operaciones en el sector de las telecomunicaciones y tecnología en la República Dominicana.",
@@ -31,18 +33,18 @@ const Timeline = () => {
       title: "Desarrollo de Infraestructura en Fibra Óptica",
       description:
         "Inversión en infraestructura de fibra óptica para mejorar la conectividad en todo el país.",
-      image: "/placeholder.svg?height=80&width=80",
+      image: Cable,
     },
     {
       year: 2021,
       title: "Acuerdo con Empresas Chinas",
       description:
         "Colaboración estratégica para el desarrollo de tecnologías avanzadas y expansión de la red.",
-      image: "/placeholder.svg?height=80&width=80",
+      image: China,
     },
     {
       year: 2024,
-      title: "Formación de COOPEDUCATE",
+      title: "Formación de COOPEBRED",
       description:
         "Creación de la cooperativa educativa para fomentar el desarrollo tecnológico y educativo en la República Dominicana.",
       image: Coopebred,
@@ -61,7 +63,7 @@ const Timeline = () => {
             }`}
           >
             <div className="order-1 w-5/12"></div>
-            <div className="z-20 flex items-center order-1 w-8 h-8 bg-gray-800 rounded-full shadow-xl">
+            <div className="z-20 flex items-center order-1 w-12 h-12 bg-black rounded-full shadow-xl">
               <h1 className="mx-auto text-lg font-semibold text-white">
                 {event.year}
               </h1>
@@ -78,7 +80,7 @@ const Timeline = () => {
                 alt={event.title}
                 width={95}
                 height={95}
-                className="mt-4"
+                className="mt-4 rounded-sm"
               />
             </div>
           </div>

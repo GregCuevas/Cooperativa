@@ -1,31 +1,34 @@
 import React from "react";
 import Timeline from "../components/Timeline";
+import Family from "../assets/family.jpg";
+import Family2 from "../assets/family2.jpg";
+import Family3 from "../assets/family3.jpg";
 const Historia = () => {
   return (
     <>
       <div className="px-2 py-4 bg-white sm:px-4 lg:px-6">
-        <h2 className="text-3xl font-bold text-center text-gray-900">
-          Transformación Digital y Educativa en RD
+        <h2 className="mt-4 text-3xl font-bold text-center text-gray-900">
+          Transformación digital y educativa en RD
         </h2>
         <div className="grid grid-cols-1 gap-4 mt-4 md:grid-cols-3">
           <div className="flex justify-center">
             <img
-              className="object-cover w-full h-48 rounded-lg shadow-lg"
-              src="https://link-to-image-1.com" // Aquí puedes usar tu propia URL de imagen
+              className="object-cover rounded-lg shadow-lg "
+              src={Family} // Aquí puedes usar tu propia URL de imagen
               alt="Grupo de personas trabajando"
             />
           </div>
           <div className="flex justify-center">
             <img
-              className="object-cover w-full h-48 rounded-lg shadow-lg"
-              src="https://link-to-image-2.com"
+              className="object-cover rounded-lg shadow-lg "
+              src={Family3}
               alt="Grupo de personas trabajando"
             />
           </div>
           <div className="flex justify-center">
             <img
-              className="object-cover w-full h-48 rounded-lg shadow-lg"
-              src="https://link-to-image-3.com"
+              className="object-cover rounded-lg shadow-lg "
+              src={Family2}
               alt="Grupo de personas trabajando"
             />
           </div>
