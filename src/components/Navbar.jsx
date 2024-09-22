@@ -24,7 +24,7 @@ const Navbar = () => {
   const bottomMenuItems = [
     {
       name: "SERVICIOS",
-      link: "/productos-y-servicios",
+      link: "/servicios",
       hasSubmenu: true,
       submenuItems: [
         { name: "Educación", link: "/eduacion" },

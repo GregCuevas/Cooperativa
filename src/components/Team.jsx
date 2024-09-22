@@ -1,5 +1,5 @@
 import { Facebook, Linkedin, Instagram } from "lucide-react";
-
+import Maria from "../assets/maria.jpg";
 const teamMembers = [
   {
     name: "Sergio Montanari",
@@ -28,7 +28,7 @@ const teamMembers = [
   {
     name: "María Isabel",
     role: "Secretaria",
-    image: "/placeholder.svg?height=200&width=200",
+    image: Maria,
     cargo: "Consejo de Administración",
     bgColor: "bg-gray-100",
     socialLinks: {
@@ -210,11 +210,7 @@ const Team = () => {
             <div
               className={`w-48 h-48 rounded-full overflow-hidden mb-4 ${member.bgColor}`}
             >
-              <img
-                src={member.image}
-                alt=""
-                className="object-cover w-full h-full "
-              />
+              <img src={member.image} alt="" className="object-cover " />
             </div>
 
             <h3 className="text-xl font-semibold">{member.name}</h3>
