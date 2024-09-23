@@ -8,6 +8,8 @@ import Institucion from "../pages/Institucion";
 import Servicios from "../pages/Servicios";
 import Educacion from "../pages/Eduacacion";
 import Telecomunicaciones from "../pages/Telecomunicaciones";
+import Finaciamiento from "../pages/Financiamiento";
+import Individual from "../pages/Individual";
 const Root = () => {
   return (
     <>
@@ -17,9 +19,11 @@ const Root = () => {
         <Route path="/calculadora-prestamos" element={<Loan />} />
         <Route path="/historia" element={<Historia />} />
         <Route path="/servicios" element={<Servicios />} />
+        <Route path="/financiamiento" element={<Finaciamiento />} />
         <Route path="/telecomunicaciones" element={<Telecomunicaciones />} />
         <Route path="/educacion" element={<Educacion />} />
         <Route path="/perfil-institucional" element={<Institucion />} />
+        <Route path="/socio-individual" element={<Individual />} />
       </Routes>
     </>
   );

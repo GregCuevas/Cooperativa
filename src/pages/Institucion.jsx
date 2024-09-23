@@ -8,19 +8,18 @@ import Mision from "../assets/mision.jpg";
 import Vision from "../assets/vision.jpg";
 import Valores from "../assets/valores.jpg";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-export default function Institucion() {
+
+const Institucion = () => {
   return (
     <>
       <Navbar />
       <section className="py-12 bg-white">
-        <div className="container px-4 mx-auto text-center">
-          {/* Main Image with Overlaid Text */}
+        <div className="container px-1 mx-auto text-center">
           <div className="relative w-full lg:h-[70vh] mb-8 overflow-hidden rounded-lg">
             <img
               src={Somos}
               alt="Coopebred main image"
-              layout="fill"
-              objectfit="cover"
+              className="object-cover w-full h-full"
             />
             <div className="absolute inset-0 flex flex-col items-center justify-center p-4 text-white bg-black bg-opacity-50">
               <h2 className="mb-4 text-4xl font-bold text-center">
@@ -37,18 +36,14 @@ export default function Institucion() {
               </p>
             </div>
           </div>
-
-          {/* Cards de Misión, Visión, Valores con estilo de bordes redondeados y sombra difusa */}
           <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
-            {/* Misión */}
             <Card className="border rounded-lg shadow-[0_4px_20px_rgba(0,0,0,0.05)] bg-white border-t-2 border-[#ff9100]">
               <CardHeader className="p-0">
                 <div className="relative w-full overflow-hidden rounded-sm rounded-t-lg h-52">
                   <img
                     src={Mision}
                     alt="Misión image"
-                    layout="fill"
-                    objectfit="cover"
+                    className="object-cover w-full h-full"
                   />
                 </div>
                 <div className="p-6">
@@ -65,16 +60,13 @@ export default function Institucion() {
                 </div>
               </CardHeader>
             </Card>
-
-            {/* Visión */}
             <Card className="border rounded-lg shadow-[0_4px_20px_rgba(0,0,0,0.05)] bg-white border-t-2 border-[#ff9100]">
               <CardHeader className="p-0">
                 <div className="relative w-full overflow-hidden rounded-sm rounded-t-lg h-52">
                   <img
                     src={Vision}
                     alt="Visión image"
-                    layout="fill"
-                    objectfit="cover"
+                    className="object-cover w-full h-full"
                   />
                 </div>
                 <div className="p-6">
@@ -90,16 +82,13 @@ export default function Institucion() {
                 </div>
               </CardHeader>
             </Card>
-
-            {/* Valores */}
             <Card className="border rounded-lg shadow-[0_4px_20px_rgba(0,0,0,0.05)] bg-white border-t-2 border-[#ff9100]">
               <CardHeader className="p-0">
                 <div className="relative w-full overflow-hidden rounded-sm rounded-t-lg h-52">
                   <img
                     src={Valores}
                     alt="Valores image"
-                    layout="fill"
-                    objectfit="cover"
+                    className="object-cover w-full h-full"
                   />
                 </div>
                 <div className="p-6">
@@ -122,4 +111,5 @@ export default function Institucion() {
       <Footer />
     </>
   );
-}
+};
+export default Institucion;

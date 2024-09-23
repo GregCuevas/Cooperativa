@@ -7,11 +7,6 @@ const teamMembers = [
     image: "/placeholder.svg?height=200&width=200",
     cargo: "Consejo Administración",
     bgColor: "bg-gray-100",
-    socialLinks: {
-      facebook: "https://facebook.com/james1",
-      Linkedin: "https://twitter.com/james1",
-      instagram: "https://instagram.com/james1",
-    },
   },
   {
     name: "Edison Rodríguez",
@@ -19,11 +14,6 @@ const teamMembers = [
     image: "/placeholder.svg?height=200&width=200",
     cargo: "Consejo de Administración",
     bgColor: "bg-gray-100",
-    socialLinks: {
-      facebook: "https://facebook.com/james2",
-      Linkedin: "https://twitter.com/james2",
-      instagram: "https://instagram.com/james2",
-    },
   },
   {
     name: "María Isabel",
@@ -31,11 +21,6 @@ const teamMembers = [
     image: Maria,
     cargo: "Consejo de Administración",
     bgColor: "bg-gray-100",
-    socialLinks: {
-      facebook: "https://facebook.com/james3",
-      Linkedin: "https://twitter.com/james3",
-      instagram: "https://instagram.com/james3",
-    },
   },
   {
     name: "Anlly Elinoy ",
@@ -43,11 +28,6 @@ const teamMembers = [
     image: "/placeholder.svg?height=200&width=200",
     cargo: "Consejo de Administración",
     bgColor: "bg-gray-100",
-    socialLinks: {
-      facebook: "https://facebook.com/james4",
-      Linkedin: "https://twitter.com/james4",
-      instagram: "https://instagram.com/james4",
-    },
   },
   {
     name: "Zulinel Brito ",
@@ -55,11 +35,6 @@ const teamMembers = [
     image: "/placeholder.svg?height=200&width=200",
     cargo: "Consejo de Administración",
     bgColor: "bg-gray-100",
-    socialLinks: {
-      facebook: "https://facebook.com/james1",
-      Linkedin: "https://twitter.com/james1",
-      instagram: "https://instagram.com/james1",
-    },
   },
   {
     name: "Cristian Alberto ",
@@ -67,11 +42,6 @@ const teamMembers = [
     image: "/placeholder.svg?height=200&width=200",
     cargo: "Consejo de Administración",
     bgColor: "bg-gray-100",
-    socialLinks: {
-      facebook: "https://facebook.com/james1",
-      Linkedin: "https://twitter.com/james1",
-      instagram: "https://instagram.com/james1",
-    },
   },
   {
     name: "Juan Valentín ",
@@ -79,11 +49,6 @@ const teamMembers = [
     image: "/placeholder.svg?height=200&width=200",
     cargo: "Consejo de Administración",
     bgColor: "bg-gray-100",
-    socialLinks: {
-      facebook: "https://facebook.com/james1",
-      Linkedin: "https://twitter.com/james1",
-      instagram: "https://instagram.com/james1",
-    },
   },
   {
     name: "Tomas Amauris",
@@ -91,11 +56,6 @@ const teamMembers = [
     image: "/placeholder.svg?height=200&width=200",
     cargo: "Consejo de Vigilancia",
     bgColor: "bg-gray-100",
-    socialLinks: {
-      facebook: "https://facebook.com/james1",
-      Linkedin: "https://twitter.com/james1",
-      instagram: "https://instagram.com/james1",
-    },
   },
   {
     name: "María Salcedo",
@@ -103,11 +63,6 @@ const teamMembers = [
     image: "/placeholder.svg?height=200&width=200",
     cargo: "Consejo de Vigilancia",
     bgColor: "bg-gray-100",
-    socialLinks: {
-      facebook: "https://facebook.com/james1",
-      Linkedin: "https://twitter.com/james1",
-      instagram: "https://instagram.com/james1",
-    },
   },
   {
     name: "Zunilda Altagracia ",
@@ -115,11 +70,6 @@ const teamMembers = [
     image: "/placeholder.svg?height=200&width=200",
     cargo: "Consejo de Vigilancia",
     bgColor: "bg-gray-100",
-    socialLinks: {
-      facebook: "https://facebook.com/james1",
-      Linkedin: "https://twitter.com/james1",
-      instagram: "https://instagram.com/james1",
-    },
   },
   {
     name: "Víctor Álvarez ",
@@ -127,11 +77,6 @@ const teamMembers = [
     image: "/placeholder.svg?height=200&width=200",
     cargo: "Consejo de Viligancia",
     bgColor: "bg-gray-100",
-    socialLinks: {
-      facebook: "https://facebook.com/james1",
-      Linkedin: "https://twitter.com/james1",
-      instagram: "https://instagram.com/james1",
-    },
   },
   {
     name: "Stefano Andreani",
@@ -139,11 +84,6 @@ const teamMembers = [
     image: "/placeholder.svg?height=200&width=200",
     cargo: "Consejo de Vigilancia",
     bgColor: "bg-gray-100",
-    socialLinks: {
-      facebook: "https://facebook.com/james1",
-      Linkedin: "https://twitter.com/james1",
-      instagram: "https://instagram.com/james1",
-    },
   },
   {
     name: "Natalya Kosnikova",
@@ -151,11 +91,6 @@ const teamMembers = [
     image: "/placeholder.svg?height=200&width=200",
     cargo: "Consejo de Crédito",
     bgColor: "bg-gray-100",
-    socialLinks: {
-      facebook: "https://facebook.com/james1",
-      Linkedin: "https://twitter.com/james1",
-      instagram: "https://instagram.com/james1",
-    },
   },
   {
     name: "José Heredia",
@@ -163,11 +98,6 @@ const teamMembers = [
     image: "/placeholder.svg?height=200&width=200",
     cargo: "Consejo de Crédito",
     bgColor: "bg-gray-100",
-    socialLinks: {
-      facebook: "https://facebook.com/james1",
-      Linkedin: "https://twitter.com/james1",
-      instagram: "https://instagram.com/james1",
-    },
   },
   {
     name: "Rafael Bienvenido",
@@ -175,11 +105,6 @@ const teamMembers = [
     image: "/placeholder.svg?height=200&width=200",
     cargo: "Consejo de Crédito",
     bgColor: "bg-gray-100",
-    socialLinks: {
-      facebook: "https://facebook.com/james1",
-      Linkedin: "https://twitter.com/james1",
-      instagram: "https://instagram.com/james1",
-    },
   },
   {
     name: "Junior Rafael",
@@ -187,11 +112,6 @@ const teamMembers = [
     image: "/placeholder.svg?height=200&width=200",
     cargo: "Consejo de Crédito",
     bgColor: "bg-gray-100",
-    socialLinks: {
-      facebook: "https://facebook.com/james1",
-      Linkedin: "https://twitter.com/james1",
-      instagram: "https://instagram.com/james1",
-    },
   },
 ];
 
@@ -212,37 +132,9 @@ const Team = () => {
             >
               <img src={member.image} alt="" className="object-cover " />
             </div>
-
             <h3 className="text-xl font-semibold">{member.name}</h3>
             <p className="mb-4 text-gray-600">{member.cargo}</p>
             <p className="mb-4 text-gray-600">{member.role}</p>
-
-            <div className="flex space-x-4">
-              <a
-                href={member.socialLinks.facebook}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-400 hover:text-gray-600"
-              >
-                <Facebook size={20} />
-              </a>
-              <a
-                href={member.socialLinks.Linkedin}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-400 hover:text-gray-600"
-              >
-                <Linkedin size={20} />
-              </a>
-              <a
-                href={member.socialLinks.instagram}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-400 hover:text-gray-600"
-              >
-                <Instagram size={20} />
-              </a>
-            </div>
           </div>
         ))}
       </div>

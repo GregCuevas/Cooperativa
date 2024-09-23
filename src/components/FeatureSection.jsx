@@ -4,24 +4,27 @@ import {
   MonitorSmartphone,
   ChevronRight,
 } from "lucide-react";
-
+import { Link } from "react-router-dom";
 const FeatureSection = () => {
   const features = [
     {
       icon: Handshake,
       title: "Asociación",
+      link: "/historia",
       description:
         "La cooperativa se une a Silkglobal Dominicana para incluir pequeñas empresas en el proyecto Unared, brindando servicios de telecomunicaciones a familias dominicanas.",
     },
     {
       icon: Globe,
       title: "Servicios",
+      link: "/servicios",
       description:
         "Se habilita un área para servicios MiTelecom, financiados por la cooperativa sin contrato inicial y con tarifas accesibles, para generar una renta competitiva.",
     },
     {
       icon: MonitorSmartphone,
       title: "Financiamiento Tech",
+      link: "/financiamiento",
       description:
         "La cooperativa financia computadoras, tabletas y smartphones en 12 cuotas sin interés ni inicial, para mejorar el acceso a la educación en áreas rurales.",
     },
@@ -52,13 +55,13 @@ const FeatureSection = () => {
             <p className="mb-6 leading-relaxed text-gray-600">
               {feature.description}
             </p>
-            <a
-              href="#"
+            <Link
+              to={feature.link}
               className="flex items-center font-semibold text-[#f8961e] hover:text-[#d77b1b] transition-colors"
             >
               Learn More
               <ChevronRight className="w-5 h-5 ml-2" />
-            </a>
+            </Link>
           </div>
         ))}
       </div>

@@ -105,7 +105,7 @@ export default function Component() {
   return (
     <>
       <Navbar />
-      <section className="py-12 ">
+      <section className="py-4 ">
         <div className="container px-4 mx-auto">
           {/* Main Image with Overlaid Text */}
           <div className="relative w-full h-[50vh] sm:h-[60vh] lg:h-[70vh] mb-12 overflow-hidden rounded-lg shadow-md">

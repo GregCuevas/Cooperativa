@@ -35,7 +35,7 @@ const Historia = () => {
         </div>
         <div className="max-w-5xl mx-auto mt-4 text-center text-gray-700">
           <p>
-            Coopeducate se constituye gracias a la decisión de experimentados
+            Coopebred se constituye gracias a la decisión de experimentados
             empresarios con una amplia trayectoria en diversos campos y
             sectores, incluyendo telecomunicaciones, tecnología, y finanzas,
             entre otros. La República Dominicana se encuentra en una situación

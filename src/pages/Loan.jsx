@@ -43,7 +43,7 @@ const Loan = () => {
       <Navbar />
       {/* Fondo y centración */}
       <div
-        className="flex items-center justify-center min-h-screen bg-center bg-cover"
+        className="flex items-center justify-center min-h-screen mt-4 mb-4 bg-center bg-cover"
         style={{
           backgroundImage: `url('/path-to-your-image.jpg')`, // Reemplaza esta ruta con tu imagen de fondo relacionada con préstamos
         }}

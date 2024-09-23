@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 import Wifi from "../assets/wifi.jpg";
 import Educación from "../assets/educacion.jpg";
 import Finanza from "../assets/finanza.jpg";
@@ -7,7 +8,7 @@ const blogPosts = [
   {
     icon: Wifi,
     category: "Conectividad",
-
+    link: "/telecomunicaciones",
     title: "Telecomunicaciones",
     description:
       "Para ampliar las telecomunicaciones en zonas rurales, nos enfocamos en promover el desarrollo educativo.",
@@ -15,7 +16,7 @@ const blogPosts = [
   {
     icon: Educación,
     category: "Equidad",
-
+    link: "/educacion",
     title: "Educación",
     description:
       "Comprometidos con un objetivo compartido, Coopebred facilita el acceso equitativo a la tecnología 5G para todos.",
@@ -23,6 +24,7 @@ const blogPosts = [
   {
     icon: Finanza,
     category: "Acceso",
+    link: "/financiamiento",
     title: "Financiamiento",
     description:
       "Con las soluciones de Coopebred, las familias en áreas rurales acceden a diversas ventajas económicas.",
@@ -58,13 +60,15 @@ const BlogSection = () => {
               </div>
               <h3 className="text-xl font-bold">{post.title}</h3>
               <p className="text-gray-500">{post.description}</p>
-              <Button
-                variant="link"
-                className="h-auto p-0 font-semibold text-black "
-              >
-                Read More
-                <ArrowRight className="w-4 h-4 ml-2" />
-              </Button>
+              <Link to={post.link}>
+                <Button
+                  variant="link"
+                  className="h-auto p-0 font-semibold text-black "
+                >
+                  Read More
+                  <ArrowRight className="w-4 h-4 ml-2" />
+                </Button>
+              </Link>
             </div>
           ))}
         </div>
