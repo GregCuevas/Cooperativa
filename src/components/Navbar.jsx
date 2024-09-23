@@ -27,14 +27,14 @@ const Navbar = () => {
       link: "/servicios",
       hasSubmenu: true,
       submenuItems: [
-        { name: "Educación", link: "/eduacion" },
+        { name: "Educación", link: "/educacion" },
         { name: "Telecomunicaciones", link: "/telecomunicaciones" },
         { name: "Financiamiento", link: "/financiamiento" },
       ],
     },
     {
       name: "CONÓCENOS",
-      link: "",
+      link: "/perfil-institucional",
       hasSubmenu: true,
       submenuItems: [
         { name: "Historia", link: "/historia" },
