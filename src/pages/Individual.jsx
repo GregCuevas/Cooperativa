@@ -1,6 +1,7 @@
 import React from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import FormIndividual from "../components/FormIndividual";
 import {
   CheckCircle,
   Heart,
@@ -13,7 +14,7 @@ import {
   User,
 } from "lucide-react"; // Importación de íconos de Lucide React
 import Individuals from "../assets/individual.jpg";
-import SavingsImage from "../assets/individual.jpg"; // Usa una imagen relevante para esta sección
+import Ahorro from "../assets/ahorrando.jpg"; // Usa una imagen relevante para esta sección
 
 const Individual = () => {
   return (
@@ -136,7 +137,7 @@ const Individual = () => {
       <div className="relative py-16 bg-black">
         <div className="absolute inset-0">
           <img
-            src={SavingsImage} // Asegúrate de que esta sea la ruta correcta de la imagen
+            src={Ahorro} // Asegúrate de que esta sea la ruta correcta de la imagen
             alt="Ahorro"
             className="object-cover w-full h-full opacity-20"
           />
@@ -165,9 +166,9 @@ const Individual = () => {
           </p>
         </div>
       </div>
-      <div className="px-6 py-12 bg-gray-50 md:px-20">
+      <div className="px-6 py-12 md:px-20">
         <h2 className="mb-6 text-3xl font-bold text-center text-black">
-          Requisitos para ser Socio
+          Requisitos para Socio Individual
         </h2>
 
         <div className="space-y-8">
@@ -229,6 +230,7 @@ const Individual = () => {
           </div>
         </div>
       </div>
+      <FormIndividual />
 
       <Footer />
     </>
