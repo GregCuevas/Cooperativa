@@ -10,6 +10,7 @@ import Educacion from "../pages/Eduacacion";
 import Telecomunicaciones from "../pages/Telecomunicaciones";
 import Finaciamiento from "../pages/Financiamiento";
 import Individual from "../pages/Individual";
+import Empresa from "../pages/Empresa";
 const Root = () => {
   return (
     <>
@@ -24,6 +25,7 @@ const Root = () => {
         <Route path="/educacion" element={<Educacion />} />
         <Route path="/perfil-institucional" element={<Institucion />} />
         <Route path="/socio-individual" element={<Individual />} />
+        <Route path="/socio-empresa" element={<Empresa />} />
       </Routes>
     </>
   );

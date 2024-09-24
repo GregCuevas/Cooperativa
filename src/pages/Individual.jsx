@@ -7,6 +7,10 @@ import {
   BarChart,
   DollarSign,
   Clipboard,
+  Wallet,
+  Banknote,
+  CreditCard,
+  User,
 } from "lucide-react"; // Importación de íconos de Lucide React
 import Individuals from "../assets/individual.jpg";
 import SavingsImage from "../assets/individual.jpg"; // Usa una imagen relevante para esta sección
@@ -44,8 +48,8 @@ const Individual = () => {
       </div>
 
       {/* Sección de Beneficios */}
-      <div className="px-6 py-12 bg-gray-100 md:px-20">
-        <h2 className="mb-6 text-3xl font-bold text-center text-blue-900">
+      <div className="px-6 py-12 md:px-20">
+        <h2 className="mb-6 text-3xl font-bold text-center text-black">
           Beneficios de Socio Individual
         </h2>
 
@@ -129,7 +133,7 @@ const Individual = () => {
         </div>
       </div>
 
-      <div className="relative py-16 bg-blue-900">
+      <div className="relative py-16 bg-black">
         <div className="absolute inset-0">
           <img
             src={SavingsImage} // Asegúrate de que esta sea la ruta correcta de la imagen
@@ -159,6 +163,70 @@ const Individual = () => {
             Las cooperativas apoyan de manera intencional la comunidad a la que
             pertenecen.
           </p>
+        </div>
+      </div>
+      <div className="px-6 py-12 bg-gray-50 md:px-20">
+        <h2 className="mb-6 text-3xl font-bold text-center text-black">
+          Requisitos para ser Socio
+        </h2>
+
+        <div className="space-y-8">
+          {/* Requisito 1 */}
+          <div className="flex items-center p-6 bg-white rounded-lg shadow-md">
+            <div className="p-4 mr-6 bg-green-100 rounded-full">
+              <User className="w-10 h-10 text-green-600" />
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold text-black">Cédula</h3>
+              <p className="mt-2 text-gray-600">
+                Presenta tu cédula de identidad para realizar el proceso de
+                inscripción.
+              </p>
+            </div>
+          </div>
+
+          {/* Requisito 2 */}
+          <div className="flex items-center p-6 bg-white rounded-lg shadow-md">
+            <div className="p-4 mr-6 bg-green-100 rounded-full">
+              <CreditCard className="w-10 h-10 text-green-600" />
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold text-black">Inscripción</h3>
+              <p className="mt-2 text-gray-600">
+                Realiza un pago de $1000 por la inscripción.
+              </p>
+            </div>
+          </div>
+
+          {/* Requisito 3 */}
+          <div className="flex items-center p-6 bg-white rounded-lg shadow-md">
+            <div className="p-4 mr-6 bg-green-100 rounded-full">
+              <Banknote className="w-10 h-10 text-green-600" />
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold text-black">
+                Aporte a Capital
+              </h3>
+              <p className="mt-2 text-gray-600">
+                Aportación inicial de $1000 para tu capital en la cooperativa.
+              </p>
+            </div>
+          </div>
+
+          {/* Requisito 4 */}
+          <div className="flex items-center p-6 bg-white rounded-lg shadow-md">
+            <div className="p-4 mr-6 bg-green-100 rounded-full">
+              <Wallet className="w-10 h-10 text-green-600" />
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold text-black">
+                Apertura de Cuenta
+              </h3>
+              <p className="mt-2 text-gray-600">
+                Apertura de una cuenta de ahorros con un mínimo de $200.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
 
