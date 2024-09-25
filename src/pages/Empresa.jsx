@@ -2,7 +2,7 @@ import React, { useRef } from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import FormEmpresa from "../components/FormEmpresa";
-import Individuals from "../assets/individual.jpg";
+import Individuals from "../assets/empresas.jpg";
 import { Building, Users, Percent, FileCheck } from "lucide-react";
 
 const InfoSection = ({ title, description, icon: Icon }) => (

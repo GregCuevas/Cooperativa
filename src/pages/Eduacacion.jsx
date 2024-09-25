@@ -87,33 +87,6 @@ export default function Component() {
             ))}
           </div>
           {/* Objetivo Principal Section */}
-          <div className="p-6 mb-12 text-gray-800 rounded-lg shadow-md sm:p-8 bg-gradient-to-r ">
-            <div className="flex flex-col items-center justify-between md:flex-row">
-              <div className="mb-6 text-center md:text-left md:mb-0 md:mr-8">
-                <h2 className="flex items-center justify-center mb-4 text-2xl font-bold text-gray-700 md:justify-start sm:text-3xl">
-                  <Target className="hidden w-8 h-8 mr-2 text-green-400 md:block" />{" "}
-                  Nuestro objetivo principal
-                </h2>
-                <p className="mb-2 text-lg font-semibold text-gray-700 sm:text-xl">
-                  Conectar y Transformar
-                </p>
-                <p className="text-base text-gray-600 sm:text-lg">
-                  Educación, Entretenimiento, Soluciones Tecnológicas
-                </p>
-              </div>
-              <div className="flex-shrink-0">
-                <Handshake className="w-20 h-20 text-green-400 sm:w-28 sm:h-28 md:w-32 md:h-32 opacity-80" />
-              </div>
-            </div>
-            <div className="max-w-xl mt-6 text-sm text-center text-gray-600 md:text-left sm:text-base">
-              <p>
-                Coopebred impulsa el futuro de la educación y el bienestar,
-                estableciendo acuerdos estratégicos con MAVIR School y
-                Psicología Industrial Dominicana. Ofrecemos educación virtual de
-                alta calidad con Monte Ararat School en Orlando.
-              </p>
-            </div>
-          </div>
         </div>
       </section>
       <Footer />

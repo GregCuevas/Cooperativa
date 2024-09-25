@@ -5,7 +5,7 @@ const teamMembers = [
     name: "Sergio Montanari",
     role: "Presidente",
     image: "/placeholder.svg?height=200&width=200",
-    cargo: "Consejo Administración",
+    cargo: "Consejo de Administración",
     bgColor: "bg-gray-100",
   },
   {
@@ -16,7 +16,7 @@ const teamMembers = [
     bgColor: "bg-gray-100",
   },
   {
-    name: "María Isabel",
+    name: "María García",
     role: "Secretaria",
     image: Maria,
     cargo: "Consejo de Administración",

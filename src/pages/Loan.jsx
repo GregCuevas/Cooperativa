@@ -13,14 +13,19 @@ const Loan = () => {
     const mesesVal = parseInt(meses);
     const tasaVal = parseFloat(tasa);
 
-    if (!montoVal || !mesesVal || !tasaVal) {
+    if (!montoVal || !mesesVal) {
       alert("Por favor, rellena todos los campos correctamente.");
       return;
     }
 
-    const tasaMensual = tasaVal / 100 / 12;
-    const cuotaMensual =
-      (tasaMensual * montoVal) / (1 - Math.pow(1 + tasaMensual, -mesesVal));
+    let cuotaMensual;
+    if (tasaVal === 0) {
+      cuotaMensual = montoVal / mesesVal; // Si la tasa es 0, cuota es monto dividido por meses
+    } else {
+      const tasaMensual = tasaVal / 100 / 12;
+      cuotaMensual =
+        (tasaMensual * montoVal) / (1 - Math.pow(1 + tasaMensual, -mesesVal));
+    }
 
     setCuota(cuotaMensual.toFixed(2));
   };
