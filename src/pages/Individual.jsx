@@ -21,7 +21,7 @@ const Individual = () => {
   return (
     <>
       <Navbar />
-      <div className="relative">
+      <div className="relative mt-4">
         <div className="relative h-[50vh] sm:h-[60vh] md:h-[70vh] lg:h-[75vh]">
           <img
             src={Individuals}

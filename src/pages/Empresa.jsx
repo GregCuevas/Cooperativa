@@ -3,14 +3,7 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import FormEmpresa from "../components/FormEmpresa";
 import Individuals from "../assets/individual.jpg";
-import {
-  Building,
-  Users,
-  Percent,
-  FileCheck,
-  DollarSign,
-  ShieldCheck,
-} from "lucide-react";
+import { Building, Users, Percent, FileCheck } from "lucide-react";
 
 const InfoSection = ({ title, description, icon: Icon }) => (
   <div className="flex items-start p-4 space-x-4 bg-white rounded-lg shadow-md">
@@ -47,7 +40,7 @@ const Empresa = () => {
   return (
     <>
       <Navbar />
-      <div className="relative">
+      <div className="relative mt-4">
         <div className="relative h-[50vh] sm:h-[60vh] md:h-[70vh] lg:h-[75vh]">
           <img
             src={Individuals}

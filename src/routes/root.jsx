@@ -21,6 +21,8 @@ import ConectividadNoticia from "../pages/ConectividadNoticia";
 import Socios from "../pages/Socios";
 import Terminos from "../pages/Terminos";
 import Politicas from "../pages/Politicas";
+import NotFound from "../pages/NoEncontrado"; // Import the 404 page
+
 const Root = () => {
   return (
     <>
@@ -62,6 +64,9 @@ const Root = () => {
           path="/publicaciones/conectividad-5g-un-requisito-de-la-unesco-para-la-educacion-en-la-era-digital-en-la-republica-dominicana"
           element={<ConectividadNoticia />}
         />
+
+        {/* Catch-all route for 404 page */}
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </>
   );
