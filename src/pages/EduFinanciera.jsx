@@ -1,7 +1,7 @@
 import React from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import EduFinaciera from "../assets/eduFinanciera.jpg";
+import EduFinaciera from "../assets/edufinanciera.jpg";
 import {
   Coins,
   PiggyBank,
