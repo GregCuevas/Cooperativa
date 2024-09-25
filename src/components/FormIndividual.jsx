@@ -422,7 +422,7 @@ const FormIndividual = () => {
             <label htmlFor="terminos" className="text-gray-700">
               Estoy de acuerdo con los{" "}
               <Link
-                to="/terminos"
+                to="/terminos-de-servicio"
                 target="_blank"
                 className="text-green-500 underline hover:text-green-700"
               >
@@ -430,7 +430,7 @@ const FormIndividual = () => {
               </Link>{" "}
               y la{" "}
               <Link
-                to="/privacidad"
+                to="/politica-de-privacidad"
                 target="_blank"
                 className="text-green-500 underline hover:text-green-700"
               >

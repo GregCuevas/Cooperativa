@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import { Link } from "react-router-dom";
 const FormEmpresa = () => {
   const [formData, setFormData] = useState({
     tipoSocio: "",
@@ -19,6 +19,7 @@ const FormEmpresa = () => {
     direccionEmpresa: "",
     telefonoEmpresa: "",
     emailEmpresa: "",
+    terminos: false,
   });
 
   const handleChange = (e) => {
@@ -29,6 +30,13 @@ const FormEmpresa = () => {
     });
   };
 
+  const handleChanges = (e) => {
+    const { name, value, type, checked } = e.target;
+    setFormData({
+      ...formData,
+      [name]: type === "checkbox" ? checked : value,
+    });
+  };
   const handleSubmit = (e) => {
     e.preventDefault();
   };
@@ -365,6 +373,41 @@ const FormEmpresa = () => {
               className="w-full p-3 border border-gray-300 rounded-md outline-none focus:ring-2 focus:ring-green-500"
               placeholder="empresa@gmail.com"
             />
+          </div>
+          <div className="mb-6 md:col-span-2">
+            <label className="block mb-2 font-medium text-gray-700">
+              Consentimiento
+              <span className="text-red-500">*</span>
+            </label>
+            <div className="flex items-center">
+              <input
+                type="checkbox"
+                id="terminos"
+                name="terminos"
+                checked={formData.terminos}
+                onChange={handleChanges}
+                className="mr-2"
+              />
+              <label htmlFor="terminos" className="text-gray-700">
+                Estoy de acuerdo con los{" "}
+                <Link
+                  to="/terminos-de-servicio"
+                  target="_blank"
+                  className="text-green-500 underline hover:text-green-700"
+                >
+                  Términos y Condiciones
+                </Link>{" "}
+                y la{" "}
+                <Link
+                  to="/politica-de-privacidad"
+                  target="_blank"
+                  className="text-green-500 underline hover:text-green-700"
+                >
+                  Política de Privacidad
+                </Link>
+                .
+              </label>
+            </div>
           </div>
         </div>
         <div>

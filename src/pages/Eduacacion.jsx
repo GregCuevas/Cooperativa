@@ -33,7 +33,7 @@ export default function Component() {
       description:
         "Conéctate sin límites. Nuestra conexión de alta velocidad potencia tu mundo digital con rendimiento excepcional.",
       icon: Wifi,
-      color: "bg-blue-400",
+      color: "bg-green-400",
     },
     {
       title: "COLEGIO VIRTUAL EDUCATIVO",
@@ -47,14 +47,14 @@ export default function Component() {
       description:
         "Asociados con Xiaomi International para brindar productos de alta gama a precios asequibles, respaldados por el fabricante.",
       icon: Smartphone,
-      color: "bg-red-400",
+      color: "bg-green-400",
     },
     {
       title: "FINANCIAMIENTO TASA 0%",
       description:
         "Accede a tus sueños con nuestro Financiamiento al 0%. Tasas de interés imbatibles para realizar tus proyectos.",
       icon: CreditCard,
-      color: "bg-orange-400",
+      color: "bg-green-400",
     },
   ];
 
@@ -91,7 +91,7 @@ export default function Component() {
             <div className="flex flex-col items-center justify-between md:flex-row">
               <div className="mb-6 text-center md:text-left md:mb-0 md:mr-8">
                 <h2 className="flex items-center justify-center mb-4 text-2xl font-bold text-gray-700 md:justify-start sm:text-3xl">
-                  <Target className="hidden w-8 h-8 mr-2 text-blue-600 md:block" />{" "}
+                  <Target className="hidden w-8 h-8 mr-2 text-green-400 md:block" />{" "}
                   Nuestro objetivo principal
                 </h2>
                 <p className="mb-2 text-lg font-semibold text-gray-700 sm:text-xl">
@@ -102,7 +102,7 @@ export default function Component() {
                 </p>
               </div>
               <div className="flex-shrink-0">
-                <Handshake className="w-20 h-20 text-blue-500 sm:w-28 sm:h-28 md:w-32 md:h-32 opacity-80" />
+                <Handshake className="w-20 h-20 text-green-400 sm:w-28 sm:h-28 md:w-32 md:h-32 opacity-80" />
               </div>
             </div>
             <div className="max-w-xl mt-6 text-sm text-center text-gray-600 md:text-left sm:text-base">

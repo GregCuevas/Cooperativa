@@ -19,14 +19,16 @@ import EducacionNoticia from "../pages/EducacionNoticia";
 import TrabajoNoticia from "../pages/TrabajoNoticia";
 import ConectividadNoticia from "../pages/ConectividadNoticia";
 import Socios from "../pages/Socios";
-
+import Terminos from "../pages/Terminos";
+import Politicas from "../pages/Politicas";
 const Root = () => {
   return (
     <>
       <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />
-
+        <Route path="/terminos-de-servicio" element={<Terminos />} />
+        <Route path="/politica-de-privacidad" element={<Politicas />} />
         <Route path="/calculadora-prestamos" element={<Loan />} />
         <Route path="/historia" element={<Historia />} />
         <Route path="/servicios" element={<Servicios />} />
