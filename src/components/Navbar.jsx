@@ -6,8 +6,12 @@ import Logo from "../assets/logo.png";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState("");
+  const [isSearchOpen, setIsSearchOpen] = useState(false); // Estado para abrir/cerrar la búsqueda
+  const [searchTerm, setSearchTerm] = useState(""); // Estado para el término de búsqueda
+  const [searchResults, setSearchResults] = useState([]); // Estado para los resultados de búsqueda
 
   const toggleMenu = () => setIsOpen(!isOpen);
+  const toggleSearch = () => setIsSearchOpen(!isSearchOpen); // Función para alternar la búsqueda
 
   const toggleDropdown = (menu) => {
     setActiveDropdown(activeDropdown === menu ? "" : menu);
@@ -67,6 +71,21 @@ const Navbar = () => {
     { name: "PRÉSTAMOS", link: "/calculadora-prestamos" },
   ];
 
+  // Función para manejar la búsqueda
+  const handleSearch = () => {
+    const allItems = [
+      ...topMenuItems,
+      ...bottomMenuItems.flatMap((item) =>
+        item.hasSubmenu ? [item, ...item.submenuItems] : [item]
+      ),
+    ];
+
+    const results = allItems.filter((item) =>
+      item.name.toLowerCase().includes(searchTerm.toLowerCase())
+    );
+    setSearchResults(results);
+  };
+
   return (
     <nav className="w-full bg-white shadow-md">
       <div className="max-w-6xl px-4 mx-auto sm:px-6 lg:px-8">
@@ -75,12 +94,12 @@ const Navbar = () => {
             <img className="w-auto h-12 lg:h-16" src={Logo} alt="Logo" />
           </div>
           <div className="items-center justify-center flex-1 hidden lg:flex">
-            <div className="flex space-x-5 ">
+            <div className="flex space-x-5">
               {topMenuItems.map((item) => (
                 <Link
                   key={item.name}
                   to={item.link}
-                  className="px-3 py-2 font-semibold  text-[#f8961e] rounded-md hover:bg-orange-100 "
+                  className="px-3 py-2 font-semibold text-[#f8961e] rounded-md hover:bg-orange-100"
                 >
                   {item.name}
                 </Link>
@@ -88,16 +107,18 @@ const Navbar = () => {
             </div>
           </div>
           <div className="items-center hidden lg:flex">
-            <button className="flex items-center px-4 py-2 font-semibold text-white bg-green-500 rounded-md hover:bg-green-600">
+            <button
+              onClick={toggleSearch} // Abre la búsqueda
+              className="flex items-center px-4 py-2 font-semibold text-white bg-green-500 rounded-md hover:bg-green-600"
+            >
               Buscar
               <Search className="w-4 h-4 ml-2" />
             </button>
           </div>
-
           <div className="flex items-center lg:hidden">
             <button
               onClick={toggleMenu}
-              className="inline-flex items-center justify-center p-2 text-green-400 rounded-md bg-green-50 "
+              className="inline-flex items-center justify-center p-2 text-green-400 rounded-md bg-green-50"
             >
               <span className="sr-only">Open main menu</span>
               {isOpen ? (
@@ -182,11 +203,52 @@ const Navbar = () => {
               </div>
             ))}
           </div>
-          <div className="px-4 py-3">
-            <button className="flex items-center justify-center w-full px-4 py-2 font-medium text-white transition-all duration-300 ease-in-out bg-green-500 rounded-md hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-offset-2">
+        </div>
+      )}
+      {/* Modal de búsqueda */}
+      {isSearchOpen && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
+          <div className="p-6 bg-white rounded-md shadow-md w-96">
+            <h3 className="mb-4 text-xl font-semibold text-gray-700">Buscar</h3>
+            <input
+              type="text"
+              placeholder="Buscar..."
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+              className="w-full px-4 py-2 mb-4 border rounded-md focus:outline-none"
+            />
+            <button
+              onClick={handleSearch}
+              className="flex items-center justify-center w-full px-4 py-2 font-medium text-white bg-green-500 rounded-md hover:bg-green-600"
+            >
               Buscar
               <Search className="w-5 h-5 ml-2" />
             </button>
+            <button
+              onClick={toggleSearch}
+              className="w-full px-4 py-2 mt-4 text-gray-600 rounded-md hover:bg-gray-100"
+            >
+              Cancelar
+            </button>
+            {/* Mostrar resultados de búsqueda en el modal */}
+            {searchResults.length > 0 && (
+              <div className="mt-4">
+                <h3 className="text-lg font-semibold">Resultados:</h3>
+                <ul>
+                  {searchResults.map((result) => (
+                    <li key={result.name}>
+                      <Link
+                        to={result.link}
+                        className="block px-4 py-2 text-green-500 hover:bg-green-100"
+                        onClick={toggleSearch} // Cierra el modal si se selecciona un resultado
+                      >
+                        {result.name}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
           </div>
         </div>
       )}
