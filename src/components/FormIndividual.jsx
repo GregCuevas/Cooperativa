@@ -35,7 +35,7 @@ const FormIndividual = () => {
 
   return (
     <>
-      <div className="max-w-xl p-6 mx-auto my-8 text-center">
+      <div className="max-w-2xl p-6 mx-auto text-center">
         <h2 className="mb-4 text-3xl font-bold">Llena este formulario</h2>
         <p className="text-lg leading-relaxed text-gray-600">
           Llenar este formulario es el primer paso para acceder a todos los

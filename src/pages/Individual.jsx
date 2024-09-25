@@ -21,28 +21,30 @@ const Individual = () => {
     <>
       <Navbar />
       <div className="relative">
-        {/* Contenedor de imagen con Overlay */}
-        <div className="relative">
+        <div className="relative h-[50vh] sm:h-[60vh] md:h-[70vh] lg:h-[75vh]">
           <img
             src={Individuals}
             alt="Familia"
-            className="w-full h-[70vh] object-cover object-center"
+            className="object-cover object-center w-full h-full"
           />
-          {/* Overlay */}
-          <div className="absolute inset-0 flex flex-col justify-center px-6 bg-black bg-opacity-55 md:px-20">
-            <div className="text-left text-white">
-              <p className="mb-2">HAZTE SOCIO</p>
-              <h1 className="max-w-xl text-2xl font-bold md:text-4xl">
-                ¿Te gustaría obtener mayores beneficios por tus ahorros?
-              </h1>
-              <p className="max-w-lg mt-4 text-sm md:mt-6 md:text-lg">
-                Porque ser socio es más que ser un cliente, te invitamos a
-                hacerte socio y acceder a todos los beneficios de ser parte de
-                nuestra familia.
-              </p>
-              <button className="px-4 py-2 mt-6 font-semibold text-white transition bg-green-500 rounded-lg md:mt-8 hover:bg-green-600">
-                REGISTRARME
-              </button>
+          <div className="absolute inset-0 flex items-center bg-black bg-opacity-60">
+            <div className="container px-4 mx-auto sm:px-6 lg:px-8">
+              <div className="max-w-xl text-white lg:max-w-2xl xl:max-w-3xl">
+                <p className="mb-2 text-sm font-semibold tracking-wider sm:mb-4 sm:text-base">
+                  HAZTE SOCIO INDIVIDUAL
+                </p>
+                <h1 className="max-w-xl mb-2 text-2xl font-bold leading-tight sm:text-3xl md:text-3xl lg:text-4xl sm:mb-4">
+                  ¿Te gustaría obtener mayores beneficios por tus ahorros?
+                </h1>
+                <p className="max-w-lg mb-4 text-sm leading-relaxed sm:text-base md:text-lg lg:text-xl sm:mb-6">
+                  Porque ser socio es más que ser un cliente, te invitamos a
+                  hacerte socio y acceder a todos los beneficios de ser parte de
+                  nuestra familia.
+                </p>
+                <button className="px-4 py-2 text-sm font-semibold text-white transition duration-300 ease-in-out bg-green-500 rounded-lg sm:px-6 sm:py-3 sm:text-base hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-opacity-50">
+                  REGISTRARME
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -144,7 +146,7 @@ const Individual = () => {
         </div>
         <div className="relative z-10 px-6 py-12 text-white md:px-20">
           <h2 className="mb-6 text-4xl font-bold text-center">
-            ¿Por qué ahorrar en COOPEBRED?
+            ¿Por qué estar en COOPEBRED?
           </h2>
           <p className="max-w-4xl mx-auto mb-6 text-lg text-center">
             Las cooperativas de Ahorro y Crédito al igual que los bancos son

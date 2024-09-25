@@ -13,7 +13,7 @@ const Institucion = () => {
   return (
     <>
       <Navbar />
-      <section className="py-12 bg-white">
+      <section className="py-12 ">
         <div className="container px-1 mx-auto text-center">
           <div className="relative w-full lg:h-[70vh] mb-8 overflow-hidden rounded-lg">
             <img

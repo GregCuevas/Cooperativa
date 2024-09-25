@@ -52,22 +52,16 @@ const Navbar = () => {
     },
     {
       name: "PUBLICACIONES",
-      link: "/publicaciones-y-novedades",
+      link: "/publicaciones/noticias",
       hasSubmenu: true,
-      submenuItems: [
-        { name: "Blog", link: "/publicaciones/blog" },
-        { name: "Noticias", link: "/publicaciones/noticias" },
-        { name: "Eventos", link: "/publicaciones/eventos" },
-      ],
+      submenuItems: [{ name: "Noticias", link: "/publicaciones/noticias" }],
     },
     {
       name: "PREVENCIÓN",
-      link: "/prevencion",
+      link: "/prevencion/educacion",
       hasSubmenu: true,
       submenuItems: [
-        { name: "Seguridad Financiera", link: "/prevencion/seguridad" },
         { name: "Educación Financiera", link: "/prevencion/educacion" },
-        { name: "Consejos", link: "/prevencion/consejos" },
       ],
     },
     { name: "PRÉSTAMOS", link: "/calculadora-prestamos" },
