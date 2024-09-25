@@ -11,7 +11,7 @@ import {
 import { Button } from "@/components/ui/button";
 export default function Homepage() {
   return (
-    <div className="relative w-full">
+    <div className="relative w-full mt-4">
       {/* Image container */}
       <div className="w-full h-[50vh] md:h-[80vh]">
         <img
@@ -23,7 +23,7 @@ export default function Homepage() {
 
       {/* Text container */}
       <div className="w-full h-full md:absolute md:inset-0 md:flex md:items-center md:pl-20 lg:pl-32">
-        <div className="bg-[#F0FFFF33] bg-opacity-0 text-white p-8 w-full md:w-[640px] lg:w-[495px] md:h-[95%] md:flex md:flex-col md:justify-center">
+        <div className="bg-[#f8961e] md:bg-[#F0FFFF33] md:bg-opacity-0 text-white p-8 w-full md:w-[640px] lg:w-[495px] md:h-[95%] md:flex md:flex-col md:justify-center">
           <h1 className="text-3xl font-bold md:text-4xl lg:text-5xl">
             COOPEBRED
           </h1>
@@ -32,19 +32,20 @@ export default function Homepage() {
             todas las familias puedan tener las mismas oportunidades.
           </p>
           <div className="flex items-center justify-center space-x-6 md:justify-center lg:justify-start">
-            <PiggyBank color="#15803d" strokeWidth={1.5} size={40} />
-            <GraduationCap color="#15803d" strokeWidth={1.5} size={40} />
-            <CircleDollarSign color="#15803d" strokeWidth={1.5} size={40} />
+            <PiggyBank color="#16a34a" strokeWidth={1.5} size={40} />
+            <GraduationCap color="#16a34a" strokeWidth={1.5} size={40} />
+            <CircleDollarSign color="#16a34a" strokeWidth={1.5} size={40} />
           </div>
           <div className="flex items-center justify-center gap-4 mt-7 md:justify-start">
-            <Button
-              variant="default"
-              className="px-6 py-3 font-semibold text-white transition-all bg-green-600 rounded-full shadow-md hover:bg-green-700 focus:ring-4 focus:ring-green-500"
-            >
-              Inscribirte
-              <LogIn className="w-5 h-5 ml-2" />
-            </Button>
-
+            <Link to="/socios">
+              <Button
+                variant="default"
+                className="px-6 py-3 font-semibold text-white transition-all bg-green-600 rounded-full shadow-md hover:bg-green-700 focus:ring-4 focus:ring-green-500"
+              >
+                Inscribirte
+                <LogIn className="w-5 h-5 ml-2" />
+              </Button>
+            </Link>
             <Link to="/perfil-institucional">
               <Button
                 type="button"

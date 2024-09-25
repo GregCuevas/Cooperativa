@@ -19,12 +19,14 @@ import EducacionNoticia from "../pages/EducacionNoticia";
 import TrabajoNoticia from "../pages/TrabajoNoticia";
 import ConectividadNoticia from "../pages/ConectividadNoticia";
 import Socios from "../pages/Socios";
+
 const Root = () => {
   return (
     <>
       <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />
+
         <Route path="/calculadora-prestamos" element={<Loan />} />
         <Route path="/historia" element={<Historia />} />
         <Route path="/servicios" element={<Servicios />} />

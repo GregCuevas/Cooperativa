@@ -1,5 +1,6 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
+
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import {
@@ -135,44 +136,89 @@ export default function PartnershipOptions() {
             </CardHeader>
             <CardContent className="flex-grow">
               <h3 className="mb-2 font-semibold">Socio Activo</h3>
-              <ul className="pl-5 mb-4 space-y-2 list-disc">
-                <li>1.97% de los fondos recaudados</li>
-                <li>10-20% del facturado neto de los productos</li>
-                <li>
-                  0.5% de los fondos recaudados de las sucursales filiales
+              <ul className="mb-4 space-y-2">
+                <li className="flex items-center">
+                  <Percent className="w-4 h-4 mr-2" />
+                  <span>1.97% de los fondos recaudados</span>
                 </li>
-                <li>
-                  5% del facturado neto de los productos de las sucursales
-                  filiales
+                <li className="flex items-center">
+                  <BarChart className="w-4 h-4 mr-2" />
+                  <span>10-20% del facturado neto de los productos</span>
                 </li>
-                <li>Participación en las Ganancias Anuales</li>
-                <li>Rendimiento competitivo sobre el aporte a capital</li>
+                <li className="flex items-center">
+                  <Briefcase className="w-4 h-4 mr-2" />
+                  <span>
+                    0.5% de los fondos recaudados de las sucursales filiales
+                  </span>
+                </li>
+                <li className="flex items-center">
+                  <Award className="w-4 h-4 mr-2" />
+                  <span>
+                    5% del facturado neto de los productos de las sucursales
+                    filiales
+                  </span>
+                </li>
+                <li className="flex items-center">
+                  <PiggyBank className="w-4 h-4 mr-2" />
+                  <span>Participación en las Ganancias Anuales</span>
+                </li>
+                <li className="flex items-center">
+                  <DollarSign className="w-4 h-4 mr-2" />
+                  <span>Rendimiento competitivo sobre el aporte a capital</span>
+                </li>
               </ul>
               <h3 className="mb-2 font-semibold">Socio Pasivo</h3>
-              <ul className="pl-5 mb-4 space-y-2 list-disc">
-                <li>1.47% de los fondos recaudados</li>
-                <li>10-20% del facturado neto de los productos</li>
-                <li>Participación en las Ganancias Anuales</li>
-                <li>Rendimiento competitivo sobre el aporte a capital</li>
+              <ul className="mb-4 space-y-2">
+                <li className="flex items-center">
+                  <Percent className="w-4 h-4 mr-2" />
+                  <span>1.47% de los fondos recaudados</span>
+                </li>
+                <li className="flex items-center">
+                  <BarChart className="w-4 h-4 mr-2" />
+                  <span>10-20% del facturado neto de los productos</span>
+                </li>
+                <li className="flex items-center">
+                  <PiggyBank className="w-4 h-4 mr-2" />
+                  <span>Participación en las Ganancias Anuales</span>
+                </li>
+                <li className="flex items-center">
+                  <DollarSign className="w-4 h-4 mr-2" />
+                  <span>Rendimiento competitivo sobre el aporte a capital</span>
+                </li>
               </ul>
               <h3 className="mb-2 font-semibold">Requisitos</h3>
               <ul className="space-y-2">
-                <li>
-                  Establecimiento adecuado para brindar atención al cliente.
+                <li className="flex items-center">
+                  <Building className="w-4 h-4 mr-2" />
+                  <span>
+                    Establecimiento adecuado para brindar atención al cliente.
+                  </span>
                 </li>
-                <li>Copia del Registro Mercantil vigente.</li>
-                <li>
-                  Copia del Registro Nacional de Contribuyente (RNC) o
-                  Certificación de la DGII.
+                <li className="flex items-center">
+                  <FileCheck className="w-4 h-4 mr-2" />
+                  <span>Copia del Registro Mercantil vigente.</span>
                 </li>
-                <li>
-                  Copia del documento de identidad de los
-                  Propietarios/Beneficiarios finales y personas físicas que
-                  ejerzan el control real de la empresa.
+                <li className="flex items-center">
+                  <FileSignature className="w-4 h-4 mr-2" />
+                  <span>
+                    Copia del Registro Nacional de Contribuyente (RNC) o
+                    Certificación de la DGII.
+                  </span>
                 </li>
-                <li>
-                  Documento que confirme el domicilio y existencia de la
-                  empresa. (Ej. Factura de Servicios).
+                <li className="flex items-center">
+                  <User className="w-4 h-4 mr-2" />
+                  <span>
+                    Copia del documento de identidad de los
+                    Propietarios/Beneficiarios finales y personas físicas que
+                    ejerzan el control real de la empresa.
+                  </span>
+                </li>
+                <li className="flex items-center">
+                  <MapPin className="w-4 h-4 mr-2" />
+                  <span>
+                    Documento que confirme el domicilio y existencia de la
+                    empresa. (Ej. Factura de Servicios).
+                  </span>
                 </li>
               </ul>
             </CardContent>
