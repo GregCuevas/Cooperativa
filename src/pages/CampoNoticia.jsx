@@ -7,7 +7,7 @@ const ConectandoCampo = () => {
   return (
     <>
       <Navbar />
-      <div className="mt-4">
+      <div className="mt-4 mb-4">
         {/* Imagen superior */}
         <div className="relative">
           <img

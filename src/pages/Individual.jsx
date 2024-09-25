@@ -1,4 +1,4 @@
-import { React } from "react";
+import React, { useRef } from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import FormIndividual from "../components/FormIndividual";
@@ -18,6 +18,11 @@ import Individuals from "../assets/individual.jpg";
 import Ahorro from "../assets/ahorrando.jpg"; // Usa una imagen relevante para esta sección
 
 const Individual = () => {
+  const formRef = useRef(null);
+
+  const scrollToForm = () => {
+    formRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
   return (
     <>
       <Navbar />
@@ -42,7 +47,10 @@ const Individual = () => {
                   hacerte socio y acceder a todos los beneficios de ser parte de
                   nuestra familia.
                 </p>
-                <button className="px-4 py-2 text-sm font-semibold text-white transition duration-300 ease-in-out bg-green-500 rounded-lg sm:px-6 sm:py-3 sm:text-base hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-opacity-50">
+                <button
+                  onClick={scrollToForm}
+                  className="px-4 py-2 text-sm font-semibold text-white transition duration-300 ease-in-out bg-green-500 rounded-lg sm:px-6 sm:py-3 sm:text-base hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-opacity-50"
+                >
                   REGISTRARME
                 </button>
               </div>
@@ -233,8 +241,9 @@ const Individual = () => {
           </div>
         </div>
       </div>
-
-      <FormIndividual />
+      <div ref={formRef}>
+        <FormIndividual />
+      </div>
 
       <Footer />
     </>

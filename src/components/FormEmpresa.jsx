@@ -187,7 +187,7 @@ const FormEmpresa = () => {
               value={formData.email}
               onChange={handleChange}
               className="w-full p-3 border border-gray-300 rounded-md outline-none focus:ring-2 focus:ring-green-500"
-              placeholder="correo@dominio.com"
+              placeholder="correo@gmail.com"
             />
           </div>
 
