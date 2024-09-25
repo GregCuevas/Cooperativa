@@ -80,8 +80,11 @@ const Navbar = () => {
       ),
     ];
 
-    const results = allItems.filter((item) =>
-      item.name.toLowerCase().includes(searchTerm.toLowerCase())
+    // Buscar tanto por el nombre del menú como por el enlace
+    const results = allItems.filter(
+      (item) =>
+        item.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        item.link.toLowerCase().includes(searchTerm.toLowerCase())
     );
     setSearchResults(results);
   };
