@@ -1,6 +1,6 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
-
+import { Link } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import {
@@ -115,10 +115,12 @@ export default function PartnershipOptions() {
               </ul>
             </CardContent>
             <CardFooter>
-              <Button className="w-full bg-green-600 hover:bg-green-700">
-                Hazte Socio Individual
-                <ArrowRight className="w-4 h-4 ml-2" />
-              </Button>
+              <Link to="/socio-individual" className="w-full">
+                <Button className="w-full bg-green-600 hover:bg-green-700">
+                  Hazte Socio Individual
+                  <ArrowRight className="w-4 h-4 ml-2" />
+                </Button>
+              </Link>
             </CardFooter>
           </Card>
 
@@ -223,10 +225,12 @@ export default function PartnershipOptions() {
               </ul>
             </CardContent>
             <CardFooter>
-              <Button className="w-full bg-green-600 hover:bg-green-700">
-                Hazte Socio Empresa
-                <ArrowRight className="w-4 h-4 ml-2" />
-              </Button>
+              <Link to="/socio-empresa " className="w-full">
+                <Button className="w-full bg-green-600 hover:bg-green-700">
+                  Hazte Socio Empresa
+                  <ArrowRight className="w-4 h-4 ml-2" />
+                </Button>
+              </Link>
             </CardFooter>
           </Card>
         </div>

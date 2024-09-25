@@ -1,7 +1,8 @@
-import React from "react";
+import { React } from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import FormIndividual from "../components/FormIndividual";
+
 import {
   CheckCircle,
   Heart,
@@ -232,6 +233,7 @@ const Individual = () => {
           </div>
         </div>
       </div>
+
       <FormIndividual />
 
       <Footer />
