@@ -8,7 +8,6 @@ const ConectandoCampo = () => {
     <>
       <Navbar />
       <div className="mt-4 mb-4">
-        {/* Imagen superior */}
         <div className="relative">
           <img
             src={Campo}
@@ -22,8 +21,6 @@ const ConectandoCampo = () => {
             </h1>
           </div>
         </div>
-
-        {/* Contenido del artículo */}
         <div className="p-6 px-10 mx-auto mt-6 bg-white rounded-lg shadow-lg max-w-7xl lg:px-20">
           <p className="mb-8 text-lg leading-relaxed text-gray-700">
             En la era digital actual, donde la conectividad se ha vuelto una
@@ -34,7 +31,6 @@ const ConectandoCampo = () => {
             infraestructuras de telecomunicación en estas zonas para impulsar el
             desarrollo social, económico y educativo.
           </p>
-
           <section className="mb-8">
             <h2 className="mb-3 text-3xl font-semibold text-green-600">
               1. Brecha Digital en las Áreas Rurales: Un Obstáculo para el
@@ -49,9 +45,7 @@ const ConectandoCampo = () => {
               sostenible en estas regiones.
             </p>
           </section>
-
           <hr className="my-8" />
-
           <section className="mb-8">
             <h2 className="mb-3 text-3xl font-semibold text-green-600">
               2. Acceso a la Educación de Calidad: Más Allá de las Aulas
@@ -66,9 +60,7 @@ const ConectandoCampo = () => {
               través de la formación en línea.
             </p>
           </section>
-
           <hr className="my-8" />
-
           <section className="mb-8">
             <h2 className="mb-3 text-3xl font-semibold text-green-600">
               3. Desarrollo Económico: Empoderando a las Comunidades Rurales
@@ -82,9 +74,7 @@ const ConectandoCampo = () => {
               reduciendo la brecha económica.
             </p>
           </section>
-
           <hr className="my-8" />
-
           <section className="mb-8">
             <h2 className="mb-3 text-3xl font-semibold text-green-600">
               4. Salud y Bienestar: Telemedicina para Comunidades Alejadas
@@ -98,9 +88,7 @@ const ConectandoCampo = () => {
               crucial.
             </p>
           </section>
-
           <hr className="my-8" />
-
           <section className="mb-8">
             <h2 className="mb-3 text-3xl font-semibold text-green-600">
               5. Agricultura Inteligente: Mejorando la Productividad Rural
@@ -115,9 +103,7 @@ const ConectandoCampo = () => {
               cultivos.
             </p>
           </section>
-
           <hr className="my-8" />
-
           <section className="mb-8">
             <h2 className="mb-3 text-3xl font-semibold text-green-600">
               6. Desarrollo de Infraestructura: Una Inversión Crucial
@@ -131,7 +117,6 @@ const ConectandoCampo = () => {
               cabo este despliegue de infraestructuras.
             </p>
           </section>
-
           <hr className="my-8" />
 
           <section className="mb-8">

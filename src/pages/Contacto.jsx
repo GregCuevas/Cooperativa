@@ -4,8 +4,6 @@ import {
   Instagram,
   Linkedin,
   Facebook,
-  Twitter,
-  Youtube,
   MessageCircle,
   Mail,
   MapPin,
@@ -32,7 +30,6 @@ const ContactPage = () => {
       <Navbar />
       <section className="">
         <div className="container px-4 mx-auto mt-4">
-          {/* Main Image with Overlaid Text and Social Icons */}
           <div className="relative w-full h-[50vh] sm:h-[60vh] lg:h-[70vh] mb-8 sm:mb-12 overflow-hidden rounded-lg shadow-2xl">
             <img
               src={Contacto}
@@ -53,7 +50,7 @@ const ContactPage = () => {
                   <Link
                     key={index}
                     to={link}
-                    target="_blank" // Esto abre el enlace en una nueva pestaña
+                    target="_blank"
                     className="text-white transition-colors hover:text-green-400"
                   >
                     <Icon size={28} />
@@ -64,7 +61,6 @@ const ContactPage = () => {
           </div>
         </div>
       </section>
-
       <div className="max-w-4xl px-4 py-8 mx-auto">
         <div className="grid gap-8 md:grid-cols-3">
           {[
@@ -101,7 +97,6 @@ const ContactPage = () => {
           ))}
         </div>
       </div>
-
       <Footer />
     </>
   );

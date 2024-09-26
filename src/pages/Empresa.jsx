@@ -79,7 +79,6 @@ const Empresa = () => {
         </div>
       </div>
 
-      {/* Tipos de Socios */}
       <section className="py-12 ">
         <div className="container px-4 mx-auto">
           <h2 className="mb-8 text-3xl font-bold text-center text-gray-800">
@@ -100,7 +99,6 @@ const Empresa = () => {
         </div>
       </section>
 
-      {/* Beneficios */}
       <section className="py-12 bg-white">
         <div className="container px-4 mx-auto">
           <h2 className="mb-8 text-3xl font-bold text-center text-gray-800">
@@ -135,7 +133,6 @@ const Empresa = () => {
         </div>
       </section>
 
-      {/* Montos de Inscripción */}
       <section className="py-12 ">
         <div className="container px-4 mx-auto">
           <h2 className="mb-8 text-3xl font-bold text-center text-gray-800">
@@ -174,8 +171,6 @@ const Empresa = () => {
         </div>
       </section>
 
-      {/* Requisitos */}
-      {/* Requisitos */}
       <section className="py-12 bg-white ">
         <div className="container px-4 mx-auto lg:px-20">
           <h2 className="mb-8 text-3xl font-bold text-center text-gray-800">

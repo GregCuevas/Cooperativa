@@ -15,12 +15,11 @@ const branches = [
   },
 ];
 
-export default function Sucursales() {
+const Sucursales = () => {
   return (
     <>
       <Navbar />
       <div className="container px-4 mx-auto mt-4">
-        {/* Main Image with Overlaid Text */}
         <div className="relative w-full h-[50vh] sm:h-[60vh] lg:h-[70vh] mb-12 overflow-hidden rounded-lg shadow-md">
           <img
             src={Sucursal}
@@ -33,14 +32,12 @@ export default function Sucursales() {
             </h1>
           </div>
         </div>
-
         <main className="container px-4 py-8 mx-auto lg:px-8 xl:px-16 max-w-7xl">
           <section className="mb-12">
             <h2 className="mb-4 text-3xl font-semibold">
               Sucursales Santo Domingo
             </h2>
           </section>
-
           <section className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
             {branches.map((branch, index) => (
               <div
@@ -77,4 +74,5 @@ export default function Sucursales() {
       <Footer />
     </>
   );
-}
+};
+export default Sucursales;

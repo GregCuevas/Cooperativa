@@ -4,16 +4,13 @@ import Footer from "../components/Footer";
 import Torre from "../assets/torre.jpg";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import {
-  Wifi,
   School,
   Smartphone,
   CreditCard,
   Users,
   Lightbulb,
   HeartHandshake,
-  PhoneCall,
   UserCheck,
-  BarChart,
   FileText,
   Building,
   GraduationCap,
@@ -35,7 +32,7 @@ const FeatureCard = ({ title, description, icon: Icon }) => (
   </Card>
 );
 
-export default function Component() {
+const Telecomunicaciones = () => {
   const mainFeatures = [
     {
       title: "Soluciones Creativas",
@@ -107,7 +104,6 @@ export default function Component() {
       <Navbar />
       <section className="py-4 ">
         <div className="container px-4 mx-auto">
-          {/* Main Image with Overlaid Text */}
           <div className="relative w-full h-[50vh] sm:h-[60vh] lg:h-[70vh] mb-12 overflow-hidden rounded-lg shadow-md">
             <img
               src={Torre}
@@ -125,15 +121,11 @@ export default function Component() {
               </p>
             </div>
           </div>
-
-          {/* Main Features */}
           <div className="grid grid-cols-1 gap-6 mb-12 md:grid-cols-2 lg:grid-cols-4">
             {mainFeatures.map((feature, index) => (
               <FeatureCard key={index} {...feature} />
             ))}
           </div>
-
-          {/* Strategic Approach Section */}
           <div className="p-8 mb-12 bg-white rounded-lg shadow-md">
             <h2 className="mb-6 text-3xl font-bold text-center text-gray-800">
               Transformando Comunidades: Educación para un Futuro Sostenible
@@ -145,8 +137,6 @@ export default function Component() {
               financiamiento, y acuerdos educativos con MAVIR School.
             </p>
           </div>
-
-          {/* Strategic Features */}
           <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
             {strategicFeatures.map((feature, index) => (
               <FeatureCard key={index} {...feature} />
@@ -157,4 +147,5 @@ export default function Component() {
       <Footer />
     </>
   );
-}
+};
+export default Telecomunicaciones;

@@ -23,7 +23,6 @@ import {
 
 const FinanceCard = ({ title, description, icon: Icon, bgImage }) => (
   <Card className="relative overflow-hidden transition-all duration-300 transform hover:scale-105 hover:shadow-xl group">
-    {/* Imagen de fondo */}
     <div
       className="absolute inset-0 z-0 transition-all duration-300 bg-center bg-cover group-hover:brightness-75"
       style={{
@@ -31,10 +30,8 @@ const FinanceCard = ({ title, description, icon: Icon, bgImage }) => (
       }}
     ></div>
 
-    {/* Capa de opacidad adicional para oscurecer la imagen */}
     <div className="absolute inset-0 transition-opacity duration-300 bg-black opacity-50 z-5 group-hover:opacity-60"></div>
 
-    {/* Contenido de la tarjeta */}
     <CardContent className="relative z-10 flex flex-col items-center justify-center p-6 text-center">
       <Icon className="w-12 h-12 mb-4 text-white" />
       <h3 className="mb-2 text-xl font-bold text-white">{title}</h3>
@@ -101,7 +98,6 @@ const Finaciamientos = () => {
       <Navbar />
       <section className="">
         <div className="container px-4 mx-auto mt-4">
-          {/* Main Image with Overlaid Text */}
           <div className="relative w-full h-[50vh] sm:h-[60vh] lg:h-[70vh] mb-12 overflow-hidden rounded-lg shadow-md">
             <img
               src={Finaciamiento}
@@ -122,18 +118,13 @@ const Finaciamientos = () => {
 
           <div className="container px-1 mx-auto py-9 lg:px-16">
             <div className="p-6 mb-12 bg-white rounded-lg shadow-lg sm:p-8 ">
-              {/* Ícono decorativo */}
               <div className="flex justify-center mb-2">
                 <Signal className="w-12 h-12 text-blue-500 sm:w-16 sm:h-16" />
               </div>
-
-              {/* Título */}
               <h2 className="mb-4 text-2xl font-bold text-center text-gray-800 sm:text-3xl">
                 Una tecnología que no solo conecta, sino que también transforma
                 vidas
               </h2>
-
-              {/* Descripción */}
               <p className="text-base text-center text-gray-600 sm:text-lg">
                 Desarrollamos redes de telecomunicaciones a bajo costo para
                 comunidades sin acceso tecnológico. En asociación con Xiaomi

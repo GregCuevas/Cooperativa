@@ -8,7 +8,6 @@ const Conectividad5GPage = () => {
     <>
       <Navbar />
       <div className="mt-4 mb-4">
-        {/* Imagen superior */}
         <div className="relative">
           <img
             src={Conectividad5G}
@@ -22,8 +21,6 @@ const Conectividad5GPage = () => {
             </h1>
           </div>
         </div>
-
-        {/* Contenido del artículo */}
         <div className="p-6 px-10 mx-auto mt-6 bg-white rounded-lg shadow-lg max-w-7xl lg:px-20">
           <p className="mb-8 text-lg leading-relaxed text-gray-700">
             En una era en la que la educación depende cada vez más de la
@@ -36,7 +33,6 @@ const Conectividad5GPage = () => {
             UNESCO para dar forma al futuro de la educación en la República
             Dominicana.
           </p>
-
           <section className="mb-8">
             <h2 className="mb-3 text-3xl font-semibold text-green-600">
               1. Acceso Ubicuo a Recursos Educativos
@@ -52,9 +48,7 @@ const Conectividad5GPage = () => {
               restricciones geográficas.
             </p>
           </section>
-
           <hr className="my-8" />
-
           <section className="mb-8">
             <h2 className="mb-3 text-3xl font-semibold text-green-600">
               2. Reducir la Brecha Digital
@@ -70,9 +64,7 @@ const Conectividad5GPage = () => {
               educativo global más inclusivo y equitativo.
             </p>
           </section>
-
           <hr className="my-8" />
-
           <section className="mb-8">
             <h2 className="mb-3 text-3xl font-semibold text-green-600">
               3. Facilitar el Aprendizaje con Realidad Virtual y Aumentada
@@ -89,9 +81,7 @@ const Conectividad5GPage = () => {
               aprendizaje inmersivas en las aulas.
             </p>
           </section>
-
           <hr className="my-8" />
-
           <section className="mb-8">
             <h2 className="mb-3 text-3xl font-semibold text-green-600">
               4. Facilitar el Aprendizaje Remoto y en Línea
@@ -107,9 +97,7 @@ const Conectividad5GPage = () => {
               dinámico de aprendizaje en línea.
             </p>
           </section>
-
           <hr className="my-8" />
-
           <section className="mb-8">
             <h2 className="mb-3 text-3xl font-semibold text-green-600">
               5. Apoyo a la Educación Basada en Datos
@@ -125,9 +113,7 @@ const Conectividad5GPage = () => {
               estudiantes para los desafíos del futuro.
             </p>
           </section>
-
           <hr className="my-8" />
-
           <section className="mb-8">
             <h2 className="mb-3 text-3xl font-semibold text-green-600">
               6. Mejorar la Colaboración Global en Educación
@@ -142,9 +128,7 @@ const Conectividad5GPage = () => {
               conocimientos a una escala sin precedentes.
             </p>
           </section>
-
           <hr className="my-8" />
-
           <section className="mb-8">
             <h2 className="mb-3 text-3xl font-semibold text-green-600">
               Conclusión: El 5G como Pilar de la Educación Futura

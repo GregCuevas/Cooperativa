@@ -35,7 +35,6 @@ const LocationMap = () => {
 
   return (
     <div className="container px-4 py-8 mx-auto font-inter">
-      {/* Sección del título */}
       <div className="p-6 text-center">
         <div className="flex flex-col items-center justify-center space-y-2">
           <MapPinned className="text-orange-500 animate-bounce" size={28} />
@@ -45,7 +44,6 @@ const LocationMap = () => {
         </div>
       </div>
 
-      {/* Contenedor principal con mapa e información */}
       <div className="flex flex-col items-center justify-center space-y-8">
         {/* Sección del mapa */}
         <div className="w-full md:w-10/12">
@@ -55,7 +53,6 @@ const LocationMap = () => {
           />
         </div>
 
-        {/* Sección de información de contacto */}
         <div className="w-full space-y-6 md:space-y-0 md:flex md:justify-between md:items-center md:space-x-6 md:w-10/12">
           <div className="flex items-center space-x-3 md:flex-row md:items-center">
             <MapPin className="text-orange-600" size={24} />
@@ -68,7 +65,7 @@ const LocationMap = () => {
           <div className="flex items-center space-x-3 md:flex-row md:items-center">
             <Mail className="text-orange-600" size={24} />
             <div className="text-gray-700 transition-colors hover:text-orange-600">
-              <p>Coopebred@silkglobal.com</p>
+              <p>info@coopebred.com</p>
               <span className="text-sm text-gray-500">Soporte 24/7</span>
             </div>
           </div>

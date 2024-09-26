@@ -2,7 +2,6 @@ import { Facebook, Linkedin, Instagram } from "lucide-react";
 import Maria from "../assets/maria.jpg";
 import Man from "../assets/man.png";
 import Woman from "../assets/woman.png";
-
 const teamMembers = [
   {
     name: "Sergio Montanari",

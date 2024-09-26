@@ -2,7 +2,7 @@ import Image from "../assets/logo.png";
 import { Link } from "react-router-dom";
 import { Facebook, Instagram, Linkedin, MessageCircle } from "lucide-react";
 
-export default function Footer() {
+const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
@@ -166,4 +166,5 @@ export default function Footer() {
       </div>
     </footer>
   );
-}
+};
+export default Footer;

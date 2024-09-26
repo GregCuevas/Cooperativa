@@ -2,14 +2,7 @@ import React from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Educacion from "../assets/educacion.jpg";
-import {
-  Wifi,
-  School,
-  Smartphone,
-  CreditCard,
-  Target,
-  Handshake,
-} from "lucide-react";
+import { Wifi, School, Smartphone, CreditCard } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 const FeatureCard = ({ title, description, icon: Icon, color }) => (
@@ -26,7 +19,7 @@ const FeatureCard = ({ title, description, icon: Icon, color }) => (
   </Card>
 );
 
-export default function Component() {
+const Educacions = () => {
   const cards = [
     {
       title: "CONEXIÓN DE INTERNET ",
@@ -57,13 +50,11 @@ export default function Component() {
       color: "bg-green-400",
     },
   ];
-
   return (
     <>
       <Navbar />
       <section className="">
         <div className="container px-4 mx-auto mt-4">
-          {/* Main Image with Overlaid Text */}
           <div className="relative w-full h-[50vh] sm:h-[60vh] lg:h-[70vh] mb-8 sm:mb-12 overflow-hidden rounded-lg shadow-2xl">
             <img
               src={Educacion}
@@ -86,10 +77,10 @@ export default function Component() {
               <FeatureCard key={index} {...card} />
             ))}
           </div>
-          {/* Objetivo Principal Section */}
         </div>
       </section>
       <Footer />
     </>
   );
-}
+};
+export default Educacions;

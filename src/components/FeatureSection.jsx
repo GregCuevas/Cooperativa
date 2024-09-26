@@ -24,7 +24,7 @@ const FeatureSection = () => {
     {
       icon: MonitorSmartphone,
       title: "Financiamiento Tech",
-      link: "/financiamiento",
+      link: "/servicios/financiamiento/",
       description:
         "La cooperativa financia computadoras, tabletas y smartphones en 12 cuotas sin interés ni inicial, para mejorar el acceso a la educación en áreas rurales.",
     },

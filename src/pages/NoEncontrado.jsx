@@ -5,7 +5,6 @@ import Footer from "../components/Footer";
 import { Button } from "@/components/ui/button";
 const NotFound = () => {
   const navigate = useNavigate();
-
   return (
     <>
       <Navbar />

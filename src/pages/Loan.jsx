@@ -9,7 +9,7 @@ const Loan = () => {
 
   const calcularCuota = (e) => {
     e.preventDefault();
-    const montoVal = parseFloat(monto.replace(/,/g, "")); // Remueve las comas para calcular
+    const montoVal = parseFloat(monto.replace(/,/g, ""));
     const mesesVal = parseInt(meses);
     const tasaVal = parseFloat(tasa);
 
@@ -20,7 +20,7 @@ const Loan = () => {
 
     let cuotaMensual;
     if (tasaVal === 0) {
-      cuotaMensual = montoVal / mesesVal; // Si la tasa es 0, cuota es monto dividido por meses
+      cuotaMensual = montoVal / mesesVal;
     } else {
       const tasaMensual = tasaVal / 100 / 12;
       cuotaMensual =
@@ -46,11 +46,10 @@ const Loan = () => {
   return (
     <>
       <Navbar />
-      {/* Fondo y centración */}
       <div
         className="flex items-center justify-center min-h-screen mt-4 mb-4 bg-center bg-cover"
         style={{
-          backgroundImage: `url('/path-to-your-image.jpg')`, // Reemplaza esta ruta con tu imagen de fondo relacionada con préstamos
+          backgroundImage: `url('/path-to-your-image.jpg')`,
         }}
       >
         <div className="max-w-md p-8 mx-auto bg-white rounded-lg shadow-lg">
@@ -85,7 +84,7 @@ const Loan = () => {
                 className="w-full p-2 border rounded-md focus:outline-none focus:border-primary"
                 placeholder="Máximo 1,000,000,000.00"
                 value={monto}
-                onChange={(e) => formatMonto(e.target.value)} // Llama a la función que formatea el valor con comas
+                onChange={(e) => formatMonto(e.target.value)}
                 required
               />
             </div>
@@ -119,7 +118,7 @@ const Loan = () => {
               <button
                 type="reset"
                 className="px-6 py-2 font-bold text-white rounded-md"
-                style={{ backgroundColor: "#f8961e" }} // Color personalizado para el botón Limpiar
+                style={{ backgroundColor: "#f8961e" }}
                 onClick={() => {
                   setMonto("");
                   setMeses("");
@@ -132,7 +131,7 @@ const Loan = () => {
               <button
                 type="submit"
                 className="px-6 py-2 font-bold text-white rounded-md"
-                style={{ backgroundColor: "#09bc8a" }} // Color personalizado para el botón Calcular
+                style={{ backgroundColor: "#09bc8a" }}
               >
                 Calcular
               </button>

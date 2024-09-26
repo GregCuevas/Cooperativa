@@ -8,7 +8,6 @@ const TeletrabajoPage = () => {
     <>
       <Navbar />
       <div className="mt-4 mb-4">
-        {/* Imagen superior */}
         <div className="relative">
           <img
             src={Trabajo}
@@ -21,8 +20,6 @@ const TeletrabajoPage = () => {
             </h1>
           </div>
         </div>
-
-        {/* Contenido del artículo */}
         <div className="p-6 px-10 mx-auto mt-6 bg-white rounded-lg shadow-lg max-w-7xl lg:px-20">
           <p className="mb-8 text-lg leading-relaxed text-gray-700">
             En los últimos años, el teletrabajo ha experimentado un crecimiento
@@ -33,7 +30,6 @@ const TeletrabajoPage = () => {
             adaptarse a nuevas realidades, como la pandemia global que afectó a
             todo el mundo.
           </p>
-
           <p className="mb-8 text-lg leading-relaxed text-gray-700">
             El trabajo remoto ha ganado cada vez más relevancia, especialmente
             con los avances tecnológicos. Numerosos estudios sugieren beneficios
@@ -42,7 +38,6 @@ const TeletrabajoPage = () => {
             Buffer y Gallup han publicado informes sobre las tendencias del
             trabajo remoto y su impacto en la participación de los empleados.
           </p>
-
           <section className="mb-8">
             <h2 className="mb-3 text-3xl font-semibold text-green-600">
               ¿Qué es el Teletrabajo y por qué es tan importante?
@@ -63,9 +58,7 @@ const TeletrabajoPage = () => {
               desde la comodidad del hogar.
             </p>
           </section>
-
           <hr className="my-8" />
-
           <section className="mb-8">
             <h2 className="mb-3 text-3xl font-semibold text-green-600">
               Ventajas del Teletrabajo para Empleados y Empresas
@@ -103,9 +96,7 @@ const TeletrabajoPage = () => {
               desastres naturales.
             </p>
           </section>
-
           <hr className="my-8" />
-
           <section className="mb-8">
             <h2 className="mb-3 text-3xl font-semibold text-green-600">
               Desafíos y Estrategias para Superarlos
@@ -142,9 +133,7 @@ const TeletrabajoPage = () => {
               esenciales.
             </p>
           </section>
-
           <hr className="my-8" />
-
           <section className="mb-8">
             <h2 className="mb-3 text-3xl font-semibold text-green-600">
               El Futuro del Teletrabajo

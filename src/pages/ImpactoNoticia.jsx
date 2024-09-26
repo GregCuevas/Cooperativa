@@ -8,7 +8,6 @@ const ImpactoNoticia = () => {
     <>
       <Navbar />
       <div className="mt-4 mb-4">
-        {/* Imagen superior */}
         <div className="relative">
           <img
             src={Impacto}
@@ -22,8 +21,6 @@ const ImpactoNoticia = () => {
             </h1>
           </div>
         </div>
-
-        {/* Contenido del artículo */}
         <div className="p-6 px-10 mx-auto mt-6 bg-white rounded-lg shadow-lg max-w-7xl lg:px-20">
           <p className="mb-8 text-lg leading-relaxed text-gray-700">
             Las cooperativas, como forma de organización económica y social, han
@@ -48,9 +45,7 @@ const ImpactoNoticia = () => {
               negociaciones y decisiones que afectan su sustento.
             </p>
           </section>
-
           <hr className="my-8" />
-
           <section className="mb-8">
             <h2 className="mb-3 text-3xl font-semibold text-green-500">
               2. Inclusión Financiera a través de Cooperativas de Ahorro y
@@ -67,9 +62,7 @@ const ImpactoNoticia = () => {
               sus recursos.
             </p>
           </section>
-
           <hr className="my-8" />
-
           <section className="mb-8">
             <h2 className="mb-3 text-3xl font-semibold text-green-500">
               3. Generación de Empleo y Desarrollo Comunitario
@@ -84,9 +77,7 @@ const ImpactoNoticia = () => {
               contribuyendo así al desarrollo integral de las comunidades.
             </p>
           </section>
-
           <hr className="my-8" />
-
           <section className="mb-8">
             <h2 className="mb-3 text-3xl font-semibold text-green-500">
               4. Enfoque Sostenible y Responsable
@@ -99,9 +90,7 @@ const ImpactoNoticia = () => {
               plazo en términos de sostenibilidad ambiental y social.
             </p>
           </section>
-
           <hr className="my-8" />
-
           <section className="mb-8">
             <h2 className="mb-3 text-3xl font-semibold text-green-500">
               Desafíos y Oportunidades Futuras
@@ -115,9 +104,7 @@ const ImpactoNoticia = () => {
               como catalizadores del desarrollo sostenible en el país.
             </p>
           </section>
-
           <hr className="my-8" />
-
           <section className="mb-8">
             <h2 className="mb-3 text-3xl font-semibold text-green-500">
               Conclusión

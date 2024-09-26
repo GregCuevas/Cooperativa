@@ -34,11 +34,10 @@ import {
   FileSignature,
 } from "lucide-react";
 
-export default function PartnershipOptions() {
+const PartnershipOptions = () => {
   return (
     <>
       <Navbar />
-
       <div className="container px-4 py-8 mx-auto">
         <h1 className="mb-2 text-3xl font-bold text-center">Nuestros Socios</h1>
         <p className="mb-8 text-center text-gray-600">
@@ -236,7 +235,6 @@ export default function PartnershipOptions() {
             </CardFooter>
           </Card>
         </div>
-
         <div className="mt-8 text-center">
           <h2 className="mb-4 text-2xl font-semibold">¿Por qué ser socio?</h2>
           <p className="max-w-2xl mx-auto text-gray-600">
@@ -300,4 +298,5 @@ export default function PartnershipOptions() {
       <Footer />
     </>
   );
-}
+};
+export default PartnershipOptions;
