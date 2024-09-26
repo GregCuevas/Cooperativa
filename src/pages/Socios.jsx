@@ -12,6 +12,8 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import {
+  ClipboardList,
+  CheckCircle,
   ArrowRight,
   User,
   Users,
@@ -36,13 +38,13 @@ export default function PartnershipOptions() {
   return (
     <>
       <Navbar />
+
       <div className="container px-4 py-8 mx-auto">
         <h1 className="mb-2 text-3xl font-bold text-center">Nuestros Socios</h1>
         <p className="mb-8 text-center text-gray-600">
           Únete a la transformación digital y educativa en la República
           Dominicana.
         </p>
-
         <div className="grid gap-8 md:grid-cols-2">
           <Card className="flex flex-col">
             <CardHeader>
@@ -245,6 +247,55 @@ export default function PartnershipOptions() {
             desarrollo de tu comunidad.
           </p>
         </div>
+        <Card className="max-w-md p-4 mx-auto mt-8">
+          <CardHeader>
+            <CardTitle className="flex items-center">
+              <ClipboardList className="mr-2" />
+              ¿Cómo ser socio?
+            </CardTitle>
+            <CardDescription>3 Simples Pasos</CardDescription>
+          </CardHeader>
+          <CardContent>
+            <ul className="space-y-4">
+              <li className="flex items-start">
+                <span className="mr-4 text-2xl font-semibold">1</span>
+                <div>
+                  <h4 className="font-bold">
+                    Llena el Formulario Online con los Datos Requeridos
+                  </h4>
+                  <p className="text-gray-600">
+                    Puedes completarlo en nuestra página web o con ayuda de un
+                    agente en la sucursal.
+                  </p>
+                </div>
+              </li>
+              <li className="flex items-start">
+                <span className="mr-4 text-2xl font-semibold">2</span>
+                <div>
+                  <h4 className="font-bold">
+                    Realiza el Pago y Firma el Certificado
+                  </h4>
+                  <p className="text-gray-600">
+                    Puedes completar el proceso en la sucursal o de manera
+                    virtual. Recibirás a tu correo las cuentas de depósito y una
+                    vez completado, recibes el certificado de aporte para
+                    firmar.
+                  </p>
+                </div>
+              </li>
+              <li className="flex items-start">
+                <span className="mr-4 text-2xl font-semibold">3</span>
+                <div>
+                  <h4 className="font-bold">Bienvenido a COOPEBRED</h4>
+                  <p className="text-gray-600">
+                    Comienza a disfrutar de los beneficios de ser Socio Empresa
+                    de COOPEBRED.
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </CardContent>
+        </Card>
       </div>
       <Footer />
     </>
