@@ -117,10 +117,10 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="mailto:coopeducate@silkglobal.com" // mailto: abre el cliente de correo
+                  href="mailto:info@coopebred.com" // mailto: abre el cliente de correo
                   className="text-gray-600 break-words hover:text-gray-900"
                 >
-                  coopebred@silkglobal.com
+                  info@coopebred.com
                 </a>
               </li>
             </ul>

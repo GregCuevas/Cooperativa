@@ -175,12 +175,13 @@ const Empresa = () => {
       </section>
 
       {/* Requisitos */}
-      <section className="py-6 bg-white ">
-        <div className="container max-w-full mx-auto text-center px-28">
+      {/* Requisitos */}
+      <section className="py-12 bg-white ">
+        <div className="container px-4 mx-auto lg:px-20">
           <h2 className="mb-8 text-3xl font-bold text-center text-gray-800">
             Requisitos
           </h2>
-          <div className="px-6 rounded-lg shadow-md">
+          <div className="p-6 bg-white rounded-lg shadow-md">
             <h3 className="mb-4 text-xl font-semibold text-gray-800">
               Documentación necesaria para ambos tipos de socios
             </h3>

@@ -65,7 +65,7 @@ const Individual = () => {
           Beneficios de Socio Individual
         </h2>
 
-        <div className="grid gap-6 lg:px-16 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 lg:px-28">
           {/* Tarjeta de beneficio */}
           <div className="flex items-start p-6 bg-white rounded-lg shadow-md">
             <CheckCircle className="w-8 h-8 text-green-500" />
@@ -182,7 +182,7 @@ const Individual = () => {
           Requisitos para Socio Individual
         </h2>
 
-        <div className="space-y-8 lg:px-20 ">
+        <div className="space-y-8 lg:px-28 ">
           {/* Requisito 1 */}
           <div className="flex items-center p-6 bg-white rounded-lg shadow-md">
             <div className="p-4 mr-6 bg-green-100 rounded-full">

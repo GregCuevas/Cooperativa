@@ -23,12 +23,14 @@ import Terminos from "../pages/Terminos";
 import Politicas from "../pages/Politicas";
 import NotFound from "../pages/NoEncontrado"; // Import the 404 page
 import Sucursales from "../pages/Sucursales";
+import Contacto from "../pages/Contacto";
 const Root = () => {
   return (
     <>
       <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/contactanos/" element={<Contacto />} />
         <Route path="/terminos-de-servicio" element={<Terminos />} />
         <Route path="/politica-de-privacidad" element={<Politicas />} />
         <Route path="/socio-individual" element={<Individual />} />
