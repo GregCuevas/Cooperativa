@@ -81,7 +81,7 @@ export default function Component() {
               </p>
             </div>
           </div>
-          <div className="grid grid-cols-1 gap-4 pb-8 sm:grid-cols-2 lg:grid-cols-4 sm:gap-6 lg:gap-8 sm:pb-12">
+          <div className="grid grid-cols-1 gap-4 pb-8 lg:px-10 sm:grid-cols-2 lg:grid-cols-4 sm:gap-6 lg:gap-8 sm:pb-12">
             {cards.map((card, index) => (
               <FeatureCard key={index} {...card} />
             ))}

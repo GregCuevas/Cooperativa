@@ -19,10 +19,10 @@ const Navbar = () => {
 
   const topMenuItems = [
     { name: "Inicio", link: "/" },
-    { name: "Sucursales", link: "/sucursales" },
+    { name: "Sucursales", link: "/sucursales/" },
     { name: "Contáctanos", link: "/contactanos" },
     { name: "Preguntas Frecuentes", link: "/#preguntas-frecuentes" },
-    { name: "Hazte Socio", link: "/app-movil" },
+    { name: "Hazte Socio", link: "/socios" },
   ];
 
   const bottomMenuItems = [
@@ -31,9 +31,9 @@ const Navbar = () => {
       link: "/servicios",
       hasSubmenu: true,
       submenuItems: [
-        { name: "Educación", link: "/educacion" },
-        { name: "Telecomunicaciones", link: "/telecomunicaciones" },
-        { name: "Financiamiento", link: "/financiamiento" },
+        { name: "Educación", link: "/servicios/educacion/" },
+        { name: "Telecomunicaciones", link: "/servicios/telecomunicaciones/" },
+        { name: "Financiamiento", link: "/servicios/financiamiento/" },
       ],
     },
     {
@@ -68,7 +68,7 @@ const Navbar = () => {
         { name: "Educación Financiera", link: "/prevencion/educacion" },
       ],
     },
-    { name: "PRÉSTAMOS", link: "/calculadora-prestamos" },
+    { name: "PRÉSTAMOS", link: "/calculadora-prestamos" }, // Sin submenú
   ];
 
   // Función para manejar la búsqueda
@@ -182,13 +182,25 @@ const Navbar = () => {
           <div className="px-2 pt-2 pb-3 space-y-1 bg-green-500">
             {bottomMenuItems.map((item) => (
               <div key={item.name}>
-                <button
-                  onClick={() => toggleDropdown(item.name)}
-                  className="inline-flex items-center justify-between w-full px-3 py-2 font-semibold text-left text-white rounded-md hover:bg-green-600"
-                >
-                  {item.name}
-                  {item.hasSubmenu && <ChevronDown className="w-4 h-4 ml-1" />}
-                </button>
+                {!item.hasSubmenu ? (
+                  <Link
+                    to={item.link}
+                    className="block px-3 py-2 font-semibold text-white rounded-md hover:bg-green-600"
+                    onClick={toggleMenu}
+                  >
+                    {item.name}
+                  </Link>
+                ) : (
+                  <button
+                    onClick={() => toggleDropdown(item.name)}
+                    className="inline-flex items-center justify-between w-full px-3 py-2 font-semibold text-left text-white rounded-md hover:bg-green-600"
+                  >
+                    {item.name}
+                    {item.hasSubmenu && (
+                      <ChevronDown className="w-4 h-4 ml-1" />
+                    )}
+                  </button>
+                )}
                 {item.hasSubmenu && activeDropdown === item.name && (
                   <div className="pl-4 space-y-1">
                     {item.submenuItems.map((subItem) => (

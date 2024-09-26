@@ -43,7 +43,7 @@ const FinanceCard = ({ title, description, icon: Icon, bgImage }) => (
   </Card>
 );
 
-export default function Component() {
+const Finaciamientos = () => {
   const financeProducts = [
     {
       title: "Aportaciones",
@@ -120,8 +120,8 @@ export default function Component() {
             </div>
           </div>
 
-          <div className="container px-1 mx-auto py-9">
-            <div className="p-6 mb-12 bg-white rounded-lg shadow-lg sm:p-8">
+          <div className="container px-1 mx-auto py-9 lg:px-16">
+            <div className="p-6 mb-12 bg-white rounded-lg shadow-lg sm:p-8 ">
               {/* Ícono decorativo */}
               <div className="flex justify-center mb-2">
                 <Signal className="w-12 h-12 text-blue-500 sm:w-16 sm:h-16" />
@@ -166,4 +166,5 @@ export default function Component() {
       <Footer />
     </>
   );
-}
+};
+export default Finaciamientos;

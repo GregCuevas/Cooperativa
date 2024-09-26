@@ -6,11 +6,11 @@ import Family3 from "../assets/family3.jpg";
 const Historia = () => {
   return (
     <>
-      <div className="px-2 py-4 bg-white sm:px-4 lg:px-6">
+      <div className="px-4 py-4 bg-white sm:px-4 lg:px-6">
         <h2 className="mt-4 text-3xl font-bold text-center text-gray-900">
           Transformación digital y educativa en RD
         </h2>
-        <div className="grid grid-cols-1 gap-4 mt-4 md:grid-cols-3">
+        <div className="grid grid-cols-1 gap-4 mt-6 md:grid-cols-3 lg:px-16">
           <div className="flex justify-center">
             <img
               className="object-cover rounded-lg shadow-lg "

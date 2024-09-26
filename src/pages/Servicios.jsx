@@ -15,7 +15,7 @@ const Servicios = () => {
       alt: "Mano sosteniendo un smartphone con icono 5G",
       description:
         "Para ampliar las telecomunicaciones en zonas rurales, nos enfocamos en promover el desarrollo educativo.",
-      link: "/servicios/telecomunicaciones",
+      link: "/servicios/telecomunicaciones/",
     },
     {
       title: "Educación",
@@ -23,7 +23,7 @@ const Servicios = () => {
       alt: "Estudiantes usando laptops y tablets al aire libre",
       description:
         "Comprometidos con un objetivo compartido, Coopebred facilita el acceso equitativo a la tecnología 5G para todos.",
-      link: "/servicios/educacion",
+      link: "/servicios/educacion/",
     },
     {
       title: "Financiamiento",
@@ -31,14 +31,14 @@ const Servicios = () => {
       alt: "Personas en oficina analizando gráficos financieros",
       description:
         "Con las soluciones de Coopebred, las familias en áreas rurales acceden a diversas ventajas económicas.",
-      link: "/servicios/financiamiento",
+      link: "/servicios/financiamiento/",
     },
   ];
 
   return (
     <div className="flex flex-col min-h-screen">
       <Navbar />
-      <main className="flex-grow ">
+      <main className="flex-grow lg:px-16 ">
         <div className="container px-4 py-8 mx-auto sm:px-6 lg:px-8">
           <div className="mb-8 text-center">
             <h2 className="mb-4 text-2xl font-bold text-gray-900 sm:text-3xl md:text-4xl lg:text-5xl">

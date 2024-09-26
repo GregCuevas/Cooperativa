@@ -8,7 +8,7 @@ const blogPosts = [
   {
     icon: Wifi,
     category: "Conectividad",
-    link: "/telecomunicaciones",
+    link: "/servicios/telecomunicaciones/",
     title: "Telecomunicaciones",
     description:
       "Para ampliar las telecomunicaciones en zonas rurales, nos enfocamos en promover el desarrollo educativo.",
@@ -16,7 +16,7 @@ const blogPosts = [
   {
     icon: Educación,
     category: "Equidad",
-    link: "/educacion",
+    link: "/servicios/educacion/",
     title: "Educación",
     description:
       "Comprometidos con un objetivo compartido, Coopebred facilita el acceso equitativo a la tecnología 5G para todos.",
@@ -24,7 +24,7 @@ const blogPosts = [
   {
     icon: Finanza,
     category: "Acceso",
-    link: "/financiamiento",
+    link: "/servicios/financiamiento/",
     title: "Financiamiento",
     description:
       "Con las soluciones de Coopebred, las familias en áreas rurales acceden a diversas ventajas económicas.",

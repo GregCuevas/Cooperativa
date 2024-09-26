@@ -23,7 +23,7 @@ export default function EduFinanciera() {
     <div className="flex flex-col min-h-screen">
       <Navbar />
 
-      <main className="flex-grow">
+      <main className="flex-grow px-2 lg:px-20">
         <div className="container px-4 mx-auto mt-4">
           {/* Main Image with Overlaid Text */}
           <div className="relative w-full h-[50vh] sm:h-[60vh] lg:h-[70vh] mb-12 overflow-hidden rounded-lg shadow-md">

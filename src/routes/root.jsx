@@ -22,7 +22,7 @@ import Socios from "../pages/Socios";
 import Terminos from "../pages/Terminos";
 import Politicas from "../pages/Politicas";
 import NotFound from "../pages/NoEncontrado"; // Import the 404 page
-
+import Sucursales from "../pages/Sucursales";
 const Root = () => {
   return (
     <>
@@ -32,12 +32,16 @@ const Root = () => {
         <Route path="/terminos-de-servicio" element={<Terminos />} />
         <Route path="/politica-de-privacidad" element={<Politicas />} />
         <Route path="/socio-individual" element={<Individual />} />
+        <Route path="/sucursales/" element={<Sucursales />} />
         <Route path="/calculadora-prestamos" element={<Loan />} />
         <Route path="/historia" element={<Historia />} />
         <Route path="/servicios" element={<Servicios />} />
-        <Route path="/financiamiento" element={<Finaciamiento />} />
-        <Route path="/telecomunicaciones" element={<Telecomunicaciones />} />
-        <Route path="/educacion" element={<Educacion />} />
+        <Route path="/servicios/financiamiento/" element={<Finaciamiento />} />
+        <Route
+          path="/servicios/telecomunicaciones/"
+          element={<Telecomunicaciones />}
+        />
+        <Route path="/servicios/educacion/" element={<Educacion />} />
         <Route path="/perfil-institucional" element={<Institucion />} />
         <Route path="/socio-individual" element={<Individual />} />
         <Route path="/socio-empresa" element={<Empresa />} />

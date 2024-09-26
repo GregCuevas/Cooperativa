@@ -36,7 +36,7 @@ const Institucion = () => {
               </p>
             </div>
           </div>
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-3 lg:px-16">
             <Card className="border rounded-lg shadow-[0_4px_20px_rgba(0,0,0,0.05)] bg-white border-t-2 border-[#ff9100]">
               <CardHeader className="p-0">
                 <div className="relative w-full overflow-hidden rounded-sm rounded-t-lg h-52">

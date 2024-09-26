@@ -52,7 +52,7 @@ const Timeline = () => {
   ];
 
   return (
-    <div className="container px-4 py-8 mx-auto">
+    <div className="container px-4 py-8 mx-auto lg:px-16">
       <div className="relative">
         <div className="absolute w-1 h-full transform -translate-x-1/2 bg-gray-200 left-1/2"></div>
         {timelineEvents.map((event, index) => (

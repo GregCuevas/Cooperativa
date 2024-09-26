@@ -85,7 +85,7 @@ const Empresa = () => {
           <h2 className="mb-8 text-3xl font-bold text-center text-gray-800">
             Tipos de Socios Empresa
           </h2>
-          <div className="grid gap-8 md:grid-cols-2">
+          <div className="grid gap-8 lg:px-16 md:grid-cols-2">
             <InfoSection
               title="Socio Activo (Distrito)"
               description="Un socio empresa activo es un miembro que actúa como Sucursal Principal en su provincia. Además de aportar capital financiero, participa activamente en la gestión y operación de la cooperativa."
@@ -106,7 +106,7 @@ const Empresa = () => {
           <h2 className="mb-8 text-3xl font-bold text-center text-gray-800">
             Beneficios para Socios
           </h2>
-          <div className="grid gap-8 md:grid-cols-2">
+          <div className="grid gap-8 lg:px-16 md:grid-cols-2">
             <div className="p-6 rounded-lg shadow-md bg-green-50">
               <h3 className="mb-4 text-xl font-semibold text-green-500">
                 Socio Activo (Sucursal Principal)
@@ -141,7 +141,7 @@ const Empresa = () => {
           <h2 className="mb-8 text-3xl font-bold text-center text-gray-800">
             Montos de Inscripción
           </h2>
-          <div className="grid gap-8 md:grid-cols-2">
+          <div className="grid gap-8 lg:px-16 md:grid-cols-2">
             <div className="p-6 bg-white rounded-lg shadow-md">
               <h3 className="mb-4 text-xl font-semibold text-gray-800">
                 Socio Activo (Sucursal principal)
@@ -175,12 +175,12 @@ const Empresa = () => {
       </section>
 
       {/* Requisitos */}
-      <section className="py-6 bg-white">
-        <div className="container px-4 mx-auto">
+      <section className="py-6 bg-white ">
+        <div className="container max-w-full mx-auto text-center px-28">
           <h2 className="mb-8 text-3xl font-bold text-center text-gray-800">
             Requisitos
           </h2>
-          <div className="p-6 rounded-lg shadow-md ">
+          <div className="px-6 rounded-lg shadow-md">
             <h3 className="mb-4 text-xl font-semibold text-gray-800">
               Documentación necesaria para ambos tipos de socios
             </h3>

@@ -24,7 +24,7 @@ const ImpactoNoticia = () => {
         </div>
 
         {/* Contenido del artículo */}
-        <div className="p-6 mx-auto mt-6 bg-white rounded-lg shadow-lg max-w-7xl">
+        <div className="p-6 px-10 mx-auto mt-6 bg-white rounded-lg shadow-lg max-w-7xl lg:px-20">
           <p className="mb-8 text-lg leading-relaxed text-gray-700">
             Las cooperativas, como forma de organización económica y social, han
             dejado una huella profunda en la República Dominicana, marcando

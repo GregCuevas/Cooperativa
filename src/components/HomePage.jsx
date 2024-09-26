@@ -1,5 +1,5 @@
 import React from "react";
-import Home from "../assets/familia.jpg";
+import Home from "../assets/familias.jpg";
 import { Link } from "react-router-dom"; // Adjust this path if necessary
 import {
   ArrowRight,
@@ -23,7 +23,7 @@ export default function Homepage() {
 
       {/* Text container */}
       <div className="w-full h-full md:absolute md:inset-0 md:flex md:items-center md:pl-20 lg:pl-32">
-        <div className="bg-[#f8961e] md:bg-[#F0FFFF33] md:bg-opacity-0 text-white p-8 w-full md:w-[640px] lg:w-[495px] md:h-[95%] md:flex md:flex-col md:justify-center">
+        <div className="bg-[#f8961e] md:bg-[#09a129] rounded-md md:bg-opacity-50 text-white p-8 w-full md:w-[640px] lg:w-[495px] md:h-[95%] md:flex md:flex-col md:justify-center">
           <h1 className="text-3xl font-bold md:text-4xl lg:text-5xl">
             COOPEBRED
           </h1>

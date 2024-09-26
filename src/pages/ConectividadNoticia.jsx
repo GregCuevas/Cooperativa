@@ -24,7 +24,7 @@ const Conectividad5GPage = () => {
         </div>
 
         {/* Contenido del artículo */}
-        <div className="p-6 mx-auto mt-6 bg-white rounded-lg shadow-lg max-w-7xl">
+        <div className="p-6 px-10 mx-auto mt-6 bg-white rounded-lg shadow-lg max-w-7xl lg:px-20">
           <p className="mb-8 text-lg leading-relaxed text-gray-700">
             En una era en la que la educación depende cada vez más de la
             tecnología, el papel de la conectividad avanzada no puede ser
