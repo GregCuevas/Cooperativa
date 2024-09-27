@@ -23,7 +23,7 @@ export default function Homepage() {
 
       {/* Text container */}
       <div className="w-full h-full md:absolute md:inset-0 md:flex md:items-center md:pl-20 lg:pl-32">
-        <div className="bg-[#f8961e] md:bg-[#09a129] rounded-md md:bg-opacity-50 text-white p-8 w-full md:w-[640px] lg:w-[495px] md:h-[95%] md:flex md:flex-col md:justify-center">
+        <div className="bg-[#09a129] md:bg-[#09a129] rounded-md md:bg-opacity-50 text-white p-8 w-full md:w-[640px] lg:w-[495px] md:h-[95%] md:flex md:flex-col md:justify-center">
           <h1 className="text-3xl font-bold md:text-4xl lg:text-5xl">
             COOPEBRED
           </h1>
@@ -32,9 +32,21 @@ export default function Homepage() {
             todas las familias puedan tener las mismas oportunidades.
           </p>
           <div className="flex items-center justify-center space-x-6 md:justify-center lg:justify-start">
-            <PiggyBank color="#16a34a" strokeWidth={1.5} size={40} />
-            <GraduationCap color="#16a34a" strokeWidth={1.5} size={40} />
-            <CircleDollarSign color="#16a34a" strokeWidth={1.5} size={40} />
+            <PiggyBank
+              className="text-[#007200] lg:text-[#2bc016]" // Cambia el color dependiendo del tamaño
+              strokeWidth={1.5}
+              size={40}
+            />
+            <GraduationCap
+              className="text-[#007200] lg:text-[#2bc016]" // Cambia el color dependiendo del tamaño
+              strokeWidth={1.5}
+              size={40}
+            />
+            <CircleDollarSign
+              className="text-[#007200] lg:text-[#2bc016]" // Cambia el color dependiendo del tamaño
+              strokeWidth={1.5}
+              size={40}
+            />
           </div>
           <div className="flex items-center justify-center gap-4 mt-7 md:justify-start">
             <Link to="/socios">
