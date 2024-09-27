@@ -33,17 +33,17 @@ export default function Homepage() {
           </p>
           <div className="flex items-center justify-center space-x-6 md:justify-center lg:justify-start">
             <PiggyBank
-              className="text-[#007200] lg:text-[#2bc016]" // Cambia el color dependiendo del tamaño
+              className="text-[#007200] lg:text-[#2bc016]"
               strokeWidth={1.5}
               size={40}
             />
             <GraduationCap
-              className="text-[#007200] lg:text-[#2bc016]" // Cambia el color dependiendo del tamaño
+              className="text-[#007200] lg:text-[#2bc016]"
               strokeWidth={1.5}
               size={40}
             />
             <CircleDollarSign
-              className="text-[#007200] lg:text-[#2bc016]" // Cambia el color dependiendo del tamaño
+              className="text-[#007200] lg:text-[#2bc016]"
               strokeWidth={1.5}
               size={40}
             />
