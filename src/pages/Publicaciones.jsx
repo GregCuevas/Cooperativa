@@ -50,7 +50,6 @@ const Publicaciones = () => {
     <>
       <Navbar />
       <div className="container px-4 mx-auto mt-4">
-        {/* Main Image with Overlaid Text */}
         <div className="relative w-full h-[50vh] sm:h-[60vh] lg:h-[70vh] mb-12 overflow-hidden rounded-lg shadow-md">
           <img
             src={News}
@@ -81,7 +80,6 @@ const Publicaciones = () => {
                 alt={news.title}
                 className="object-cover w-full h-48 lg:h-64"
               />
-              {/* Categoría en la parte superior derecha */}
               <div className="absolute px-3 py-1 text-sm text-white bg-green-500 rounded-sm top-2 right-2">
                 {news.category}
               </div>

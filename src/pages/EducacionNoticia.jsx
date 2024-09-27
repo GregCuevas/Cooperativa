@@ -8,7 +8,6 @@ const EducacionNoticia = () => {
     <>
       <Navbar />
       <div className="mt-4 mb-4">
-        {/* Imagen superior */}
         <div className="relative">
           <img
             src={Aprendizaje}
@@ -22,8 +21,6 @@ const EducacionNoticia = () => {
             </h1>
           </div>
         </div>
-
-        {/* Contenido del artículo */}
         <div className="p-6 px-10 mx-auto mt-6 bg-white rounded-lg shadow-lg max-w-7xl lg:px-20">
           <p className="mb-8 text-lg leading-relaxed text-gray-700">
             En la era digital acelerada, la influencia de las telecomunicaciones
@@ -33,14 +30,12 @@ const EducacionNoticia = () => {
             cambios significativos, revolucionando la forma en que aprendemos,
             enseñamos y accedemos a recursos educativos.
           </p>
-
           <p className="mb-8 text-lg leading-relaxed text-gray-700">
             Desde aulas virtuales hasta plataformas de aprendizaje en línea, las
             telecomunicaciones han democratizado el acceso a la educación,
             rompiendo las barreras geográficas y proporcionando oportunidades de
             aprendizaje igualitarias para estudiantes de todo el mundo.
           </p>
-
           <section className="mb-8">
             <h2 className="mb-3 text-3xl font-semibold text-green-600">
               1. Conectividad Global: Superando Brechas Educativas
@@ -56,9 +51,7 @@ const EducacionNoticia = () => {
               a los estudiantes independientemente de su ubicación.
             </p>
           </section>
-
           <hr className="my-8" />
-
           <section className="mb-8">
             <h2 className="mb-3 text-3xl font-semibold text-green-600">
               2. Plataformas de E-Learning: Aprendizaje Más Allá de las Aulas
@@ -75,9 +68,7 @@ const EducacionNoticia = () => {
               necesidades individuales.
             </p>
           </section>
-
           <hr className="my-8" />
-
           <section className="mb-8">
             <h2 className="mb-3 text-3xl font-semibold text-green-600">
               3. Aulas Virtuales: Redefiniendo el Entorno de Aprendizaje
@@ -94,9 +85,7 @@ const EducacionNoticia = () => {
               sin precedentes.
             </p>
           </section>
-
           <hr className="my-8" />
-
           <section className="mb-8">
             <h2 className="mb-3 text-3xl font-semibold text-green-600">
               4. Acceso a la Información: Una Revolución del Conocimiento
@@ -112,9 +101,7 @@ const EducacionNoticia = () => {
               campos de estudio.
             </p>
           </section>
-
           <hr className="my-8" />
-
           <section className="mb-8">
             <h2 className="mb-3 text-3xl font-semibold text-green-600">
               5. Aprendizaje Móvil: Educación en la Palma de tu Mano
@@ -130,9 +117,7 @@ const EducacionNoticia = () => {
               su vida diaria.
             </p>
           </section>
-
           <hr className="my-8" />
-
           <section className="mb-8">
             <h2 className="mb-3 text-3xl font-semibold text-green-600">
               6. Análisis de Datos en Educación: Toma de Decisiones Informada
@@ -148,9 +133,7 @@ const EducacionNoticia = () => {
               mejorando así la calidad general de la educación.
             </p>
           </section>
-
           <hr className="my-8" />
-
           <section className="mb-8">
             <h2 className="mb-3 text-3xl font-semibold text-green-600">
               Conclusión

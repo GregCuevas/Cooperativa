@@ -2,7 +2,7 @@ import Image from "../assets/logo.png";
 import { Link } from "react-router-dom";
 import { Facebook, Instagram, Linkedin, MessageCircle } from "lucide-react";
 
-export default function Footer() {
+const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
@@ -117,10 +117,10 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="mailto:coopeducate@silkglobal.com" // mailto: abre el cliente de correo
+                  href="mailto:info@coopebred.com" // mailto: abre el cliente de correo
                   className="text-gray-600 break-words hover:text-gray-900"
                 >
-                  coopebred@silkglobal.com
+                  info@coopebred.com
                 </a>
               </li>
             </ul>
@@ -166,4 +166,5 @@ export default function Footer() {
       </div>
     </footer>
   );
-}
+};
+export default Footer;

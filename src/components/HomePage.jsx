@@ -11,7 +11,7 @@ import {
 import { Button } from "@/components/ui/button";
 export default function Homepage() {
   return (
-    <div className="relative w-full mt-4">
+    <div className="relative w-full mt-4 lg:mt-0">
       {/* Image container */}
       <div className="w-full h-[50vh] md:h-[80vh]">
         <img

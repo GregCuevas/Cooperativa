@@ -21,28 +21,33 @@ import ConectividadNoticia from "../pages/ConectividadNoticia";
 import Socios from "../pages/Socios";
 import Terminos from "../pages/Terminos";
 import Politicas from "../pages/Politicas";
-import NotFound from "../pages/NoEncontrado"; // Import the 404 page
+import NotFound from "../pages/NoEncontrado";
 import Sucursales from "../pages/Sucursales";
+import Contacto from "../pages/Contacto";
 const Root = () => {
   return (
     <>
       <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/terminos-de-servicio" element={<Terminos />} />
-        <Route path="/politica-de-privacidad" element={<Politicas />} />
-        <Route path="/socio-individual" element={<Individual />} />
-        <Route path="/sucursales/" element={<Sucursales />} />
         <Route path="/calculadora-prestamos" element={<Loan />} />
         <Route path="/historia" element={<Historia />} />
+        <Route path="/perfil-institucional" element={<Institucion />} />
         <Route path="/servicios" element={<Servicios />} />
-        <Route path="/servicios/financiamiento/" element={<Finaciamiento />} />
+        <Route path="/servicios/educacion/" element={<Educacion />} />
         <Route
           path="/servicios/telecomunicaciones/"
           element={<Telecomunicaciones />}
         />
-        <Route path="/servicios/educacion/" element={<Educacion />} />
-        <Route path="/perfil-institucional" element={<Institucion />} />
+
+        <Route path="/servicios/financiamiento/" element={<Finaciamiento />} />
+        <Route path="/socio-individual" element={<Individual />} />
+        <Route path="/contactanos/" element={<Contacto />} />
+        <Route path="/terminos-de-servicio" element={<Terminos />} />
+        <Route path="/politica-de-privacidad" element={<Politicas />} />
+
+        <Route path="/sucursales/" element={<Sucursales />} />
+
         <Route path="/socio-individual" element={<Individual />} />
         <Route path="/socio-empresa" element={<Empresa />} />
         <Route path="/prevencion/educacion" element={<EducFinanciera />} />
@@ -68,8 +73,6 @@ const Root = () => {
           path="/publicaciones/conectividad-5g-un-requisito-de-la-unesco-para-la-educacion-en-la-era-digital-en-la-republica-dominicana"
           element={<ConectividadNoticia />}
         />
-
-        {/* Catch-all route for 404 page */}
         <Route path="*" element={<NotFound />} />
       </Routes>
     </>

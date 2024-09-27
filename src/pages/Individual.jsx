@@ -2,7 +2,6 @@ import React, { useRef } from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import FormIndividual from "../components/FormIndividual";
-
 import {
   CheckCircle,
   Heart,
@@ -13,9 +12,9 @@ import {
   Banknote,
   CreditCard,
   User,
-} from "lucide-react"; // Importación de íconos de Lucide React
+} from "lucide-react";
 import Individuals from "../assets/individual.jpg";
-import Ahorro from "../assets/ahorrando.jpg"; // Usa una imagen relevante para esta sección
+import Ahorro from "../assets/ahorrando.jpg";
 
 const Individual = () => {
   const formRef = useRef(null);
@@ -58,15 +57,11 @@ const Individual = () => {
           </div>
         </div>
       </div>
-
-      {/* Sección de Beneficios */}
       <div className="px-6 py-12 md:px-20">
         <h2 className="mb-6 text-3xl font-bold text-center text-black">
           Beneficios de Socio Individual
         </h2>
-
-        <div className="grid gap-6 lg:px-16 md:grid-cols-2 lg:grid-cols-3">
-          {/* Tarjeta de beneficio */}
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 lg:px-28">
           <div className="flex items-start p-6 bg-white rounded-lg shadow-md">
             <CheckCircle className="w-8 h-8 text-green-500" />
             <div className="ml-4">
@@ -79,8 +74,6 @@ const Individual = () => {
               </p>
             </div>
           </div>
-
-          {/* Otra tarjeta */}
           <div className="flex items-start p-6 bg-white rounded-lg shadow-md">
             <Heart className="w-8 h-8 text-green-500" />
             <div className="ml-4">
@@ -93,8 +86,6 @@ const Individual = () => {
               </p>
             </div>
           </div>
-
-          {/* Otra tarjeta */}
           <div className="flex items-start p-6 bg-white rounded-lg shadow-md">
             <DollarSign className="w-8 h-8 text-green-500" />
             <div className="ml-4">
@@ -104,8 +95,6 @@ const Individual = () => {
               </p>
             </div>
           </div>
-
-          {/* Otra tarjeta */}
           <div className="flex items-start p-6 bg-white rounded-lg shadow-md">
             <BarChart className="w-8 h-8 text-green-500" />
             <div className="ml-4">
@@ -116,8 +105,6 @@ const Individual = () => {
               </p>
             </div>
           </div>
-
-          {/* Otra tarjeta */}
           <div className="flex items-start p-6 bg-white rounded-lg shadow-md">
             <Clipboard className="w-8 h-8 text-green-500" />
             <div className="ml-4">
@@ -130,8 +117,6 @@ const Individual = () => {
               </p>
             </div>
           </div>
-
-          {/* Otra tarjeta */}
           <div className="flex items-start p-6 bg-white rounded-lg shadow-md">
             <CheckCircle className="w-8 h-8 text-green-500" />
             <div className="ml-4">
@@ -144,11 +129,10 @@ const Individual = () => {
           </div>
         </div>
       </div>
-
       <div className="relative py-16 bg-black">
         <div className="absolute inset-0">
           <img
-            src={Ahorro} // Asegúrate de que esta sea la ruta correcta de la imagen
+            src={Ahorro}
             alt="Ahorro"
             className="object-cover w-full h-full opacity-20"
           />
@@ -181,9 +165,7 @@ const Individual = () => {
         <h2 className="mb-6 text-3xl font-bold text-center text-black">
           Requisitos para Socio Individual
         </h2>
-
-        <div className="space-y-8 lg:px-20 ">
-          {/* Requisito 1 */}
+        <div className="space-y-8 lg:px-28 ">
           <div className="flex items-center p-6 bg-white rounded-lg shadow-md">
             <div className="p-4 mr-6 bg-green-100 rounded-full">
               <User className="w-10 h-10 text-green-600" />
@@ -196,8 +178,6 @@ const Individual = () => {
               </p>
             </div>
           </div>
-
-          {/* Requisito 2 */}
           <div className="flex items-center p-6 bg-white rounded-lg shadow-md">
             <div className="p-4 mr-6 bg-green-100 rounded-full">
               <CreditCard className="w-10 h-10 text-green-600" />
@@ -209,8 +189,6 @@ const Individual = () => {
               </p>
             </div>
           </div>
-
-          {/* Requisito 3 */}
           <div className="flex items-center p-6 bg-white rounded-lg shadow-md">
             <div className="p-4 mr-6 bg-green-100 rounded-full">
               <Banknote className="w-10 h-10 text-green-600" />
@@ -224,8 +202,6 @@ const Individual = () => {
               </p>
             </div>
           </div>
-
-          {/* Requisito 4 */}
           <div className="flex items-center p-6 bg-white rounded-lg shadow-md">
             <div className="p-4 mr-6 bg-green-100 rounded-full">
               <Wallet className="w-10 h-10 text-green-600" />

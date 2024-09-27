@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 
-// Componente CountUp personalizado
 const CountUp = ({ end, duration }) => {
   const [count, setCount] = useState(0);
 

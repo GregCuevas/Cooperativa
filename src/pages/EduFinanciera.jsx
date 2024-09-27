@@ -22,10 +22,8 @@ export default function EduFinanciera() {
   return (
     <div className="flex flex-col min-h-screen">
       <Navbar />
-
       <main className="flex-grow px-2 lg:px-20">
         <div className="container px-4 mx-auto mt-4">
-          {/* Main Image with Overlaid Text */}
           <div className="relative w-full h-[50vh] sm:h-[60vh] lg:h-[70vh] mb-12 overflow-hidden rounded-lg shadow-md">
             <img
               src={EduFinaciera}
@@ -42,7 +40,6 @@ export default function EduFinanciera() {
               </p>
             </div>
           </div>
-
           <section className="py-16 ">
             <div className="container mx-auto">
               <h2 className="mb-12 text-3xl font-semibold text-center">
@@ -67,7 +64,6 @@ export default function EduFinanciera() {
               </div>
             </div>
           </section>
-
           <section className="py-16">
             <div className="container mx-auto">
               <h2 className="mb-12 text-3xl font-semibold text-center">
@@ -92,7 +88,6 @@ export default function EduFinanciera() {
               </div>
             </div>
           </section>
-
           <section className="py-16 ">
             <div className="container mx-auto">
               <h2 className="mb-12 text-3xl font-semibold text-center">
@@ -122,7 +117,6 @@ export default function EduFinanciera() {
               </div>
             </div>
           </section>
-
           <section className="py-16">
             <div className="container mx-auto">
               <h2 className="mb-12 text-3xl font-semibold text-center">
@@ -152,7 +146,6 @@ export default function EduFinanciera() {
               </div>
             </div>
           </section>
-
           <section className="py-16 ">
             <div className="container mx-auto">
               <h2 className="mb-12 text-3xl font-semibold text-center">
@@ -194,7 +187,6 @@ export default function EduFinanciera() {
           </section>
         </div>
       </main>
-
       <Footer />
     </div>
   );

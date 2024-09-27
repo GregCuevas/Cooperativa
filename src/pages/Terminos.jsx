@@ -28,14 +28,11 @@ const PrivacyPolicy = () => {
             detenidamente.
           </p>
         </header>
-
         <section className="p-6 bg-white rounded-lg shadow-lg">
           <h2 className="mb-6 text-2xl font-semibold text-gray-800">
             Políticas generales de Coopebred
           </h2>
-
           <div className="space-y-6">
-            {/* Sección 1 */}
             <div className="flex items-center space-x-4">
               <ShieldAlert className="w-6 h-6 text-black" />
               <div>
@@ -52,8 +49,6 @@ const PrivacyPolicy = () => {
                 </p>
               </div>
             </div>
-
-            {/* Sección 2 */}
             <div className="flex items-center space-x-4">
               <User className="w-6 h-6 text-black" />
               <div>
@@ -69,8 +64,6 @@ const PrivacyPolicy = () => {
                 </p>
               </div>
             </div>
-
-            {/* Sección 3 */}
             <div className="flex items-center space-x-4">
               <FileText className="w-6 h-6 text-black" />
               <div>
@@ -86,8 +79,6 @@ const PrivacyPolicy = () => {
                 </p>
               </div>
             </div>
-
-            {/* Sección 4 */}
             <div className="flex items-center space-x-4">
               <Lock className="w-6 h-6 text-black" />
               <div>
@@ -104,8 +95,6 @@ const PrivacyPolicy = () => {
                 </p>
               </div>
             </div>
-
-            {/* Sección 5 */}
             <div className="flex items-center space-x-4">
               <CreditCard className="w-6 h-6 text-black" />
               <div>
@@ -122,8 +111,6 @@ const PrivacyPolicy = () => {
                 </p>
               </div>
             </div>
-
-            {/* Sección 6 */}
             <div className="flex items-center space-x-4">
               <Globe className="w-6 h-6 text-black" />
               <div>
@@ -138,8 +125,6 @@ const PrivacyPolicy = () => {
                 </p>
               </div>
             </div>
-
-            {/* Sección 7 */}
             <div className="flex items-center space-x-4">
               <Edit className="w-6 h-6 text-black" />
               <div>
@@ -154,8 +139,6 @@ const PrivacyPolicy = () => {
                 </p>
               </div>
             </div>
-
-            {/* Sección 8 */}
             <div className="flex items-center space-x-4">
               <Edit className="w-6 h-6 text-black" />
               <div>
@@ -171,8 +154,6 @@ const PrivacyPolicy = () => {
                 </p>
               </div>
             </div>
-
-            {/* Sección 9 */}
             <div className="flex items-center space-x-4">
               <Trash2 className="w-6 h-6 text-black" />
               <div>
@@ -186,8 +167,6 @@ const PrivacyPolicy = () => {
                 </p>
               </div>
             </div>
-
-            {/* Sección 10 */}
             <div className="flex items-center space-x-4">
               <Mail className="w-6 h-6 text-black" />
               <div>
