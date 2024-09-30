@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import toast, { Toaster } from "react-hot-toast";
 
-// Verifica si estás en producción y asigna la URL adecuada
 const API_URL = "/api/send-empresa";
 
 const FormEmpresa = () => {
@@ -97,7 +96,6 @@ const FormEmpresa = () => {
       toast.error("Hubo un problema al enviar el formulario de empresa");
     }
   };
-
   return (
     <>
       <Toaster />

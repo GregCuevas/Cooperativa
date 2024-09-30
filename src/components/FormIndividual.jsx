@@ -42,11 +42,11 @@ const FormIndividual = () => {
       "afiliacion",
       "terminos",
     ];
-    const isValid = requiredFields.every((field) => formData[field]);
-    setIsFormValid(isValid);
-    return isValid;
+    return requiredFields.every((field) => formData[field]);
   };
+
   const API_URL = "/api/send-individual";
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitAttempted(true);
@@ -70,18 +70,21 @@ const FormIndividual = () => {
         formDataToSend.append("cedulaFoto", cedulaFoto);
       }
 
-      // Cambia la URL para la API según el entorno
       const response = await fetch(API_URL, {
         method: "POST",
         body: formDataToSend,
       });
+
+      if (!response.ok) {
+        throw new Error("Error en la respuesta del servidor");
+      }
 
       const result = await response.json();
 
       if (response.ok) {
         toast.success("Formulario enviado exitosamente");
       } else {
-        toast.error("Error al enviar el formulario");
+        toast.error(result.message || "Error al enviar el formulario");
       }
     } catch (error) {
       console.error("Error al enviar el formulario:", error);
