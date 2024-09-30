@@ -2,10 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import toast, { Toaster } from "react-hot-toast";
 
-const API_URL =
-  process.env.NODE_ENV === "production"
-    ? "/api/send-individual"
-    : "http://localhost:3000/api/send-individual";
+const API_URL = "/api/send-individual";
 
 const FormIndividual = () => {
   const [formData, setFormData] = useState({

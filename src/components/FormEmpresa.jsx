@@ -3,10 +3,7 @@ import { Link } from "react-router-dom";
 import toast, { Toaster } from "react-hot-toast";
 
 // Verifica si estás en producción y asigna la URL adecuada
-const API_URL =
-  process.env.NODE_ENV === "production"
-    ? "/api/send-empresa"
-    : "http://localhost:3000/api/send-empresa";
+const API_URL = "/api/send-empresa";
 
 const FormEmpresa = () => {
   const [formData, setFormData] = useState({
