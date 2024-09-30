@@ -8,7 +8,6 @@ import Accordion from "../components/AccordionFAQ";
 import LocationMap from "../components/LocationMap";
 import LoanOptions from "../components/LoanOptions";
 import Footer from "../components/Footer";
-import LogoSection from "../components/LogoSection";
 import Homepage from "../components/HomePage";
 
 const Home = () => {
@@ -16,7 +15,7 @@ const Home = () => {
     <>
       <Navbar />
       <Homepage />
-      <LogoSection />
+
       <FeatureSection />
       <BlogSection />
       <BlogSocios />
