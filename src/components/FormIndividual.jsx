@@ -19,14 +19,14 @@ const FormIndividual = () => {
     terminos: false,
   });
 
-  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmitAttempted, setIsSubmitAttempted] = useState(false);
 
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
-    setFormData((prev) => ({
-      ...prev,
+    setFormData({
+      ...formData,
       [name]: type === "checkbox" ? checked : value,
-    }));
+    });
   };
 
   const validateForm = () => {
@@ -43,50 +43,51 @@ const FormIndividual = () => {
     return requiredFields.every((field) => formData[field]);
   };
 
+  const API_URL = "/api/send-individual";
+
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setIsSubmitAttempted(true);
+
     if (!validateForm()) {
       toast.error("Por favor, completa todos los campos requeridos.");
       return;
     }
 
-    setIsSubmitting(true);
-
     try {
-      const response = await fetch("/api/send-individual", {
+      const formDataToSend = new FormData();
+
+      for (const key in formData) {
+        formDataToSend.append(key, formData[key]);
+      }
+
+      const cedulaFoto = document.getElementById("cedulaFoto").files[0];
+      if (cedulaFoto) {
+        formDataToSend.append("cedulaFoto", cedulaFoto);
+      }
+
+      const response = await fetch(API_URL, {
         method: "POST",
+        body: JSON.stringify(Object.fromEntries(formDataToSend)),
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(formData),
       });
 
       if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
+        throw new Error("Error en la respuesta del servidor");
       }
 
       const result = await response.json();
-      toast.success("Formulario enviado exitosamente");
-      // Reset form
-      setFormData({
-        nombres: "",
-        apellidos: "",
-        cedula: "",
-        telefono: "",
-        email: "",
-        direccion1: "",
-        ciudad: "",
-        estado: "",
-        pais: "",
-        afiliacion: "",
-        comoSupiste: "",
-        terminos: false,
-      });
+
+      if (response.ok) {
+        toast.success("Formulario enviado exitosamente");
+      } else {
+        toast.error(result.message || "Error al enviar el formulario");
+      }
     } catch (error) {
       console.error("Error al enviar el formulario:", error);
       toast.error("Hubo un problema al enviar el formulario");
-    } finally {
-      setIsSubmitting(false);
     }
   };
   return (
