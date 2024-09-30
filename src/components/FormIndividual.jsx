@@ -20,7 +20,6 @@ const FormIndividual = () => {
     terminos: false,
   });
 
-  const [isFormValid, setIsFormValid] = useState(true);
   const [isSubmitAttempted, setIsSubmitAttempted] = useState(false);
 
   const handleChange = (e) => {
@@ -45,7 +44,11 @@ const FormIndividual = () => {
     return requiredFields.every((field) => formData[field]);
   };
 
-  const API_URL = "/api/send-individual";
+  // Ajusta la URL según el entorno
+  const API_URL =
+    process.env.NODE_ENV === "production"
+      ? "https://www.coopebred.com/api/send-individual"
+      : "/api/send-individual";
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -59,7 +62,7 @@ const FormIndividual = () => {
     try {
       const formDataToSend = new FormData();
 
-      // Añadimos todos los campos del formulario a FormData
+      // Añadir todos los campos del formulario a FormData
       for (const key in formData) {
         formDataToSend.append(key, formData[key]);
       }

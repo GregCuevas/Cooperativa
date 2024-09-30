@@ -51,8 +51,8 @@ export default async function handler(req, res) {
       res.status(500).json({ message: "Error al enviar el correo", error });
     }
   } else {
-    // Si el método no es POST
+    // Si el método no es POST, retorna un error 405
     res.setHeader("Allow", ["POST"]);
-    res.status(405).json({ message: "Método no permitido" });
+    res.status(405).json({ message: `Método ${req.method} no permitido` });
   }
 }
