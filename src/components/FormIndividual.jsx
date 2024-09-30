@@ -2,8 +2,6 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import toast, { Toaster } from "react-hot-toast";
 
-const API_URL = "/api/send-individual";
-
 const FormIndividual = () => {
   const [formData, setFormData] = useState({
     nombreCompleto: "",
@@ -48,7 +46,7 @@ const FormIndividual = () => {
     setIsFormValid(isValid);
     return isValid;
   };
-
+  const API_URL = "/api/send-individual";
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitAttempted(true);
