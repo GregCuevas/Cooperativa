@@ -1,15 +1,13 @@
-const { Resend } = require("resend");
-const multer = require("multer");
+import { Resend } from "resend";
+import multer from "multer";
 
-// Configura multer para manejar la subida de archivos en memoria
-const upload = multer({ storage: multer.memoryStorage() });
-
-// Configura la API de Resend
+const upload = multer().single("cedulaFoto");
 const resend = new Resend(process.env.RESEND_API_KEY);
 
 export default async function handler(req, res) {
   if (req.method === "POST") {
-    upload.single("cedulaFoto")(req, res, async (err) => {
+    // Usar multer para manejar la subida de archivos
+    upload(req, res, async function (err) {
       if (err) {
         return res
           .status(500)
@@ -30,7 +28,6 @@ export default async function handler(req, res) {
         comoSupiste,
       } = req.body;
 
-      // Si hay una foto de la cédula, conviértela a base64
       const cedulaFoto = req.file ? req.file.buffer.toString("base64") : null;
 
       const htmlContent = `
@@ -51,10 +48,9 @@ export default async function handler(req, res) {
       `;
 
       try {
-        // Enviar correo usando Resend
         await resend.emails.send({
-          from: "onboarding@resend.dev", // Cambia esto si es necesario
-          to: "onboarding@resend.dev", // Cambia esto si es necesario
+          from: "onboarding@resend.dev",
+          to: "onboarding@resend.dev",
           subject: `Nuevo mensaje de ${nombres || "socio-individual"}`,
           html: htmlContent,
         });
@@ -66,6 +62,7 @@ export default async function handler(req, res) {
       }
     });
   } else {
+    // Manejo de otros métodos HTTP (GET, PUT, etc.)
     res.status(405).json({ message: "Método no permitido" });
   }
 }
