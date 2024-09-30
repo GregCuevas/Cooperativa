@@ -1,5 +1,5 @@
-const { Resend } = require("resend");
-const multer = require("multer");
+import { Resend } from "resend";
+import multer from "multer";
 
 // Configura multer para almacenar el archivo en memoria
 const upload = multer({ storage: multer.memoryStorage() }).single("fotoCedula");

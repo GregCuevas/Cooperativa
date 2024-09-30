@@ -24,6 +24,7 @@ import Politicas from "../pages/Politicas";
 import NotFound from "../pages/NoEncontrado";
 import Sucursales from "../pages/Sucursales";
 import Contacto from "../pages/Contacto";
+
 const Root = () => {
   return (
     <>
@@ -35,6 +36,7 @@ const Root = () => {
         <Route path="/perfil-institucional" element={<Institucion />} />
         <Route path="/servicios" element={<Servicios />} />
         <Route path="/servicios/educacion/" element={<Educacion />} />
+
         <Route
           path="/servicios/telecomunicaciones/"
           element={<Telecomunicaciones />}

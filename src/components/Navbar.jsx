@@ -31,9 +31,11 @@ const Navbar = () => {
       link: "/servicios",
       hasSubmenu: true,
       submenuItems: [
-        { name: "Educación", link: "/servicios/educacion/" },
-        { name: "Telecomunicaciones", link: "/servicios/telecomunicaciones/" },
+        { name: "Cuenta de ahorro", link: "/servicios/educacion/" },
+        { name: "Depósito a Plazo", link: "/servicios/financiamiento/" },
+        { name: "Aportes", link: "/servicios/telecomunicaciones/" },
         { name: "Financiamiento", link: "/servicios/financiamiento/" },
+        { name: "Tarifario", link: "/servicios/financiamiento/" },
       ],
     },
     {
