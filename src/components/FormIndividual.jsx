@@ -55,23 +55,23 @@ const FormIndividual = () => {
     }
 
     try {
+      // Crear un FormData para enviar el formulario
       const formDataToSend = new FormData();
 
       for (const key in formData) {
         formDataToSend.append(key, formData[key]);
       }
 
+      // Incluir la foto de la cédula, si se ha seleccionado
       const cedulaFoto = document.getElementById("cedulaFoto").files[0];
       if (cedulaFoto) {
         formDataToSend.append("cedulaFoto", cedulaFoto);
       }
 
+      // Enviar el formulario usando fetch con FormData
       const response = await fetch(API_URL, {
         method: "POST",
-        body: JSON.stringify(Object.fromEntries(formDataToSend)),
-        headers: {
-          "Content-Type": "application/json",
-        },
+        body: formDataToSend, // No se necesita JSON.stringify para FormData
       });
 
       if (!response.ok) {

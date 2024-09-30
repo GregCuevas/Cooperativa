@@ -1,53 +1,60 @@
-import { Resend } from "resend";
+// Importar la biblioteca Resend
+const { Resend } = require("resend");
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+const resend = new Resend(process.env.RESEND_API_KEY); // Asegúrate de tener la clave en tus variables de entorno
 
+// Handler para el envío de correos electrónicos
 export default async function handler(req, res) {
-  if (req.method !== "POST") {
-    return res.status(405).json({ message: "Method Not Allowed" });
-  }
+  if (req.method === "POST") {
+    try {
+      const {
+        nombres,
+        apellidos,
+        cedula,
+        telefono,
+        email,
+        direccion1,
+        ciudad,
+        estado,
+        pais,
+        afiliacion,
+        comoSupiste,
+        cedulaFoto,
+      } = req.body;
 
-  try {
-    const {
-      nombres,
-      apellidos,
-      cedula,
-      telefono,
-      email,
-      direccion1,
-      ciudad,
-      estado,
-      pais,
-      afiliacion,
-      comoSupiste,
-    } = req.body;
+      const htmlContent = `
+        <p><strong>Nombre:</strong> ${nombres || ""} ${apellidos || ""}</p>
+        <p><strong>Cédula:</strong> ${cedula || ""}</p>
+        <p><strong>Teléfono:</strong> ${telefono || ""}</p>
+        <p><strong>Email:</strong> ${email || ""}</p>
+        <p><strong>Dirección:</strong> ${direccion1 || ""}, ${ciudad || ""}, ${
+        estado || ""
+      }, ${pais || ""}</p>
+        <p><strong>Afiliación:</strong> ${afiliacion || ""}</p>
+        <p><strong>¿Cómo supiste?:</strong> ${comoSupiste || ""}</p>
+        ${
+          cedulaFoto
+            ? `<p><strong>Foto de la cédula:</strong></p><img src="${cedulaFoto}" alt="Foto de la cédula" />`
+            : ""
+        }
+      `;
 
-    const htmlContent = `
-      <h1>Nuevo formulario de socio individual</h1>
-      <p><strong>Nombre:</strong> ${nombres} ${apellidos}</p>
-      <p><strong>Cédula:</strong> ${cedula}</p>
-      <p><strong>Teléfono:</strong> ${telefono}</p>
-      <p><strong>Email:</strong> ${email}</p>
-      <p><strong>Dirección:</strong> ${direccion1}, ${ciudad}, ${estado}, ${pais}</p>
-      <p><strong>Afiliación:</strong> ${afiliacion}</p>
-      <p><strong>¿Cómo supiste?:</strong> ${comoSupiste}</p>
-    `;
+      // Envío del correo utilizando Resend
+      await resend.emails.send({
+        from: "onboarding@resend.dev", // Cambia este correo al que usas para el envío
+        to: "onboarding@resend.dev", // Cambia este correo de destino
+        subject: `Nuevo mensaje de ${nombres || "socio-individual"}`,
+        html: htmlContent,
+      });
 
-    const { data, error } = await resend.emails.send({
-      from: "Formulario <onboarding@resend.dev>",
-      to: ["your-email@example.com"], // Replace with your email
-      subject: `Nuevo socio individual: ${nombres}`,
-      html: htmlContent,
-    });
-
-    if (error) {
-      console.error("Error sending email:", error);
-      return res.status(500).json({ error: "Error sending email" });
+      // Respuesta exitosa
+      res.status(200).json({ message: "Correo enviado exitosamente" });
+    } catch (error) {
+      console.error("Error al enviar correo con Resend", error);
+      res.status(500).json({ message: "Error al enviar el correo", error });
     }
-
-    res.status(200).json({ message: "Email sent successfully", data });
-  } catch (error) {
-    console.error("Error in API route:", error);
-    res.status(500).json({ error: "Internal Server Error" });
+  } else {
+    res.setHeader("Allow", ["POST"]);
+    res.status(405).end(`Método ${req.method} no permitido`);
   }
 }
