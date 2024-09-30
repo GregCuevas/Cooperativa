@@ -4,7 +4,6 @@ import toast, { Toaster } from "react-hot-toast";
 
 const FormIndividual = () => {
   const [formData, setFormData] = useState({
-    nombreCompleto: "",
     nombres: "",
     apellidos: "",
     cedula: "",
@@ -44,11 +43,7 @@ const FormIndividual = () => {
     return requiredFields.every((field) => formData[field]);
   };
 
-  // Ajusta la URL según el entorno
-  const API_URL =
-    process.env.NODE_ENV === "production"
-      ? "https://www.coopebred.com/api/send-individual"
-      : "/api/send-individual";
+  const API_URL = "/api/send-individual";
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -62,12 +57,10 @@ const FormIndividual = () => {
     try {
       const formDataToSend = new FormData();
 
-      // Añadir todos los campos del formulario a FormData
       for (const key in formData) {
         formDataToSend.append(key, formData[key]);
       }
 
-      // Agregar el archivo de la cédula (input type="file")
       const cedulaFoto = document.getElementById("cedulaFoto").files[0];
       if (cedulaFoto) {
         formDataToSend.append("cedulaFoto", cedulaFoto);
@@ -75,7 +68,10 @@ const FormIndividual = () => {
 
       const response = await fetch(API_URL, {
         method: "POST",
-        body: formDataToSend,
+        body: JSON.stringify(Object.fromEntries(formDataToSend)),
+        headers: {
+          "Content-Type": "application/json",
+        },
       });
 
       if (!response.ok) {
