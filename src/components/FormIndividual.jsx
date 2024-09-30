@@ -67,7 +67,21 @@ const FormIndividual = () => {
 
       const result = await response.json();
       toast.success("Formulario enviado exitosamente");
-      // Reset form or redirect user
+      // Reset form
+      setFormData({
+        nombres: "",
+        apellidos: "",
+        cedula: "",
+        telefono: "",
+        email: "",
+        direccion1: "",
+        ciudad: "",
+        estado: "",
+        pais: "",
+        afiliacion: "",
+        comoSupiste: "",
+        terminos: false,
+      });
     } catch (error) {
       console.error("Error al enviar el formulario:", error);
       toast.error("Hubo un problema al enviar el formulario");
