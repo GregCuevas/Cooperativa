@@ -1,5 +1,12 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import toast, { Toaster } from "react-hot-toast";
+
+const API_URL =
+  process.env.NODE_ENV === "production"
+    ? "/api/send-individual"
+    : "http://localhost:3000/api/send-individual";
+
 const FormIndividual = () => {
   const [formData, setFormData] = useState({
     nombreCompleto: "",
@@ -19,6 +26,7 @@ const FormIndividual = () => {
   });
 
   const [isFormValid, setIsFormValid] = useState(true);
+  const [isSubmitAttempted, setIsSubmitAttempted] = useState(false);
 
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
@@ -28,13 +36,66 @@ const FormIndividual = () => {
     });
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Aquí puedes manejar la lógica de validación y envío
+  const validateForm = () => {
+    const requiredFields = [
+      "nombres",
+      "cedula",
+      "telefono",
+      "email",
+      "direccion1",
+      "pais",
+      "afiliacion",
+      "terminos",
+    ];
+    const isValid = requiredFields.every((field) => formData[field]);
+    setIsFormValid(isValid);
+    return isValid;
   };
 
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setIsSubmitAttempted(true);
+
+    if (!validateForm()) {
+      toast.error("Por favor, completa todos los campos requeridos.");
+      return;
+    }
+
+    try {
+      const formDataToSend = new FormData();
+
+      // Añadimos todos los campos del formulario a FormData
+      for (const key in formData) {
+        formDataToSend.append(key, formData[key]);
+      }
+
+      // Agregar el archivo de la cédula (input type="file")
+      const cedulaFoto = document.getElementById("cedulaFoto").files[0];
+      if (cedulaFoto) {
+        formDataToSend.append("cedulaFoto", cedulaFoto);
+      }
+
+      // Cambia la URL para la API según el entorno
+      const response = await fetch(API_URL, {
+        method: "POST",
+        body: formDataToSend,
+      });
+
+      const result = await response.json();
+
+      if (response.ok) {
+        toast.success("Formulario enviado exitosamente");
+      } else {
+        toast.error("Error al enviar el formulario");
+      }
+    } catch (error) {
+      console.error("Error al enviar el formulario:", error);
+      toast.error("Hubo un problema al enviar el formulario");
+    }
+  };
   return (
     <>
+      <Toaster />
       <div className="max-w-2xl p-6 mx-auto text-center">
         <h2 className="mb-4 text-3xl font-bold">Hazte Socio</h2>
         <p className="text-lg leading-relaxed text-gray-600">
@@ -65,10 +126,14 @@ const FormIndividual = () => {
             onChange={handleChange}
             placeholder="Juan Alfredo"
             className={`w-full p-3 border ${
-              isFormValid
-                ? "border-gray-300 focus:ring-2 focus:ring-green-500"
-                : "border-red-500 focus:ring-0"
-            } rounded-md focus:outline-none`}
+              isSubmitAttempted && !formData.nombres
+                ? "border-red-500"
+                : "border-gray-300"
+            } rounded-md focus:outline-none focus:ring-2 ${
+              isSubmitAttempted && !formData.nombres
+                ? "focus:ring-red-500"
+                : "focus:ring-green-500"
+            }`}
           />
         </div>
 
@@ -87,11 +152,7 @@ const FormIndividual = () => {
             value={formData.apellidos}
             onChange={handleChange}
             placeholder="Pérez Báez"
-            className={`w-full p-3 border ${
-              isFormValid
-                ? "border-gray-300 focus:ring-2 focus:ring-green-500"
-                : "border-red-500 focus:ring-0"
-            } rounded-md focus:outline-none`}
+            className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
           />
         </div>
 
@@ -112,12 +173,18 @@ const FormIndividual = () => {
             onChange={handleChange}
             placeholder="XXX-XXXXXXX-X"
             className={`w-full p-3 border ${
-              isFormValid
-                ? "border-gray-300 focus:ring-2 focus:ring-green-500"
-                : "border-red-500 focus:ring-0"
-            } rounded-md focus:outline-none`}
+              isSubmitAttempted && !formData.cedula
+                ? "border-red-500"
+                : "border-gray-300"
+            } rounded-md focus:outline-none focus:ring-2 ${
+              isSubmitAttempted && !formData.cedula
+                ? "focus:ring-red-500"
+                : "focus:ring-green-500"
+            }`}
           />
         </div>
+
+        {/* Foto de la Cédula */}
         <div className="mb-6 md:col-span-2">
           <label
             htmlFor="cedulaFoto"
@@ -130,15 +197,12 @@ const FormIndividual = () => {
             type="file"
             id="cedulaFoto"
             name="cedulaFoto"
-            accept="image/*" // Solo permite archivos de imagen
+            accept="image/*"
             onChange={handleChange}
-            className={`w-full p-3 border ${
-              isFormValid
-                ? "border-gray-300 focus:ring-2 focus:ring-green-500"
-                : "border-red-500 focus:ring-0"
-            } rounded-md focus:outline-none`}
+            className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
           />
         </div>
+
         {/* Teléfono */}
         <div className="mb-6">
           <label
@@ -156,10 +220,14 @@ const FormIndividual = () => {
             onChange={handleChange}
             placeholder="809-123-4567"
             className={`w-full p-3 border ${
-              isFormValid
-                ? "border-gray-300 focus:ring-2 focus:ring-green-500"
-                : "border-red-500 focus:ring-0"
-            } rounded-md focus:outline-none`}
+              isSubmitAttempted && !formData.telefono
+                ? "border-red-500"
+                : "border-gray-300"
+            } rounded-md focus:outline-none focus:ring-2 ${
+              isSubmitAttempted && !formData.telefono
+                ? "focus:ring-red-500"
+                : "focus:ring-green-500"
+            }`}
           />
         </div>
 
@@ -180,10 +248,14 @@ const FormIndividual = () => {
             onChange={handleChange}
             placeholder="correo@correo.com"
             className={`w-full p-3 border ${
-              isFormValid
-                ? "border-gray-300 focus:ring-2 focus:ring-green-500"
-                : "border-red-500 focus:ring-0"
-            } rounded-md focus:outline-none`}
+              isSubmitAttempted && !formData.email
+                ? "border-red-500"
+                : "border-gray-300"
+            } rounded-md focus:outline-none focus:ring-2 ${
+              isSubmitAttempted && !formData.email
+                ? "focus:ring-red-500"
+                : "focus:ring-green-500"
+            }`}
           />
         </div>
 
@@ -204,10 +276,14 @@ const FormIndividual = () => {
             onChange={handleChange}
             placeholder="Calle"
             className={`w-full p-3 border ${
-              isFormValid
-                ? "border-gray-300 focus:ring-2 focus:ring-green-500"
-                : "border-red-500 focus:ring-0"
-            } rounded-md focus:outline-none`}
+              isSubmitAttempted && !formData.direccion1
+                ? "border-red-500"
+                : "border-gray-300"
+            } rounded-md focus:outline-none focus:ring-2 ${
+              isSubmitAttempted && !formData.direccion1
+                ? "focus:ring-red-500"
+                : "focus:ring-green-500"
+            }`}
           />
           <input
             type="text"
@@ -220,7 +296,7 @@ const FormIndividual = () => {
           />
         </div>
 
-        {/* Ciudad, Estado, País */}
+        {/* Ciudad */}
         <div className="mb-6">
           <label
             htmlFor="ciudad"
@@ -234,14 +310,11 @@ const FormIndividual = () => {
             name="ciudad"
             value={formData.ciudad}
             onChange={handleChange}
-            className={`w-full p-3 border ${
-              isFormValid
-                ? "border-gray-300 focus:ring-2 focus:ring-green-500"
-                : "border-red-500 focus:ring-0"
-            } rounded-md focus:outline-none`}
+            className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
           />
         </div>
 
+        {/* Estado / Provincia */}
         <div className="mb-6">
           <label
             htmlFor="estado"
@@ -255,14 +328,11 @@ const FormIndividual = () => {
             name="estado"
             value={formData.estado}
             onChange={handleChange}
-            className={`w-full p-3 border ${
-              isFormValid
-                ? "border-gray-300 focus:ring-2 focus:ring-green-500"
-                : "border-red-500 focus:ring-0"
-            } rounded-md focus:outline-none`}
+            className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
           />
         </div>
 
+        {/* País */}
         <div className="mb-6">
           <label
             htmlFor="pais"
@@ -276,57 +346,24 @@ const FormIndividual = () => {
             value={formData.pais}
             onChange={handleChange}
             className={`w-full p-3 border ${
-              isFormValid
-                ? "border-gray-300 focus:ring-2 focus:ring-green-500"
-                : "border-red-500 focus:ring-0"
-            } rounded-md focus:outline-none`}
+              isSubmitAttempted && !formData.pais
+                ? "border-red-500"
+                : "border-gray-300"
+            } rounded-md focus:outline-none focus:ring-2 ${
+              isSubmitAttempted && !formData.pais
+                ? "focus:ring-red-500"
+                : "focus:ring-green-500"
+            }`}
           >
             <option value="">Selecciona un país</option>
-            {/* Países del Caribe */}
-            <option value="Antigua and Barbuda">Antigua y Barbuda</option>
-            <option value="Bahamas">Bahamas</option>
-            <option value="Barbados">Barbados</option>
-            <option value="Cuba">Cuba</option>
             <option value="Dominican Republic">República Dominicana</option>
-            <option value="Grenada">Granada</option>
-            <option value="Haiti">Haití</option>
-            <option value="Jamaica">Jamaica</option>
-            <option value="Saint Kitts and Nevis">
-              San Cristóbal y Nieves
-            </option>
-            <option value="Saint Lucia">Santa Lucía</option>
-            <option value="Saint Vincent and the Grenadines">
-              San Vicente y las Granadinas
-            </option>
-            <option value="Trinidad and Tobago">Trinidad y Tobago</option>
-            <option value="Aruba">Aruba</option>
-            <option value="Cayman Islands">Islas Caimán</option>
-            <option value="Turks and Caicos Islands">
-              Islas Turcas y Caicos
-            </option>
-            <option value="Puerto Rico">Puerto Rico</option>
-            <option value="Curacao">Curazao</option>
-            <option value="Guadeloupe">Guadalupe</option>
-            <option value="Martinique">Martinica</option>
-            <option value="Saint Barthelemy">San Bartolomé</option>
-            <option value="Saint Martin">San Martín</option>
-
-            {/* Países del resto del mundo */}
-            <option value="Afghanistan">Afganistán</option>
-            <option value="Albania">Albania</option>
-            <option value="Algeria">Argelia</option>
-            <option value="Andorra">Andorra</option>
-            <option value="Angola">Angola</option>
-            <option value="Argentina">Argentina</option>
-            <option value="Armenia">Armenia</option>
-            <option value="Australia">Australia</option>
-            <option value="Austria">Austria</option>
-            <option value="Azerbaijan">Azerbaiyán</option>
-            {/* Continúa con todos los países del mundo */}
+            <option value="United States">Estados Unidos</option>
+            <option value="Mexico">México</option>
+            {/* Agrega más opciones aquí */}
           </select>
         </div>
 
-        {/* Ciudad y municipio */}
+        {/* Afiliación */}
         <div className="mb-6 md:col-span-2">
           <label
             htmlFor="afiliacion"
@@ -341,39 +378,21 @@ const FormIndividual = () => {
             value={formData.afiliacion}
             onChange={handleChange}
             className={`w-full p-3 border ${
-              isFormValid
-                ? "border-gray-300 focus:ring-2 focus:ring-green-500"
-                : "border-red-500 focus:ring-0"
-            } rounded-md focus:outline-none`}
+              isSubmitAttempted && !formData.afiliacion
+                ? "border-red-500"
+                : "border-gray-300"
+            } rounded-md focus:outline-none focus:ring-2 ${
+              isSubmitAttempted && !formData.afiliacion
+                ? "focus:ring-red-500"
+                : "focus:ring-green-500"
+            }`}
           >
             <option value="">– Elegir una opción –</option>
             <option value="Santo Domingo">Santo Domingo</option>
-            <option value="Santo Domingo">Distrito Nacional</option>
             <option value="Santiago de los Caballeros">
               Santiago de los Caballeros
             </option>
-            <option value="La Romana">La Romana</option>
-            <option value="San Pedro de Macorís">San Pedro de Macorís</option>
-            <option value="Higüey">Higüey</option>
-            <option value="San Francisco de Macorís">
-              San Francisco de Macorís
-            </option>
-            <option value="Puerto Plata">Puerto Plata</option>
-            <option value="La Vega">La Vega</option>
-            <option value="Moca">Moca</option>
-            <option value="Bonao">Bonao</option>
-            <option value="San Cristóbal">San Cristóbal</option>
-            <option value="Azua">Azua</option>
-            <option value="Barahona">Barahona</option>
-            <option value="Baní">Baní</option>
-            <option value="Nagua">Nagua</option>
-            <option value="Montecristi">Montecristi</option>
-            <option value="Mao (Valverde)">Mao (Valverde)</option>
-            <option value="Samaná">Samaná</option>
-            <option value="San Juan de la Maguana">
-              San Juan de la Maguana
-            </option>
-            <option value="Cotuí">Cotuí</option>
+            {/* Agrega más opciones de ciudades aquí */}
           </select>
         </div>
 
@@ -390,17 +409,13 @@ const FormIndividual = () => {
             name="comoSupiste"
             value={formData.comoSupiste}
             onChange={handleChange}
-            className={`w-full p-3 border ${
-              isFormValid
-                ? "border-gray-300 focus:ring-2 focus:ring-green-500"
-                : "border-red-500 focus:ring-0"
-            } rounded-md focus:outline-none`}
+            className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
           >
             <option value="">– Elegir una opción –</option>
             <option value="amigo">Amigo</option>
             <option value="internet">Internet</option>
             <option value="publicidad">Publicidad</option>
-            <option value="publicidad">Otros</option>
+            <option value="otros">Otros</option>
           </select>
         </div>
 

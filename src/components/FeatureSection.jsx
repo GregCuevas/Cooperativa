@@ -34,7 +34,7 @@ const FeatureSection = () => {
     <div className="container max-w-6xl px-6 py-16 mx-auto">
       <header className="mb-20 text-center">
         <h4 className="mb-4 text-base font-medium tracking-wide text-gray-500 uppercase">
-          Coopebred hace todo por ti.
+          Coopebred hace todo por ti
         </h4>
         <h2 className="mb-10 text-4xl font-bold text-gray-900 md:text-5xl">
           Programa Coopebred

@@ -1,5 +1,13 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import toast, { Toaster } from "react-hot-toast";
+
+// Verifica si estás en producción y asigna la URL adecuada
+const API_URL =
+  process.env.NODE_ENV === "production"
+    ? "/api/send-empresa"
+    : "http://localhost:3000/api/send-empresa";
+
 const FormEmpresa = () => {
   const [formData, setFormData] = useState({
     tipoSocio: "",
@@ -22,6 +30,8 @@ const FormEmpresa = () => {
     terminos: false,
   });
 
+  const [isSubmitAttempted, setIsSubmitAttempted] = useState(false);
+
   const handleChange = (e) => {
     const { name, value, type, files } = e.target;
     setFormData({
@@ -37,12 +47,63 @@ const FormEmpresa = () => {
       [name]: type === "checkbox" ? checked : value,
     });
   };
-  const handleSubmit = (e) => {
+
+  const validateForm = () => {
+    const requiredFields = [
+      "tipoSocio",
+      "fotoCedula",
+      "nombres",
+      "apellidos",
+      "cedulaIdentidad",
+      "telefono",
+      "email",
+      "direccionResidencia",
+      "municipio",
+      "provincia",
+      "terminos",
+    ];
+
+    return requiredFields.every((field) => formData[field]);
+  };
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
+    setIsSubmitAttempted(true);
+
+    if (!validateForm()) {
+      toast.error("Por favor, completa todos los campos requeridos.");
+      return;
+    }
+
+    try {
+      const formDataToSend = new FormData();
+
+      // Añadimos todos los campos al FormData
+      for (const key in formData) {
+        formDataToSend.append(key, formData[key]);
+      }
+
+      // Utiliza la URL configurada según el entorno
+      const response = await fetch(API_URL, {
+        method: "POST",
+        body: formDataToSend,
+      });
+
+      const result = await response.json();
+
+      if (response.ok) {
+        toast.success("Formulario de empresa enviado exitosamente");
+      } else {
+        toast.error("Error al enviar el formulario de empresa");
+      }
+    } catch (error) {
+      toast.error("Hubo un problema al enviar el formulario de empresa");
+    }
   };
 
   return (
     <>
+      <Toaster />
       <div className="max-w-2xl p-6 mx-auto text-center">
         <h2 className="mb-4 text-3xl font-bold">Hazte Socio</h2>
         <p className="text-lg leading-relaxed text-gray-600">
@@ -65,7 +126,15 @@ const FormEmpresa = () => {
             name="tipoSocio"
             value={formData.tipoSocio}
             onChange={handleChange}
-            className="w-full p-3 border border-gray-300 rounded-md outline-none focus:ring-2 focus:ring-green-500"
+            className={`w-full p-3 border ${
+              isSubmitAttempted && !formData.tipoSocio
+                ? "border-red-500"
+                : "border-gray-300"
+            } rounded-md outline-none focus:ring-2 ${
+              isSubmitAttempted && !formData.tipoSocio
+                ? "focus:ring-red-500"
+                : "focus:ring-green-500"
+            }`}
           >
             <option value="">Selecciona una opción</option>
             <option value="distrito">Distrito</option>
@@ -88,7 +157,15 @@ const FormEmpresa = () => {
             name="fotoCedula"
             accept="image/*"
             onChange={handleChange}
-            className="w-full p-3 border border-gray-300 rounded-md outline-none focus:ring-2 focus:ring-green-500"
+            className={`w-full p-3 border ${
+              isSubmitAttempted && !formData.fotoCedula
+                ? "border-red-500"
+                : "border-gray-300"
+            } rounded-md outline-none focus:ring-2 ${
+              isSubmitAttempted && !formData.fotoCedula
+                ? "focus:ring-red-500"
+                : "focus:ring-green-500"
+            }`}
           />
         </div>
 
@@ -111,10 +188,19 @@ const FormEmpresa = () => {
               name="nombres"
               value={formData.nombres}
               onChange={handleChange}
-              className="w-full p-3 border border-gray-300 rounded-md outline-none focus:ring-2 focus:ring-green-500"
+              className={`w-full p-3 border ${
+                isSubmitAttempted && !formData.nombres
+                  ? "border-red-500"
+                  : "border-gray-300"
+              } rounded-md outline-none focus:ring-2 ${
+                isSubmitAttempted && !formData.nombres
+                  ? "focus:ring-red-500"
+                  : "focus:ring-green-500"
+              }`}
               placeholder="Juan Carlos"
             />
           </div>
+
           <div>
             <label
               htmlFor="apellidos"
@@ -129,7 +215,15 @@ const FormEmpresa = () => {
               name="apellidos"
               value={formData.apellidos}
               onChange={handleChange}
-              className="w-full p-3 border border-gray-300 rounded-md outline-none focus:ring-2 focus:ring-green-500"
+              className={`w-full p-3 border ${
+                isSubmitAttempted && !formData.apellidos
+                  ? "border-red-500"
+                  : "border-gray-300"
+              } rounded-md outline-none focus:ring-2 ${
+                isSubmitAttempted && !formData.apellidos
+                  ? "focus:ring-red-500"
+                  : "focus:ring-green-500"
+              }`}
               placeholder="Pérez Santos"
             />
           </div>
@@ -148,7 +242,15 @@ const FormEmpresa = () => {
               name="cedulaIdentidad"
               value={formData.cedulaIdentidad}
               onChange={handleChange}
-              className="w-full p-3 border border-gray-300 rounded-md outline-none focus:ring-2 focus:ring-green-500"
+              className={`w-full p-3 border ${
+                isSubmitAttempted && !formData.cedulaIdentidad
+                  ? "border-red-500"
+                  : "border-gray-300"
+              } rounded-md outline-none focus:ring-2 ${
+                isSubmitAttempted && !formData.cedulaIdentidad
+                  ? "focus:ring-red-500"
+                  : "focus:ring-green-500"
+              }`}
               placeholder="XXX-XXXXXXX-X"
             />
           </div>
@@ -167,7 +269,15 @@ const FormEmpresa = () => {
               name="telefono"
               value={formData.telefono}
               onChange={handleChange}
-              className="w-full p-3 border border-gray-300 rounded-md outline-none focus:ring-2 focus:ring-green-500"
+              className={`w-full p-3 border ${
+                isSubmitAttempted && !formData.telefono
+                  ? "border-red-500"
+                  : "border-gray-300"
+              } rounded-md outline-none focus:ring-2 ${
+                isSubmitAttempted && !formData.telefono
+                  ? "focus:ring-red-500"
+                  : "focus:ring-green-500"
+              }`}
               placeholder="809-123-4567"
             />
           </div>
@@ -186,7 +296,15 @@ const FormEmpresa = () => {
               name="email"
               value={formData.email}
               onChange={handleChange}
-              className="w-full p-3 border border-gray-300 rounded-md outline-none focus:ring-2 focus:ring-green-500"
+              className={`w-full p-3 border ${
+                isSubmitAttempted && !formData.email
+                  ? "border-red-500"
+                  : "border-gray-300"
+              } rounded-md outline-none focus:ring-2 ${
+                isSubmitAttempted && !formData.email
+                  ? "focus:ring-red-500"
+                  : "focus:ring-green-500"
+              }`}
               placeholder="correo@gmail.com"
             />
           </div>
@@ -205,7 +323,15 @@ const FormEmpresa = () => {
               name="direccionResidencia"
               value={formData.direccionResidencia}
               onChange={handleChange}
-              className="w-full p-3 border border-gray-300 rounded-md outline-none focus:ring-2 focus:ring-green-500"
+              className={`w-full p-3 border ${
+                isSubmitAttempted && !formData.direccionResidencia
+                  ? "border-red-500"
+                  : "border-gray-300"
+              } rounded-md outline-none focus:ring-2 ${
+                isSubmitAttempted && !formData.direccionResidencia
+                  ? "focus:ring-red-500"
+                  : "focus:ring-green-500"
+              }`}
               placeholder="Calle, número"
             />
           </div>
@@ -224,7 +350,15 @@ const FormEmpresa = () => {
               name="municipio"
               value={formData.municipio}
               onChange={handleChange}
-              className="w-full p-3 border border-gray-300 rounded-md outline-none focus:ring-2 focus:ring-green-500"
+              className={`w-full p-3 border ${
+                isSubmitAttempted && !formData.municipio
+                  ? "border-red-500"
+                  : "border-gray-300"
+              } rounded-md outline-none focus:ring-2 ${
+                isSubmitAttempted && !formData.municipio
+                  ? "focus:ring-red-500"
+                  : "focus:ring-green-500"
+              }`}
               placeholder="Municipio"
             />
           </div>
@@ -243,7 +377,15 @@ const FormEmpresa = () => {
               name="provincia"
               value={formData.provincia}
               onChange={handleChange}
-              className="w-full p-3 border border-gray-300 rounded-md outline-none focus:ring-2 focus:ring-green-500"
+              className={`w-full p-3 border ${
+                isSubmitAttempted && !formData.provincia
+                  ? "border-red-500"
+                  : "border-gray-300"
+              } rounded-md outline-none focus:ring-2 ${
+                isSubmitAttempted && !formData.provincia
+                  ? "focus:ring-red-500"
+                  : "focus:ring-green-500"
+              }`}
               placeholder="Provincia"
             />
           </div>
