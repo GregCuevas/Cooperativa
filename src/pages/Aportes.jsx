@@ -70,7 +70,7 @@ const Aportes = () => {
             </CardTitle>
           </CardHeader>
           <CardContent>
-            <p className="max-w-2xl mx-auto mb-4 text-lg text-center">
+            <p className="max-w-3xl mx-auto mb-4 text-lg text-center">
               El aporte mínimo inicial es de RD$1,000, necesario para acceder a
               nuestros servicios y beneficios. Este monto te permite participar
               en nuestras actividades y aprovechar nuestras ofertas exclusivas.
