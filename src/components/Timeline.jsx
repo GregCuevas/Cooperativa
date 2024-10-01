@@ -1,5 +1,5 @@
 import React from "react";
-import Unared from "../assets/unared.png";
+import Unared from "../assets/unared.jpeg";
 import Silkglobal from "../assets/silkglobal.jpg";
 import Trofeo from "../assets/medalla.jpg";
 import Coopebred from "../assets/logo.png";
