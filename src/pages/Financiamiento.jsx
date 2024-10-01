@@ -127,27 +127,27 @@ const Finaciamientos = () => {
       <Navbar />
       <section className="">
         <div className="container px-4 mx-auto mt-4">
-          <div className="relative w-full h-[50vh] sm:h-[60vh] lg:h-[70vh] mb-12 overflow-hidden rounded-lg shadow-md">
+          <div className="relative w-full h-[50vh] sm:h-[60vh] lg:h-[70vh] mb-8 sm:mb-12 overflow-hidden rounded-lg shadow-2xl">
             <img
               src={Finaciamiento}
-              alt="COOPEBRED main image"
+              alt="Coopebred main image"
               className="object-cover w-full h-full"
             />
-            <div className="absolute inset-0 flex flex-col items-center justify-center p-4 text-white bg-black bg-opacity-60 sm:p-6 lg:p-8">
-              <h1 className="mb-4 text-4xl font-bold text-center sm:text-5xl lg:text-6xl animate-fade-in-down">
+            <div className="absolute inset-0 flex flex-col items-center justify-center p-4 text-white bg-black bg-opacity-50 sm:p-6 lg:p-8">
+              <h1 className="mb-2 text-3xl font-bold text-center sm:mb-4 sm:text-4xl lg:text-5xl animate-fade-in-down">
                 Financiamiento
               </h1>
-              <p className="max-w-xl mx-auto text-lg text-center sm:max-w-2xl lg:max-w-5xl sm:text-xl lg:text-2xl animate-fade-in-up">
-                En COOPEBRED, ofrecemos diversas opciones de financiamiento
-                diseñadas para cubrir las necesidades tanto personales como
-                empresariales de nuestros socios. Gracias a nuestra alianza
-                estratégica con MiTelecom y Silkglobal, los socios pueden
-                acceder a financiamiento en productos tecnológicos y
-                equipamiento especializado con condiciones exclusivas. A
-                continuación, se detalla cada tipo de financiamiento disponible:
+              <p className="max-w-xs mx-auto text-sm text-center sm:max-w-md lg:max-w-2xl sm:text-base lg:text-xl animate-fade-in-up">
+                Ofrecemos diversas opciones de financiamiento diseñadas para
+                cubrir las necesidades tanto personales como empresariales de
+                nuestros socios. Gracias a nuestra alianza estratégica con
+                MiTelecom y Silkglobal, los socios pueden acceder a
+                financiamiento en productos tecnológicos y equipamiento
+                especializado con condiciones exclusivas.
               </p>
             </div>
           </div>
+
           <div className="grid gap-8 md:px-12 lg:px-24">
             {financingOptions.map((option, index) => (
               <div
