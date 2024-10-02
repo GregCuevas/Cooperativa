@@ -36,6 +36,8 @@ const Navbar = () => {
         { name: "Financiamiento", link: "/financiamiento/" },
         { name: "Cuentas de Ahorro", link: "/cuentas-de-ahorro/" },
         { name: "Aportes", link: "/aportes/" },
+        { name: "Depositos a Plazo", link: "/depositos-a-plazo/" },
+        { name: "Tarifario", link: "/tarifario/" },
       ],
     },
     {

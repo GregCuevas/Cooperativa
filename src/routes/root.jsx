@@ -26,6 +26,8 @@ import Sucursales from "../pages/Sucursales";
 import Contacto from "../pages/Contacto";
 import Ahorro from "../pages/Ahorro";
 import Aportes from "../pages/Aportes";
+import Depositos from "../pages/Depositos";
+import Tarifario from "../pages/Tarifario";
 const Root = () => {
   return (
     <>
@@ -37,9 +39,9 @@ const Root = () => {
         <Route path="/cuentas-de-ahorro" element={<Ahorro />} />
         <Route path="/perfil-institucional" element={<Institucion />} />
         <Route path="/servicios" element={<Servicios />} />
-
+        <Route path="/depositos-a-plazo/" element={<Depositos />} />
         <Route path="/aportes/" element={<Aportes />} />
-
+        <Route path="/tarifario/" element={<Tarifario />} />
         <Route path="/financiamiento/" element={<Finaciamiento />} />
         <Route path="/socio-individual" element={<Individual />} />
         <Route path="/contactanos/" element={<Contacto />} />
