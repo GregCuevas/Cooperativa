@@ -25,7 +25,7 @@ const Ahorro = () => {
     {
       id: "universitarios",
       title: "Cuenta de Ahorro para Estudiantes Universitarios",
-      shortTitle: "Estudiantes",
+      shortTitle: "Universitarios",
       description:
         "Dirigida a jóvenes en proceso de formación académica que desean gestionar sus finanzas de manera responsable.",
       icon: <GraduationCap className="w-5 h-5 md:h-6 md:w-6" />,
