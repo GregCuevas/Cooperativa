@@ -22,6 +22,7 @@ const NotFound = () => {
           Ir a Inicio
         </Button>
       </div>
+      
       <Footer />
     </>
   );

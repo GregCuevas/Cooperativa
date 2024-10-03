@@ -168,13 +168,13 @@ const Finaciamientos = () => {
                 </div>
                 <div className="p-6">
                   <div className="mb-4 prose max-w-none">{option.content}</div>
-                  <div className="relative h-48 overflow-hidden rounded-lg">
-                    <img
-                      src={option.image}
-                      alt={option.title}
-                      className="object-cover w-full h-full transition-transform duration-300 hover:scale-110"
-                    />
-                  </div>
+                  <div className="relative h-48 lg:h-80 overflow-hidden rounded-lg">
+  <img
+    src={option.image}
+    alt={option.title}
+    className="object-cover w-full h-full transition-transform duration-300 hover:scale-110"
+  />
+</div> 
                 </div>
               </div>
             ))}
