@@ -70,8 +70,8 @@ module.exports = async (req, res) => {
       try {
         // Enviar correo usando Resend
         await resend.emails.send({
-          from: "onboarding@resend.dev",
-          to: "onboarding@resend.dev", // Cambiar al correo destino real
+          from: "coopebred.com",
+          to: "gregoryjunior2101@gmail.com", // Cambiar al correo destino real
           subject: `Nuevo mensaje de ${razonSocial || "socio-empresa"}`,
           html: htmlContent,
         });

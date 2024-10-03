@@ -40,8 +40,8 @@ export default async function handler(req, res) {
 
       // Envío del correo utilizando Resend
       await resend.emails.send({
-        from: "onboarding@resend.dev", // Cambia este correo al que usas para el envío
-        to: "onboarding@resend.dev", // Cambia este correo de destino
+        from: "coopebred.com", // Cambia este correo al que usas para el envío
+        to: "gregoryjunior2101@gmail.com", // Cambia este correo de destino
         subject: `Nuevo mensaje de ${nombres || "socio-individual"}`,
         html: htmlContent,
       });
