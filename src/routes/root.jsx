@@ -50,7 +50,6 @@ const Root = () => {
 
         <Route path="/sucursales/" element={<Sucursales />} />
 
-        <Route path="/socio-individual" element={<Individual />} />
         <Route path="/socio-empresa" element={<Empresa />} />
         <Route path="/prevencion/educacion" element={<EducFinanciera />} />
         <Route path="/publicaciones/noticias" element={<Publicaciones />} />
