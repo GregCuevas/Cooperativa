@@ -54,7 +54,7 @@ const BlogSection = () => {
                 />
               </div>
               <div className="flex items-center space-x-2 text-sm text-gray-500">
-                <span className="text-[#09bc8a]">•</span>
+                <span className="text-[#f8961e]">•</span>
                 <span className="font-medium">{post.category}</span>
               </div>
               <h3 className="text-xl font-bold">{post.title}</h3>
