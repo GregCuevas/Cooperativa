@@ -264,17 +264,10 @@ const Tarifario = () => {
                     </TableRow>
                     <TableRow>
                       <TableCell className="whitespace-nowrap">
-                        Hipotecario
+                        Productos Tecnológicos
                       </TableCell>
                       <TableCell>8.0%</TableCell>
-                      <TableCell>360 meses</TableCell>
-                    </TableRow>
-                    <TableRow>
-                      <TableCell className="whitespace-nowrap">
-                        Automotriz
-                      </TableCell>
-                      <TableCell>10.0%</TableCell>
-                      <TableCell>72 meses</TableCell>
+                      <TableCell>12 meses</TableCell>
                     </TableRow>
                   </TableBody>
                 </Table>
