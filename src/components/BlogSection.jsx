@@ -1,36 +1,35 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
-import Wifi from "../assets/wifi.jpg";
-import Educación from "../assets/educacion.jpg";
-import Finanza from "../assets/finanza.jpg";
+import Cuenta from "../assets/ahorro.jpg";
+import Financi from "../assets/financiamiento.jpg";
+import Tari from "../assets/tarifario.jpg";
 const blogPosts = [
   {
-    icon: Wifi,
-    category: "Conectividad",
-    link: "/servicios/telecomunicaciones/",
-    title: "Telecomunicaciones",
+    icon: Cuenta,
+    category: "Prosperidad",
+    link: "/cuentas-de-ahorro/",
+    title: "Cuentas de Ahorro",
     description:
-      "Para ampliar las telecomunicaciones en zonas rurales, nos enfocamos en promover el desarrollo educativo.",
+      "Ahorra con nosotros y disfruta de tasas competitivas y beneficios exclusivos diseñados para ti.",
   },
   {
-    icon: Educación,
-    category: "Equidad",
-    link: "/servicios/educacion/",
-    title: "Educación",
+    icon: Tari,
+    category: "Beneficios",
+    link: "/tarifario/",
+    title: "Tarifarios",
     description:
-      "Comprometidos con un objetivo compartido, Coopebred facilita el acceso equitativo a la tecnología 5G para todos.",
+      "Descubre nuestras tarifas y opciones convenientes. ¡Precios competitivos para tus necesidades!",
   },
   {
-    icon: Finanza,
-    category: "Acceso",
-    link: "/servicios/financiamiento/",
+    icon: Financi,
+    category: "Oportunidad",
+    link: "/financiamiento/",
     title: "Financiamiento",
     description:
-      "Con las soluciones de Coopebred, las familias en áreas rurales acceden a diversas ventajas económicas.",
+      "Ofrecemos opciones de financiamiento adaptadas a tus necesidades personales y empresariales.",
   },
 ];
-
 const BlogSection = () => {
   return (
     <section className="flex items-center justify-center w-full px-4 py-12">

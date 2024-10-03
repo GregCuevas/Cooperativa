@@ -2,13 +2,18 @@ import React from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Finaciamiento from "../assets/financiamiento.jpg";
-
+import Tecno from "../assets/tecnologicos.jpg";
+import Planta from "../assets/planta.jpg";
+import Internet from "../assets/internet.jpg";
+import Tienda from "../assets/tienda.jpg";
+import Empredimiento from "../assets/empredimiento.jpg";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 const Finaciamientos = () => {
   const financingOptions = [
     {
       title: "Financiamiento de Productos Tecnológicos",
+      image: Tecno,
       content: (
         <>
           <p>
@@ -38,6 +43,7 @@ const Finaciamientos = () => {
     },
     {
       title: "Financiamiento para Desarrollo de Proyectos de Planta Externa",
+      image: Planta,
       content: (
         <>
           <p>
@@ -66,6 +72,7 @@ const Finaciamientos = () => {
     {
       title:
         "Financiamiento de Expedientes para Revendedores de Internet o Concesionarias",
+      image: Internet,
       content: (
         <>
           <p>
@@ -84,6 +91,7 @@ const Finaciamientos = () => {
     },
     {
       title: "Financiamiento para Franquicias y Tiendas MiTelecom",
+      image: Tienda,
       content: (
         <>
           <p>
@@ -111,6 +119,7 @@ const Finaciamientos = () => {
     },
     {
       title: "Financiamiento para Emprendimientos Educativos",
+      image: Empredimiento,
       content: (
         <p>
           Con el objetivo de cerrar la brecha digital y promover la inclusión
@@ -157,7 +166,16 @@ const Finaciamientos = () => {
                 <div className="p-4 text-white bg-green-600">
                   <h3 className="text-xl font-semibold">{option.title}</h3>
                 </div>
-                <div className="p-6">{option.content}</div>
+                <div className="p-6">
+                  <div className="mb-4 prose max-w-none">{option.content}</div>
+                  <div className="relative h-48 overflow-hidden rounded-lg">
+                    <img
+                      src={option.image}
+                      alt={option.title}
+                      className="object-cover w-full h-full transition-transform duration-300 hover:scale-110"
+                    />
+                  </div>
+                </div>
               </div>
             ))}
           </div>
@@ -189,4 +207,5 @@ const Finaciamientos = () => {
     </>
   );
 };
+
 export default Finaciamientos;

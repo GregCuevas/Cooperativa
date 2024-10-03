@@ -38,7 +38,6 @@ const Aportes = () => {
       icon: <BarChart className="w-6 h-6 text-green-600" />,
     },
   ];
-  //
   return (
     <>
       <Navbar />

@@ -16,7 +16,7 @@ const FeatureSection = () => {
     },
     {
       icon: Globe,
-      title: "Servicios",
+      title: "Productos y Servicios",
       link: "/servicios",
       description:
         "Se habilita un área para servicios MiTelecom, financiados por la cooperativa sin contrato inicial y con tarifas accesibles, para generar una renta competitiva.",
@@ -24,7 +24,7 @@ const FeatureSection = () => {
     {
       icon: MonitorSmartphone,
       title: "Financiamiento Tech",
-      link: "/servicios/financiamiento/",
+      link: "/financiamiento/",
       description:
         "La cooperativa financia computadoras, tabletas y smartphones en 12 cuotas sin interés ni inicial, para mejorar el acceso a la educación en áreas rurales.",
     },
@@ -59,7 +59,7 @@ const FeatureSection = () => {
               to={feature.link}
               className="flex items-center font-semibold text-[#f8961e] hover:text-[#d77b1b] transition-colors"
             >
-              Learn More
+              Más Información
               <ChevronRight className="w-5 h-5 ml-2" />
             </Link>
           </div>
