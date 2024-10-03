@@ -38,7 +38,7 @@ const Root = () => {
         <Route path="/historia" element={<Historia />} />
         <Route path="/cuentas-de-ahorro" element={<Ahorro />} />
         <Route path="/perfil-institucional" element={<Institucion />} />
-        <Route path="/servicios" element={<Servicios />} />
+        <Route path="/productos-y-servicios/" element={<Servicios />} />
         <Route path="/depositos-a-plazo/" element={<Depositos />} />
         <Route path="/aportes/" element={<Aportes />} />
         <Route path="/tarifario/" element={<Tarifario />} />

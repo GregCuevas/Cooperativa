@@ -17,7 +17,7 @@ const FeatureSection = () => {
     {
       icon: Globe,
       title: "Productos y Servicios",
-      link: "/servicios",
+      link: "/productos-y-servicios/",
       description:
         "Se habilita un área para servicios MiTelecom, financiados por la cooperativa sin contrato inicial y con tarifas accesibles, para generar una renta competitiva.",
     },
