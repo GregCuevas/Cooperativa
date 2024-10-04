@@ -6,8 +6,6 @@ import Loan from "../pages/Loan";
 import Historia from "../pages/Historia";
 import Institucion from "../pages/Institucion";
 import Servicios from "../pages/Servicios";
-//import Educacion from "../pages/Eduacacion";
-//import Telecomunicaciones from "../pages/Telecomunicaciones";
 import Finaciamiento from "../pages/Financiamiento";
 import Individual from "../pages/Individual";
 import Empresa from "../pages/Empresa";
@@ -47,9 +45,7 @@ const Root = () => {
         <Route path="/contactanos/" element={<Contacto />} />
         <Route path="/terminos-de-servicio" element={<Terminos />} />
         <Route path="/politica-de-privacidad" element={<Politicas />} />
-
         <Route path="/sucursales/" element={<Sucursales />} />
-
         <Route path="/socio-empresa" element={<Empresa />} />
         <Route path="/prevencion/educacion" element={<EducFinanciera />} />
         <Route path="/publicaciones/noticias" element={<Publicaciones />} />
