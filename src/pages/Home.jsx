@@ -15,7 +15,6 @@ const Home = () => {
     <>
       <Navbar />
       <Homepage />
-
       <FeatureSection />
       <BlogSection />
       <BlogSocios />
