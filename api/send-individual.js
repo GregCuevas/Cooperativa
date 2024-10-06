@@ -3,17 +3,18 @@ import { Resend } from "resend";
 
 export const config = {
   api: {
-    bodyParser: false, // Importante para manejar FormData (archivos)
+    bodyParser: false, // Desactivar el body parser para manejar archivos con FormData
   },
 };
 
-const resend = new Resend(process.env.RESEND_API_KEY); // Asegúrate de tener la clave en tus variables de entorno
+// Instanciar Resend con la API key desde las variables de entorno
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 export default async function handler(req, res) {
   if (req.method === "POST") {
     const form = new IncomingForm();
 
-    // Procesar el FormData (incluyendo archivos)
+    // Parsear los datos del formulario
     form.parse(req, async (err, fields, files) => {
       if (err) {
         console.error("Error al procesar el archivo", err);
@@ -22,6 +23,7 @@ export default async function handler(req, res) {
           .json({ message: "Error al procesar el archivo" });
       }
 
+      // Extraer los campos del formulario
       const {
         nombres,
         apellidos,
@@ -36,8 +38,10 @@ export default async function handler(req, res) {
         comoSupiste,
       } = fields;
 
+      // Extraer la ruta del archivo (foto de la cédula)
       const cedulaFoto = files.cedulaFoto ? files.cedulaFoto.filepath : null;
 
+      // Crear el contenido del correo en HTML
       const htmlContent = `
         <p><strong>Nombre:</strong> ${nombres || ""} ${apellidos || ""}</p>
         <p><strong>Cédula:</strong> ${cedula || ""}</p>
@@ -58,12 +62,13 @@ export default async function handler(req, res) {
       try {
         // Envío del correo utilizando Resend
         await resend.emails.send({
-          from: "onboarding@resend.dev",
-          to: "onboarding@resend.dev",
+          from: "onboarding@resend.dev", // Cambiar este correo si es necesario
+          to: "onboarding@resend.dev", // Cambiar el correo de destino
           subject: `Nuevo mensaje de ${nombres || "socio-individual"}`,
           html: htmlContent,
         });
 
+        // Respuesta exitosa
         res.status(200).json({ message: "Correo enviado exitosamente" });
       } catch (error) {
         console.error("Error al enviar el correo con Resend", error);
@@ -71,6 +76,7 @@ export default async function handler(req, res) {
       }
     });
   } else {
+    // Si el método no es POST, devolver 405
     res.setHeader("Allow", ["POST"]);
     res.status(405).end(`Método ${req.method} no permitido`);
   }
