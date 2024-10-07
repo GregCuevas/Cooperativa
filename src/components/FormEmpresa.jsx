@@ -79,6 +79,9 @@ const FormEmpresa = () => {
         formDataToSend.append(key, formData[key]);
       }
 
+      for (let pair of formDataToSend.entries()) {
+        console.log(pair[0] + ": " + pair[1]);
+      }
       // Utiliza la URL configurada según el entorno
       const response = await fetch(API_URL, {
         method: "POST",
