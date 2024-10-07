@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import toast, { Toaster } from "react-hot-toast";
 
-const API_URL = "/api/send-empresa";
+const API_URL =
+  "https://backend-api-service.up.railway.app/api/send-individual";
 
 const FormEmpresa = () => {
   const [formData, setFormData] = useState({
