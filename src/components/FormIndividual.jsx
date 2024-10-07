@@ -43,7 +43,8 @@ const FormIndividual = () => {
     return requiredFields.every((field) => formData[field]);
   };
 
-  const API_URL = "/api/send-individual";
+  const API_URL =
+    "https://backend-api-service.up.railway.app/api/send-individual";
 
   const handleSubmit = async (e) => {
     e.preventDefault();
