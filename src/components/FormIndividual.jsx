@@ -390,7 +390,29 @@ const FormIndividual = () => {
             <option value="Santiago de los Caballeros">
               Santiago de los Caballeros
             </option>
-            {/* Agrega más opciones de ciudades aquí */}
+            <option value="Alcarrizos El Libertador">
+              Alcarrizos El Libertador
+            </option>
+            <option value="Alcarrizos Los Americanos">
+              Alcarrizos Los Americanos
+            </option>
+            <option value="Azua">Azua</option>
+            <option value="Bonao">Bonao</option>
+            <option value="Consuelo">Consuelo</option>
+            <option value="Distrito Nacional">Distrito Nacional</option>
+            <option value="El Seibo">El Seibo</option>
+            <option value="Guaricanos">Guaricanos</option>
+            <option value="Haina">Haina</option>
+            <option value="Hato Mayor">Hato Mayor</option>
+            <option value="Herrera">Herrera</option>
+            <option value="Higuey">Higuey</option>
+            <option value="La Romana">La Romana</option>
+            <option value="La Vega">La Vega</option>
+            <option value="Las Américas">Las Américas</option>
+            <option value="Los Mina">Los Mina</option>
+            <option value="Padre Castellanos">Padre Castellanos</option>
+            <option value="Pedro Brand">Pedro Brand</option>
+            <option value="Piantini">Piantini</option>
           </select>
         </div>
 
