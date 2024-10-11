@@ -59,7 +59,6 @@ const FormIndividual = () => {
     }
 
     try {
-      
       // Crear un FormData para enviar el formulario
       const formDataToSend = new FormData();
 
@@ -100,11 +99,9 @@ const FormIndividual = () => {
 
       // Verificar la respuesta de Supabase
       if (supabaseResponse.ok) {
-        toast.success("Datos guardados exitosamente en Supabase.");
+        toast.success("Datos guardados exitosamente");
       } else {
-        toast.error(
-          supabaseResult.message || "Error al guardar los datos en Supabase."
-        );
+        toast.error(supabaseResult.message || "Error al guardar los datos.");
         return;
       }
 
