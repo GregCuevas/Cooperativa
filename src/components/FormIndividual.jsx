@@ -59,13 +59,25 @@ const FormIndividual = () => {
     }
 
     try {
+      
       // Crear un FormData para enviar el formulario
       const formDataToSend = new FormData();
 
       for (const key in formData) {
         formDataToSend.append(key, formData[key]);
       }
-
+      const dataToSend = {
+        nombres: formData.nombres,
+        apellidos: formData.apellidos,
+        cedula: formData.cedula,
+        telefono: formData.telefono,
+        email: formData.email,
+        direccion: formData.direccion1, // Solo dirección 1 se envía
+        ciudad: formData.ciudad,
+        estado_provincia: formData.estado,
+        pais: formData.pais,
+        afiliacion_ciudad: formData.afiliacion,
+      };
       // Incluir la foto de la cédula, si se ha seleccionado
       const cedulaFoto = document.getElementById("cedulaFoto").files[0];
       if (cedulaFoto) {
@@ -74,7 +86,10 @@ const FormIndividual = () => {
       // 1. Enviar la información a Supabase (Backend)
       const supabaseResponse = await fetch(SUPABASE_API_URL, {
         method: "POST",
-        body: formDataToSend, // No se necesita JSON.stringify para FormData
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(dataToSend), // Enviar los datos como JSON
       });
 
       if (!supabaseResponse.ok) {
