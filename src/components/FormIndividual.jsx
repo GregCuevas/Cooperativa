@@ -47,7 +47,7 @@ const FormIndividual = () => {
     "https://backend-api-service.up.railway.app/api/send-individual";
 
   const SUPABASE_API_URL =
-    "backend-socios-production.up.railway.app/registrar-socio-individual";
+    "https://backend-socios-production.up.railway.app/registrar-socio-individual";
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -71,27 +71,27 @@ const FormIndividual = () => {
       if (cedulaFoto) {
         formDataToSend.append("cedulaFoto", cedulaFoto);
       }
-         // 1. Enviar la información a Supabase (Backend)
-         const supabaseResponse = await fetch(SUPABASE_API_URL, {
-          method: "POST",
-          body: formDataToSend, // No se necesita JSON.stringify para FormData
-        });
-  
-        if (!supabaseResponse.ok) {
-          throw new Error("Error al conectar con la base de datos");
-        }
-  
-        const supabaseResult = await supabaseResponse.json();
-  
-        // Verificar la respuesta de Supabase
-        if (supabaseResponse.ok) {
-          toast.success("Datos guardados exitosamente en Supabase.");
-        } else {
-          toast.error(
-            supabaseResult.message || "Error al guardar los datos en Supabase."
-          );
-          return;
-        }
+      // 1. Enviar la información a Supabase (Backend)
+      const supabaseResponse = await fetch(SUPABASE_API_URL, {
+        method: "POST",
+        body: formDataToSend, // No se necesita JSON.stringify para FormData
+      });
+
+      if (!supabaseResponse.ok) {
+        throw new Error("Error al conectar con la base de datos");
+      }
+
+      const supabaseResult = await supabaseResponse.json();
+
+      // Verificar la respuesta de Supabase
+      if (supabaseResponse.ok) {
+        toast.success("Datos guardados exitosamente en Supabase.");
+      } else {
+        toast.error(
+          supabaseResult.message || "Error al guardar los datos en Supabase."
+        );
+        return;
+      }
 
       // Enviar el formulario usando fetch con FormData
       const response = await fetch(API_URL, {
