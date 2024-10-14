@@ -425,7 +425,7 @@ const FormEmpresa = () => {
           </div>
         </div>
 
-        <h3 className="text-lg font-bold">Datos de la Empresa (Opcional)</h3>
+        <h3 className="text-lg font-bold">Datos de la Empresa</h3>
 
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
           <div>
