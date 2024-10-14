@@ -23,10 +23,45 @@ const FormIndividual = () => {
 
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
-    setFormData({
-      ...formData,
-      [name]: type === "checkbox" ? checked : value,
-    });
+
+    if (name === "cedula") {
+      // Aplicar formato a la cédula XXX-XXXXXXX-X
+      const cedulaValue = formatCedula(value);
+      setFormData({ ...formData, [name]: cedulaValue });
+    } else if (name === "telefono") {
+      // Aplicar formato al teléfono XXX-XXX-XXXX
+      const telefonoValue = formatTelefono(value);
+      setFormData({ ...formData, [name]: telefonoValue });
+    } else {
+      setFormData({
+        ...formData,
+        [name]: type === "checkbox" ? checked : value,
+      });
+    }
+  };
+
+  // Formato para cédula (XXX-XXXXXXX-X)
+  const formatCedula = (value) => {
+    const cleanValue = value.replace(/\D/g, ""); // Eliminar todo lo que no sea un número
+    let formattedValue = cleanValue;
+    if (cleanValue.length > 3 && cleanValue.length <= 10) {
+      formattedValue = `${cleanValue.slice(0, 3)}-${cleanValue.slice(3, 10)}-${cleanValue.slice(10)}`;
+    } else if (cleanValue.length > 10) {
+      formattedValue = `${cleanValue.slice(0, 3)}-${cleanValue.slice(3, 10)}-${cleanValue.slice(10, 11)}`;
+    }
+    return formattedValue;
+  };
+
+  // Formato para teléfono (XXX-XXX-XXXX)
+  const formatTelefono = (value) => {
+    const cleanValue = value.replace(/\D/g, ""); // Eliminar todo lo que no sea un número
+    let formattedValue = cleanValue;
+    if (cleanValue.length > 3 && cleanValue.length <= 6) {
+      formattedValue = `${cleanValue.slice(0, 3)}-${cleanValue.slice(3)}`;
+    } else if (cleanValue.length > 6) {
+      formattedValue = `${cleanValue.slice(0, 3)}-${cleanValue.slice(3, 6)}-${cleanValue.slice(6)}`;
+    }
+    return formattedValue;
   };
 
   const validateForm = () => {
