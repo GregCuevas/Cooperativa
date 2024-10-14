@@ -61,7 +61,8 @@ const FormEmpresa = () => {
 
     return requiredFields.every((field) => formData[field]);
   };
-
+  const SUPABASE_API_URLS =
+    "https://backend-socios-production.up.railway.app/registrar-socio-empresa";
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitAttempted(true);
@@ -78,7 +79,46 @@ const FormEmpresa = () => {
       for (const key in formData) {
         formDataToSend.append(key, formData[key]);
       }
+      const dataToSends = {
+        tipoSocio: formData.tipoSocio,
+        nombres: formData.nombres,
+        apellidos: formData.apellidos,
+        cedulaIdentidad: formData.cedulaIdentidad,
+        telefono: formData.telefono,
+        email: formData.email,
+        direccionResidencia: formData.direccionResidencia,
+        municipio: formData.municipio,
+        provincia: formData.provincia,
+        razonSocial: formData.razonSocial,
+        rnc: formData.rnc,
+        registroMercantil: formData.registroMercantil,
+        actividadEconomica: formData.actividadEconomica,
+        direccionEmpresa: formData.direccionEmpresa,
+        telefonoEmpresa: formData.telefonoEmpresa,
+        emailEmpresa: formData.emailEmpresa,
+       
+      };
+      const supabaseResponse = await fetch(SUPABASE_API_URLS, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(dataToSends), // Enviar los datos como JSON
+      });
 
+      if (!supabaseResponse.ok) {
+        throw new Error("Error al conectar con la base de datos");
+      }
+
+      const supabaseResult = await supabaseResponse.json();
+
+      // Verificar la respuesta de Supabase
+      if (supabaseResponse.ok) {
+        toast.success("Datos guardados exitosamente");
+      } else {
+        toast.error(supabaseResult.message || "Error al guardar los datos.");
+        return;
+      }
       // Utiliza la URL configurada según el entorno
       const response = await fetch(API_URL, {
         method: "POST",
