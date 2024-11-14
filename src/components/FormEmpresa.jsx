@@ -132,9 +132,9 @@ const FormEmpresa = () => {
             }`}
           >
             <option value="">Selecciona una opción</option>
-            <option value="distrito">Distrito</option>
-            <option value="sucursal">Sucursal</option>
-            <option value="puntoAtencion">Punto de Atención</option>
+            <option value="distrito">Sucursal Principal</option>
+            <option value="sucursal">Sucursal Filial</option>
+            <option value="puntoAtencion">Corporativo</option>
           </select>
         </div>
 

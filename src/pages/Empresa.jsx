@@ -3,7 +3,7 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import FormEmpresa from "../components/FormEmpresa";
 import Individuals from "../assets/empresas.jpg";
-import { Building, Users, Percent, FileCheck } from "lucide-react";
+import { Building, Users, Percent, FileCheck, Briefcase } from "lucide-react";
 
 const InfoSection = ({ title, description, icon: Icon }) => (
   <div className="flex items-start p-4 space-x-4 bg-white rounded-lg shadow-md">
@@ -95,6 +95,11 @@ const Empresa = () => {
               description="Un socio empresa pasivo es un miembro que actúa como sucursal filial, es decir, es una extensión de la sucursal principal en su provincia. Aporta capital pero no participa activamente en la gestión interna de la cooperativa."
               icon={Users}
             />
+            <InfoSection
+              title="Socio Corporativo"
+              description="Un Socio Corporativo es una empresa registrada en la cooperativa que disfruta de beneficios exclusivos sin requerir una sucursal física. Accede a programas comerciales, financiamiento, descuentos y alianzas estratégicas, logrando un rendimiento competitivo para su crecimiento."
+              icon={Briefcase}
+            />
           </div>
         </div>
       </section>
@@ -114,7 +119,7 @@ const Empresa = () => {
                 <BenefitItem text="10-20% del facturado neto de los productos" />
                 <BenefitItem text="0.5% de los fondos recaudados de las sucursales filiales" />
                 <BenefitItem text="5% del facturado neto de los productos de las sucursales filiales" />
-                <BenefitItem text="Participación en las Ganancias Anuales" />
+                <BenefitItem text="Participación en las ganancias anuales" />
                 <BenefitItem text="Rendimiento competitivo sobre el aporte a capital" />
               </ul>
             </div>
@@ -125,7 +130,17 @@ const Empresa = () => {
               <ul className="space-y-2 text-gray-700">
                 <BenefitItem text="1.47% de los fondos recaudados" />
                 <BenefitItem text="10-20% del facturado neto de los productos" />
-                <BenefitItem text="Participación en las Ganancias Anuales" />
+                <BenefitItem text="Participación en las ganancias anuales" />
+                <BenefitItem text="Rendimiento competitivo sobre el aporte a capital" />
+              </ul>
+            </div>
+            <div className="p-6 rounded-lg shadow-md bg-green-50">
+              <h3 className="mb-4 text-xl font-semibold text-green-500">
+                Socio Corporativo
+              </h3>
+              <ul className="space-y-2 text-gray-700">
+                <BenefitItem text="Participación en las ganancias anuales" />
+                <BenefitItem text="Descuentos exclusivos en productos y servicios de la cooperativa" />
                 <BenefitItem text="Rendimiento competitivo sobre el aporte a capital" />
               </ul>
             </div>
@@ -181,7 +196,8 @@ const Empresa = () => {
               Documentación necesaria para ambos tipos de socios
             </h3>
             <ul className="space-y-2 text-gray-700">
-              <RequirementItem text="Establecimiento adecuado para brindar atención al cliente." />
+              <RequirementItem text="Documentos necesarios para socio empresa." />
+              <RequirementItem text="Establecimiento adecuado para brindar atención al cliente. (SI APLICA)" />
               <RequirementItem text="Copia del Registro Mercantil vigente." />
               <RequirementItem text="Copia del Registro Nacional de Contribuyente (RNC) o Certificación de la DGII." />
               <RequirementItem text="Copia del documento de identidad de los Propietarios/Beneficiarios finales y personas físicas que ejerzan el control real de la empresa." />
