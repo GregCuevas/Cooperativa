@@ -25,7 +25,7 @@ const teamMembers = [
     bgColor: "bg-gray-100",
   },
   {
-    name: "Anlly Elinoy ",
+    name: "Anlly Marte",
     role: "Tesorera",
     image: Woman,
     cargo: "Consejo de Administración",

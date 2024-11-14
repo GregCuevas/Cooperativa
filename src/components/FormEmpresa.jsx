@@ -28,12 +28,53 @@ const FormEmpresa = () => {
 
   const [isSubmitAttempted, setIsSubmitAttempted] = useState(false);
 
+  const formatCedula = (value) => {
+    const cleanValue = value.replace(/\D/g, ""); // Eliminar todo lo que no sea un número
+    let formattedValue = cleanValue;
+    if (cleanValue.length > 3 && cleanValue.length <= 10) {
+      formattedValue = `${cleanValue.slice(0, 3)}-${cleanValue.slice(
+        3,
+        10
+      )}-${cleanValue.slice(10)}`;
+    } else if (cleanValue.length > 10) {
+      formattedValue = `${cleanValue.slice(0, 3)}-${cleanValue.slice(
+        3,
+        10
+      )}-${cleanValue.slice(10, 11)}`;
+    }
+    return formattedValue;
+  };
+
+  // Formato para teléfono (XXX-XXX-XXXX)
+  const formatTelefono = (value) => {
+    const cleanValue = value.replace(/\D/g, ""); // Eliminar todo lo que no sea un número
+    let formattedValue = cleanValue;
+    if (cleanValue.length > 3 && cleanValue.length <= 6) {
+      formattedValue = `${cleanValue.slice(0, 3)}-${cleanValue.slice(3)}`;
+    } else if (cleanValue.length > 6) {
+      formattedValue = `${cleanValue.slice(0, 3)}-${cleanValue.slice(
+        3,
+        6
+      )}-${cleanValue.slice(6)}`;
+    }
+    return formattedValue;
+  };
+
   const handleChange = (e) => {
     const { name, value, type, files } = e.target;
-    setFormData({
-      ...formData,
-      [name]: type === "file" ? files[0] : value,
-    });
+    // Aplicar formateo a la cédula y teléfono
+    if (name === "cedulaIdentidad") {
+      const cedulaValue = formatCedula(value);
+      setFormData({ ...formData, [name]: cedulaValue });
+    } else if (name === "telefono" || name === "telefonoEmpresa") {
+      const telefonoValue = formatTelefono(value);
+      setFormData({ ...formData, [name]: telefonoValue });
+    } else {
+      setFormData({
+        ...formData,
+        [name]: type === "file" ? files[0] : value,
+      });
+    }
   };
 
   const handleChanges = (e) => {
@@ -61,7 +102,8 @@ const FormEmpresa = () => {
 
     return requiredFields.every((field) => formData[field]);
   };
-
+  const SUPABASE_API_URLS =
+    "https://backend-socios-production.up.railway.app/registrar-socio-empresa";
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitAttempted(true);
@@ -78,7 +120,45 @@ const FormEmpresa = () => {
       for (const key in formData) {
         formDataToSend.append(key, formData[key]);
       }
+      const dataToSends = {
+        tipo_socio_empresa: formData.tipoSocio,
+        nombres_gerente: formData.nombres,
+        apellidos_gerente: formData.apellidos,
+        cedula_gerente: formData.cedulaIdentidad,
+        telefono_gerente: formData.telefono,
+        email_gerente: formData.email,
+        direccion_gerente: formData.direccionResidencia,
+        municipio_gerente: formData.municipio,
+        provincia_gerente: formData.provincia,
+        razon_social_empresa: formData.razonSocial,
+        rnc_empresa: formData.rnc,
+        registro_mercantil: formData.registroMercantil,
+        actividad_economica: formData.actividadEconomica,
+        direccion_empresa: formData.direccionEmpresa,
+        telefono_empresa: formData.telefonoEmpresa,
+        email_empresa: formData.emailEmpresa,
+      };
+      const supabaseResponse = await fetch(SUPABASE_API_URLS, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(dataToSends), // Enviar los datos como JSON
+      });
 
+      if (!supabaseResponse.ok) {
+        throw new Error("Error al conectar con la base de datos");
+      }
+
+      const supabaseResult = await supabaseResponse.json();
+
+      // Verificar la respuesta de Supabase
+      if (supabaseResponse.ok) {
+        toast.success("Datos guardados exitosamente");
+      } else {
+        toast.error(supabaseResult.message || "Error al guardar los datos.");
+        return;
+      }
       // Utiliza la URL configurada según el entorno
       const response = await fetch(API_URL, {
         method: "POST",
@@ -386,7 +466,7 @@ const FormEmpresa = () => {
           </div>
         </div>
 
-        <h3 className="text-lg font-bold">Datos de la Empresa (Opcional)</h3>
+        <h3 className="text-lg font-bold">Datos de la Empresa</h3>
 
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
           <div>

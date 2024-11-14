@@ -286,8 +286,8 @@ const PartnershipOptions = () => {
                 <div>
                   <h4 className="font-bold">Bienvenido a COOPEBRED</h4>
                   <p className="text-gray-600">
-                    Comienza a disfrutar de los beneficios de ser Socio Empresa
-                    de COOPEBRED.
+                    Comienza a disfrutar de los beneficios de ser Socio de
+                    COOPEBRED.
                   </p>
                 </div>
               </li>

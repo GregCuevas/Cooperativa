@@ -23,10 +23,45 @@ const FormIndividual = () => {
 
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
-    setFormData({
-      ...formData,
-      [name]: type === "checkbox" ? checked : value,
-    });
+
+    if (name === "cedula") {
+      // Aplicar formato a la cédula XXX-XXXXXXX-X
+      const cedulaValue = formatCedula(value);
+      setFormData({ ...formData, [name]: cedulaValue });
+    } else if (name === "telefono") {
+      // Aplicar formato al teléfono XXX-XXX-XXXX
+      const telefonoValue = formatTelefono(value);
+      setFormData({ ...formData, [name]: telefonoValue });
+    } else {
+      setFormData({
+        ...formData,
+        [name]: type === "checkbox" ? checked : value,
+      });
+    }
+  };
+
+  // Formato para cédula (XXX-XXXXXXX-X)
+  const formatCedula = (value) => {
+    const cleanValue = value.replace(/\D/g, ""); // Eliminar todo lo que no sea un número
+    let formattedValue = cleanValue;
+    if (cleanValue.length > 3 && cleanValue.length <= 10) {
+      formattedValue = `${cleanValue.slice(0, 3)}-${cleanValue.slice(3, 10)}-${cleanValue.slice(10)}`;
+    } else if (cleanValue.length > 10) {
+      formattedValue = `${cleanValue.slice(0, 3)}-${cleanValue.slice(3, 10)}-${cleanValue.slice(10, 11)}`;
+    }
+    return formattedValue;
+  };
+
+  // Formato para teléfono (XXX-XXX-XXXX)
+  const formatTelefono = (value) => {
+    const cleanValue = value.replace(/\D/g, ""); // Eliminar todo lo que no sea un número
+    let formattedValue = cleanValue;
+    if (cleanValue.length > 3 && cleanValue.length <= 6) {
+      formattedValue = `${cleanValue.slice(0, 3)}-${cleanValue.slice(3)}`;
+    } else if (cleanValue.length > 6) {
+      formattedValue = `${cleanValue.slice(0, 3)}-${cleanValue.slice(3, 6)}-${cleanValue.slice(6)}`;
+    }
+    return formattedValue;
   };
 
   const validateForm = () => {
@@ -46,6 +81,9 @@ const FormIndividual = () => {
   const API_URL =
     "https://backend-api-service.up.railway.app/api/send-individual";
 
+  const SUPABASE_API_URL =
+    "https://backend-socios-production.up.railway.app/registrar-socio-individual";
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitAttempted(true);
@@ -62,11 +100,44 @@ const FormIndividual = () => {
       for (const key in formData) {
         formDataToSend.append(key, formData[key]);
       }
-
+      const dataToSend = {
+        nombres: formData.nombres,
+        apellidos: formData.apellidos,
+        cedula: formData.cedula,
+        telefono: formData.telefono,
+        email: formData.email,
+        direccion: formData.direccion1, // Solo dirección 1 se envía
+        ciudad: formData.ciudad,
+        estado_provincia: formData.estado,
+        pais: formData.pais,
+        afiliacion_ciudad: formData.afiliacion,
+      };
       // Incluir la foto de la cédula, si se ha seleccionado
       const cedulaFoto = document.getElementById("cedulaFoto").files[0];
       if (cedulaFoto) {
         formDataToSend.append("cedulaFoto", cedulaFoto);
+      }
+      // 1. Enviar la información a Supabase (Backend)
+      const supabaseResponse = await fetch(SUPABASE_API_URL, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(dataToSend), // Enviar los datos como JSON
+      });
+
+      if (!supabaseResponse.ok) {
+        throw new Error("Error al conectar con la base de datos");
+      }
+
+      const supabaseResult = await supabaseResponse.json();
+
+      // Verificar la respuesta de Supabase
+      if (supabaseResponse.ok) {
+        toast.success("Datos guardados exitosamente");
+      } else {
+        toast.error(supabaseResult.message || "Error al guardar los datos.");
+        return;
       }
 
       // Enviar el formulario usando fetch con FormData
@@ -390,7 +461,29 @@ const FormIndividual = () => {
             <option value="Santiago de los Caballeros">
               Santiago de los Caballeros
             </option>
-            {/* Agrega más opciones de ciudades aquí */}
+            <option value="Alcarrizos El Libertador">
+              Alcarrizos El Libertador
+            </option>
+            <option value="Alcarrizos Los Americanos">
+              Alcarrizos Los Americanos
+            </option>
+            <option value="Azua">Azua</option>
+            <option value="Bonao">Bonao</option>
+            <option value="Consuelo">Consuelo</option>
+            <option value="Distrito Nacional">Distrito Nacional</option>
+            <option value="El Seibo">El Seibo</option>
+            <option value="Guaricanos">Guaricanos</option>
+            <option value="Haina">Haina</option>
+            <option value="Hato Mayor">Hato Mayor</option>
+            <option value="Herrera">Herrera</option>
+            <option value="Higuey">Higuey</option>
+            <option value="La Romana">La Romana</option>
+            <option value="La Vega">La Vega</option>
+            <option value="Las Américas">Las Américas</option>
+            <option value="Los Mina">Los Mina</option>
+            <option value="Padre Castellanos">Padre Castellanos</option>
+            <option value="Pedro Brand">Pedro Brand</option>
+            <option value="Piantini">Piantini</option>
           </select>
         </div>
 
