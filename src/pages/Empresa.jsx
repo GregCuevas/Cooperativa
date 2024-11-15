@@ -86,7 +86,7 @@ const Empresa = () => {
           </h2>
           <div className="grid gap-8 lg:px-16 md:grid-cols-2">
             <InfoSection
-              title="Socio Activo (Distrito)"
+              title="Socio Activo (Sucursal Principal)"
               description="Un socio empresa activo es un miembro que actúa como Sucursal Principal en su provincia. Además de aportar capital financiero, participa activamente en la gestión y operación de la cooperativa."
               icon={Building}
             />
@@ -182,6 +182,20 @@ const Empresa = () => {
                 value="RD$200.00"
               />
             </div>
+            <div className="p-6 bg-white rounded-lg shadow-md">
+              <h3 className="mb-4 text-xl font-semibold text-gray-800">
+                Socio Corporativo
+              </h3>
+              <MontoItem label="Monto de Inscripción" value="RD$1,000.00" />
+              <MontoItem
+                label="Aportación a capital (monto mínimo)"
+                value="RD$1,000.00"
+              />
+              <MontoItem
+                label="Cuenta de ahorro (monto mínimo de apertura)"
+                value="RD$200.00"
+              />
+            </div>
           </div>
         </div>
       </section>
@@ -193,10 +207,9 @@ const Empresa = () => {
           </h2>
           <div className="p-6 bg-white rounded-lg shadow-md">
             <h3 className="mb-4 text-xl font-semibold text-gray-800">
-              Documentación necesaria para ambos tipos de socios
+              Documentación necesaria para Socios Empresa
             </h3>
             <ul className="space-y-2 text-gray-700">
-              <RequirementItem text="Documentos necesarios para socio empresa." />
               <RequirementItem text="Establecimiento adecuado para brindar atención al cliente. (SI APLICA)" />
               <RequirementItem text="Copia del Registro Mercantil vigente." />
               <RequirementItem text="Copia del Registro Nacional de Contribuyente (RNC) o Certificación de la DGII." />
