@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import toast, { Toaster } from "react-hot-toast";
+import DepositInfo from "./DepositInfo";
 
 const FormIndividual = () => {
   const [formData, setFormData] = useState({
@@ -45,9 +46,15 @@ const FormIndividual = () => {
     const cleanValue = value.replace(/\D/g, ""); // Eliminar todo lo que no sea un número
     let formattedValue = cleanValue;
     if (cleanValue.length > 3 && cleanValue.length <= 10) {
-      formattedValue = `${cleanValue.slice(0, 3)}-${cleanValue.slice(3, 10)}-${cleanValue.slice(10)}`;
+      formattedValue = `${cleanValue.slice(0, 3)}-${cleanValue.slice(
+        3,
+        10
+      )}-${cleanValue.slice(10)}`;
     } else if (cleanValue.length > 10) {
-      formattedValue = `${cleanValue.slice(0, 3)}-${cleanValue.slice(3, 10)}-${cleanValue.slice(10, 11)}`;
+      formattedValue = `${cleanValue.slice(0, 3)}-${cleanValue.slice(
+        3,
+        10
+      )}-${cleanValue.slice(10, 11)}`;
     }
     return formattedValue;
   };
@@ -59,7 +66,10 @@ const FormIndividual = () => {
     if (cleanValue.length > 3 && cleanValue.length <= 6) {
       formattedValue = `${cleanValue.slice(0, 3)}-${cleanValue.slice(3)}`;
     } else if (cleanValue.length > 6) {
-      formattedValue = `${cleanValue.slice(0, 3)}-${cleanValue.slice(3, 6)}-${cleanValue.slice(6)}`;
+      formattedValue = `${cleanValue.slice(0, 3)}-${cleanValue.slice(
+        3,
+        6
+      )}-${cleanValue.slice(6)}`;
     }
     return formattedValue;
   };
@@ -545,8 +555,8 @@ const FormIndividual = () => {
               .
             </label>
           </div>
+          <DepositInfo />
         </div>
-
         <div className="col-span-1 md:col-span-2">
           <button
             type="submit"
