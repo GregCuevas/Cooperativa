@@ -20,7 +20,7 @@ const Navbar = () => {
   const topMenuItems = [
     { name: "Inicio", link: "/" },
     { name: "Sucursales", link: "/sucursales/" },
-    { name: "Contáctanos", link: "/contactanos/" },
+    { name: "Contáctanos", link: "/contacto" },
     { name: "Preguntas Frecuentes", link: "/#preguntas-frecuentes" },
     { name: "Hazte Socio", link: "/socios" },
   ];

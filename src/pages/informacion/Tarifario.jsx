@@ -283,7 +283,7 @@ const Tarifario = () => {
             para ayudarte a tomar decisiones financieras informadas y alineadas
             con tus objetivos.
           </p>
-          <Link to="/contactanos/">
+          <Link to="/contacto">
             <Button variant="outline" className="flex items-center mx-auto">
               <HelpCircle className="mr-2" />
               Contactar Servicio al Cliente

@@ -194,7 +194,7 @@ const Depositos = () => {
         </Card>
 
         <div className="mt-12 text-center">
-          <Link to="/contactanos/">
+          <Link to="/contacto">
             <Button variant="link" className="text-primary">
               <HelpCircle className="mr-2" />
               ¿Necesitas ayuda? Contáctanos
