@@ -3,23 +3,19 @@ import { useCart } from "@/context/CartContext";
 import CartItem from "./CartItem";
 
 function CartDrawer({ isOpen, setIsOpen }) {
-  const { cart, clearCart } = useCart();
-
-  const totalPrice = cart.reduce(
-    (acc, item) => acc + (item?.price || 0) * (item?.quantity || 1),
-    0
-  );
+  const { cart, clearCart, totalPrice, totalCuota } = useCart();
 
   if (!isOpen) return null;
 
   return (
     <div className="fixed inset-0 z-50 overflow-hidden">
       <div
-        className="absolute inset-0 bg-black bg-opacity-40 "
+        className="absolute inset-0 bg-black bg-opacity-50"
         onClick={() => setIsOpen(false)}
       />
-      <div className="absolute inset-y-0 right-0 max-w-full flex ">
-        <div className="relative w-screen max-w-md ">
+
+      <div className="absolute inset-y-0 right-0 max-w-full flex">
+        <div className="relative w-screen max-w-md">
           <div className="h-full flex flex-col bg-white shadow-xl">
             <div className="flex items-center justify-between px-4 py-6 border-b">
               <h2 className="text-lg font-medium">Carrito de compra</h2>
@@ -49,7 +45,7 @@ function CartDrawer({ isOpen, setIsOpen }) {
                 <div className="flex flex-col items-center justify-center h-full text-center">
                   <p className="text-gray-500 mb-4">Tu carrito está vacío</p>
                   <button
-                    className="bg-[#22C55E] text-white px-4 py-2 rounded-md hover:bg-[#171717] transition-colors"
+                    className="bg-green-500 text-white px-4 py-2 rounded-md hover:bg-green-600 transition-colors"
                     onClick={() => setIsOpen(false)}
                   >
                     Continuar comprando
@@ -66,13 +62,17 @@ function CartDrawer({ isOpen, setIsOpen }) {
 
             {cart.length > 0 && (
               <div className="border-t p-4">
+                <div className="flex justify-between mb-2">
+                  <span className="font-medium">Aporte total:</span>
+                  <span className="font-bold text-green-500">
+                    RD${totalPrice.toLocaleString()}
+                  </span>
+                </div>
+
                 <div className="flex justify-between mb-4">
-                  <span className="font-medium">Subtotal</span>
-                  <span className="font-bold">
-                    £
-                    {typeof totalPrice === "number"
-                      ? totalPrice.toFixed(2)
-                      : "0.00"}
+                  <span className="font-medium">Cuota mensual total:</span>
+                  <span className="font-bold text-[#171717]">
+                    RD${totalCuota.toLocaleString()}
                   </span>
                 </div>
 
@@ -83,7 +83,7 @@ function CartDrawer({ isOpen, setIsOpen }) {
                   >
                     Vaciar carrito
                   </button>
-                  <button className="bg-[#22C55E] text-white px-4 py-2 rounded-md hover:bg-[#171717] transition-colors">
+                  <button className="bg-green-500 text-white px-4 py-2 rounded-md hover:bg-green-600 transition-colors">
                     Checkout
                   </button>
                 </div>

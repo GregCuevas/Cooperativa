@@ -3,46 +3,7 @@
 import { useState } from "react";
 import Slider from "../ui/Slider";
 import Checkbox from "../ui/Checkbox";
-
-// Categorías disponibles
-const categories = [
-  { id: "tabletas", name: "Tabletas", count: 8 },
-  { id: "laptops", name: "Laptops", count: 4 },
-  { id: "televisores", name: "Televisores", count: 10 },
-  { id: "celulares", name: "Celurares", count: 8 },
-];
-// Productos destacados
-const featuredProducts = [
-  {
-    id: 1,
-    image: "/images/placeholder-chair.jpg",
-    alt: "Silla de oficina",
-    title: "SmarTab Mini 8",
-    price: "£120.00",
-  },
-
-  {
-    id: 2,
-    image: "/images/placeholder-table.jpg",
-    alt: "Mesa de centro",
-    title: "TechBook Slim 14",
-    price: "£160.00",
-  },
-  {
-    id: 3,
-    image: "/images/placeholder-table.jpg",
-    alt: "Mesa de centro",
-    title: "MYTVSTICK – TV Stick Android",
-    price: "£120.00",
-  },
-  {
-    id: 4,
-    image: "/images/placeholder-table.jpg",
-    alt: "Mesa de centro",
-    title: "GT-10 – GoPro 7",
-    price: "£150.00",
-  },
-];
+import { categories } from "../../data/products";
 
 function Sidebar({
   priceRange,
@@ -50,7 +11,10 @@ function Sidebar({
   selectedCategories,
   setSelectedCategories,
 }) {
-  const [localPriceRange, setLocalPriceRange] = useState(priceRange);
+  // Asegurarse de que el rango inicial del slider sea correcto
+  const [localPriceRange, setLocalPriceRange] = useState(
+    priceRange || [0, 20000]
+  );
 
   const handlePriceChange = (value) => {
     setLocalPriceRange(value);
@@ -74,24 +38,26 @@ function Sidebar({
     <div className="space-y-8">
       {/* Filtro por precio */}
       <div className="bg-white p-6 rounded-md shadow-sm border border-gray-100">
-        <h2 className="text-xl font-bold mb-6">Filtrar por precio</h2>
+        {/* Cambiar el título del filtro para mayor claridad */}
+        <h2 className="text-xl font-bold mb-6">Filtrar por aporte inicial</h2>
         <Slider
           value={localPriceRange}
           min={0}
-          max={200}
-          step={5}
+          max={20000}
+          step={1000}
           onValueChange={handlePriceChange}
           className="mb-6"
         />
         <div className="flex justify-between items-center mb-6">
           <button
-            className="bg-[#22C55E] hover:bg-[#171717] text-white px-4 py-2 rounded-md transition-colors"
+            className="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-md transition-colors"
             onClick={applyPriceFilter}
           >
             Aplicar
           </button>
           <span className="text-sm">
-            Precio: £{localPriceRange[0]} — £{localPriceRange[1]}
+            Aporte: RD${localPriceRange[0].toLocaleString()} — RD$
+            {localPriceRange[1].toLocaleString()}
           </span>
         </div>
       </div>
@@ -123,22 +89,65 @@ function Sidebar({
       <div className="bg-white p-6 rounded-md shadow-sm border border-gray-100">
         <h2 className="text-xl font-bold mb-6">Productos destacados</h2>
         <div className="space-y-4">
-          {featuredProducts.map((product) => (
-            <div key={product.id} className="flex items-center gap-3">
-              <div className="w-16 h-16 bg-gray-100 rounded-md flex items-center justify-center">
-                <img
-                  src={product.image}
-                  alt={product.alt}
-                  className="w-12 h-12"
-                />
-              </div>
-              <div>
-                <h3 className="font-medium text-sm">{product.title}</h3>
-                <div className="flex text-yellow-400 text-xs mt-1">★★★★★</div>
-                <p className="text-sm font-bold mt-1">{product.price}</p>
-              </div>
+          <div className="flex items-center gap-3">
+            <div className="w-16 h-16 bg-gray-100 rounded-md flex items-center justify-center">
+              <img
+                src="https://via.placeholder.com/60?text=ProTab"
+                alt="ProTab Ultra 10"
+                className="w-12 h-12"
+              />
             </div>
-          ))}
+            <div>
+              <h3 className="font-medium text-sm">ProTab Ultra 10</h3>
+              <div className="flex text-yellow-400 text-xs mt-1">★★★★★</div>
+              <p className="text-sm font-bold mt-1">RD$5,000</p>
+            </div>
+          </div>
+
+          <div className="flex items-center gap-3">
+            <div className="w-16 h-16 bg-gray-100 rounded-md flex items-center justify-center">
+              <img
+                src="https://via.placeholder.com/60?text=SmartTab"
+                alt="SmartTab Elite 14"
+                className="w-12 h-12"
+              />
+            </div>
+            <div>
+              <h3 className="font-medium text-sm">SmartTab Elite 14</h3>
+              <div className="flex text-yellow-400 text-xs mt-1">★★★★</div>
+              <p className="text-sm font-bold mt-1">RD$6,000</p>
+            </div>
+          </div>
+
+          <div className="flex items-center gap-3">
+            <div className="w-16 h-16 bg-gray-100 rounded-md flex items-center justify-center">
+              <img
+                src="https://via.placeholder.com/60?text=VISION55"
+                alt="VISION55 4K"
+                className="w-12 h-12"
+              />
+            </div>
+            <div>
+              <h3 className="font-medium text-sm">VISION55 4K</h3>
+              <div className="flex text-yellow-400 text-xs mt-1">★★★★★</div>
+              <p className="text-sm font-bold mt-1">RD$8,000</p>
+            </div>
+          </div>
+
+          <div className="flex items-center gap-3">
+            <div className="w-16 h-16 bg-gray-100 rounded-md flex items-center justify-center">
+              <img
+                src="https://via.placeholder.com/60?text=NOTE30"
+                alt="NOTE 30 PRO"
+                className="w-12 h-12"
+              />
+            </div>
+            <div>
+              <h3 className="font-medium text-sm">NOTE 30 PRO</h3>
+              <div className="flex text-yellow-400 text-xs mt-1">★★★★★</div>
+              <p className="text-sm font-bold mt-1">RD$4,000</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>

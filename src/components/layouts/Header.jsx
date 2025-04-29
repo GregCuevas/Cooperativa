@@ -14,7 +14,7 @@ function Header({ searchTerm, setSearchTerm, sortOption, setSortOption }) {
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center">
-            <a href="/" className="text-2xl font-bold text-[#f8961e]">
+            <a href="/tienda" className="text-2xl font-bold text-[#f8961e]">
               TIENDA
             </a>
           </div>

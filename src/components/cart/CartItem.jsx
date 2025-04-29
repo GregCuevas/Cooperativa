@@ -10,14 +10,23 @@ function CartItem({ item }) {
         <img
           src={item.image || "https://via.placeholder.com/80"}
           alt={item.name}
-          className="h-full w-full object-cover object-center "
+          className="h-full w-full object-cover object-center"
         />
       </div>
 
       <div className="flex flex-1 flex-col">
         <div className="flex justify-between text-base font-medium text-gray-900">
-          <h3>{item.name}</h3>
-          <p className="ml-4">£{(item.price * item.quantity).toFixed(2)}</p>
+          <h3 className="pr-2">{item.name}</h3>
+          <p className="ml-4 whitespace-nowrap text-[#171717]">
+            RD${(item.aporte * item.quantity).toLocaleString()}
+          </p>
+        </div>
+
+        <div className="text-sm text-gray-500">
+          Cuota:{" "}
+          <span className="text-[#171717]">
+            RD${item.cuota.toLocaleString()}/mes
+          </span>
         </div>
 
         <div className="flex items-center justify-between mt-2">
