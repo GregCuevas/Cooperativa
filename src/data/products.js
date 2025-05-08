@@ -23,7 +23,12 @@ const products = [
     name: "KidsTab Fun 10",
     aporte: 2000,
     cuota: 900,
-    image: "/placeholder.svg",
+    image: "/images/KidsTab-Fun-10/E10Kid-G.jpg",
+    images: [
+      "/images/KidsTab-Fun-10/E10Kids-3.jpg",
+      "/images/KidsTab-Fun-10/E10Kids-12.jpg",
+      "/images/KidsTab-Fun-10/E10Kids-14.jpg",
+    ],
     rating: 4,
     categories: ["tabletas"],
     description:
@@ -41,7 +46,12 @@ const products = [
     name: "SmartTab Lite 10",
     aporte: 3000,
     cuota: 1100,
-    image: "/placeholder.svg",
+    image: "/images/SmartTab-Lite-10/SmartTab-Lite-1.jpg",
+    images: [
+      "/images/SmartTab-Lite-10/SmartTab-Lite-2.jpg",
+      "/images/SmartTab-Lite-10/SmartTab-Lite-3.jpg",
+      "/images/SmartTab-Lite-10/SmartTab-Lite-4.jpg",
+    ],
     rating: 5,
     categories: ["tabletas"],
     description:
@@ -59,7 +69,12 @@ const products = [
     name: "ProTab Plus 10",
     aporte: 3000,
     cuota: 1200,
-    image: "/placeholder.svg",
+    image: "/images/ProTab-Plus-10/ProTab-Plus2.jpg",
+    images: [
+      "/images/ProTab-Plus-10/ProTab-Plus.jpg",
+      "/images/ProTab-Plus-10/ProTab-Plus1.jpg",
+      "/images/ProTab-Plus-10/ProTab-Plus3.jpg",
+    ],
     rating: 5,
     categories: ["tabletas"],
     description:
@@ -77,7 +92,12 @@ const products = [
     name: "ProTab Ultra 10",
     aporte: 5000,
     cuota: 2000,
-    image: "/placeholder.svg",
+    image: "/images/ProTab-Plus-10/ProTab-Plus.jpg",
+    images: [
+      "/images/ProTab-Ultra-10/ProTab-Plus1.jpg",
+      "/images/ProTab-Ultra-10/ProTab-Plus2.jpg",
+      "/images/ProTab-Ultra-10/ProTab-Plus3.jpg",
+    ],
     rating: 5,
     categories: ["tabletas"],
     description:
@@ -95,7 +115,12 @@ const products = [
     name: "VisionTab Max 11",
     aporte: 5000,
     cuota: 2100,
-    image: "/placeholder.svg",
+    image: "/images/VisionTab-Max-11/VisionTab-Max.jpg",
+    images: [
+      "/images/VisionTab-Max-11/VisionTab-Max1.jpg",
+      "/images/VisionTab-Max-11/VisionTab-Max2.jpg",
+      "/images/VisionTab-Max-11/VisionTab-Max3.jpg",
+    ],
     rating: 5,
     categories: ["tabletas"],
     description:
@@ -113,7 +138,12 @@ const products = [
     name: "VisionTab Elite 12",
     aporte: 6000,
     cuota: 2500,
-    image: "/placeholder.svg",
+    image: "/images/VisionTab-Elite-12/VisionTab-Elite.jpg",
+    images: [
+      "/images/VisionTab-Elite-12/VisionTab-Elite1.jpg",
+      "/images/VisionTab-Elite-12/VisionTab-Elite2.jpg",
+      "/images/VisionTab-Elite-12/VisionTab-Elite3.jpg",
+    ],
     rating: 5,
     categories: ["tabletas"],
     description:
@@ -151,7 +181,12 @@ const products = [
     name: "TechBook Slim 14",
     aporte: 6000,
     cuota: 2500,
-    image: "/placeholder.svg",
+    image: "/images/TechBook-Slim-14/E142-2.jpg",
+    images: [
+      "/images/TechBook-Slim-14/E142.jpg",
+      "/images/TechBook-Slim-14/E142-1.jpg",
+      "/images/TechBook-Slim-14/E142-4.jpg",
+    ],
     rating: 4,
     categories: ["laptops"],
     description:
@@ -170,7 +205,12 @@ const products = [
     name: "TechBook Core 14",
     aporte: 6000,
     cuota: 2600,
-    image: "/placeholder.svg",
+    image: "/images/TechBook-Core-14/E140-2.jpg",
+    images: [
+      "/images/TechBook-Core-14/E140.jpg",
+      "/images/TechBook-Core-14/E140-1.jpg",
+      "/images/TechBook-Core-14/E140-3.jpg",
+    ],
     rating: 4,
     categories: ["laptops"],
     description:
@@ -189,7 +229,12 @@ const products = [
     name: "PowerBook Pro 15.6",
     aporte: 9000,
     cuota: 3600,
-    image: "/placeholder.svg",
+    image: "/images/PowerBook-Pro-15/E140i-F.jpg",
+    images: [
+      "/images/PowerBook-Pro-15/E140i-J.jpg",
+      "/images/PowerBook-Pro-15/E140i-I.jpg",
+      "/images/PowerBook-Pro-15/E140i-E.jpg",
+    ],
     rating: 5,
     categories: ["laptops"],
     description:
