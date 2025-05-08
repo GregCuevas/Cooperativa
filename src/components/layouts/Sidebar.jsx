@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Slider from "../ui/slider";
-import Checkbox from "../ui/Checkbox";
+import Checkbox from "../ui/checkbox";
 import { categories } from "../../data/products";
 
 function Sidebar({
