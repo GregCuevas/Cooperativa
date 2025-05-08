@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import Slider from "../ui/Slider";
+import Slider from "../ui/slider";
 import Checkbox from "../ui/Checkbox";
 import { categories } from "../../data/products";
 
