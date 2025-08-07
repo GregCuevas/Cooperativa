@@ -196,6 +196,255 @@ El proyecto utiliza un sistema de componentes modular con:
 - Context API para estado compartido entre componentes
 - localStorage para persistencia de datos del usuario
 
+## 🔌 Integración con Backend
+
+### APIs Externas Utilizadas
+
+El proyecto integra múltiples servicios backend para diferentes funcionalidades:
+
+#### 1. **API de Formularios de Socios**
+- **URL Base**: `https://backend-api-service.up.railway.app/api/`
+- **Endpoints**:
+  - `POST /send-individual` - Formulario de socios individuales
+  - `POST /send-empresa` - Formulario de socios empresariales
+- **Propósito**: Envío de formularios de registro de socios
+- **Formato**: FormData (multipart/form-data) para archivos e imágenes
+
+#### 2. **API de Base de Datos (Supabase)**
+- **URL Base**: `https://backend-socios-production.up.railway.app/`
+- **Endpoints**:
+  - `POST /registrar-socio-individual` - Registro en BD para socios individuales
+  - `POST /registrar-socio-empresa` - Registro en BD para socios empresariales
+- **Propósito**: Persistencia de datos en base de datos
+- **Formato**: JSON
+
+### Flujo de Datos en Formularios
+
+#### Formulario Individual (`FormIndividual.jsx`)
+```javascript
+// 1. Validación local del formulario
+const validateForm = () => {
+  const requiredFields = ["nombres", "cedula", "telefono", "email", "direccion1", "pais", "afiliacion", "terminos"];
+  return requiredFields.every((field) => formData[field]);
+};
+
+// 2. Envío a Supabase (Base de Datos)
+const supabaseResponse = await fetch(SUPABASE_API_URL, {
+  method: "POST",
+  headers: { "Content-Type": "application/json" },
+  body: JSON.stringify(dataToSend)
+});
+
+// 3. Envío a API de Formularios (Email/Notificación)
+const response = await fetch(API_URL, {
+  method: "POST",
+  body: formDataToSend // FormData para archivos
+});
+```
+
+#### Formulario Empresa (`FormEmpresa.jsx`)
+```javascript
+// 1. Validación local del formulario
+const validateForm = () => {
+  const requiredFields = ["tipoSocio", "fotoCedula", "nombres", "apellidos", "cedulaIdentidad", "telefono", "email", "direccionResidencia", "municipio", "provincia", "terminos"];
+  return requiredFields.every((field) => formData[field]);
+};
+
+// 2. Envío a Supabase (Base de Datos)
+const supabaseResponse = await fetch(SUPABASE_API_URLS, {
+  method: "POST",
+  headers: { "Content-Type": "application/json" },
+  body: JSON.stringify(dataToSends)
+});
+
+// 3. Envío a API de Formularios (Email/Notificación)
+const response = await fetch(API_URL, {
+  method: "POST",
+  body: formDataToSend // FormData para archivos
+});
+```
+
+### Estructura de Datos Enviados
+
+#### Datos de Socio Individual
+```javascript
+{
+  nombres: string,
+  apellidos: string,
+  cedula: string, // Formato: XXX-XXXXXXX-X
+  telefono: string, // Formato: XXX-XXX-XXXX
+  email: string,
+  direccion: string,
+  ciudad: string,
+  estado_provincia: string,
+  pais: string,
+  afiliacion_ciudad: string
+}
+```
+
+#### Datos de Socio Empresa
+```javascript
+{
+  tipo_socio_empresa: string,
+  nombres_gerente: string,
+  apellidos_gerente: string,
+  cedula_gerente: string,
+  telefono_gerente: string,
+  email_gerente: string,
+  direccion_gerente: string,
+  municipio_gerente: string,
+  provincia_gerente: string,
+  razon_social_empresa: string,
+  rnc_empresa: string,
+  registro_mercantil: string,
+  actividad_economica: string,
+  direccion_empresa: string,
+  telefono_empresa: string,
+  email_empresa: string
+}
+```
+
+### Manejo de Errores
+
+#### Validación Local
+- Validación de campos requeridos antes del envío
+- Formateo automático de cédula y teléfono
+- Validación de tipos de archivo para imágenes
+
+#### Manejo de Respuestas del Backend
+```javascript
+// Verificación de respuesta de Supabase
+if (supabaseResponse.ok) {
+  toast.success("Datos guardados exitosamente");
+} else {
+  toast.error(supabaseResult.message || "Error al guardar los datos.");
+  return;
+}
+
+// Verificación de respuesta de API de formularios
+if (response.ok) {
+  toast.success("Formulario enviado exitosamente");
+} else {
+  toast.error("Error al enviar el formulario");
+}
+```
+
+### Configuración de URLs
+
+#### Variables de Entorno Recomendadas
+```bash
+# .env
+VITE_API_BASE_URL=https://backend-api-service.up.railway.app/api
+VITE_SUPABASE_API_URL=https://backend-socios-production.up.railway.app
+VITE_EMAIL_API_URL=https://backend-api-service.up.railway.app/api
+```
+
+#### Uso en Componentes
+```javascript
+// En lugar de URLs hardcodeadas, usar variables de entorno
+const API_URL = import.meta.env.VITE_API_BASE_URL + "/send-individual";
+const SUPABASE_API_URL = import.meta.env.VITE_SUPABASE_API_URL + "/registrar-socio-individual";
+```
+
+### Consideraciones de Seguridad
+
+#### Validación de Datos
+- Validación tanto en frontend como backend
+- Sanitización de inputs antes del envío
+- Validación de tipos de archivo para uploads
+
+#### Manejo de Archivos
+- Límite de tamaño de archivo (recomendado: 5MB)
+- Tipos de archivo permitidos: `image/*`
+- Validación de extensión antes del envío
+
+### Testing de APIs
+
+#### Endpoints de Prueba
+```bash
+# Probar formulario individual
+curl -X POST https://backend-api-service.up.railway.app/api/send-individual \
+  -F "nombres=Juan" \
+  -F "apellidos=Pérez" \
+  -F "cedula=123-4567890-1" \
+  -F "telefono=809-123-4567" \
+  -F "email=test@example.com"
+
+# Probar registro en Supabase
+curl -X POST https://backend-socios-production.up.railway.app/registrar-socio-individual \
+  -H "Content-Type: application/json" \
+  -d '{"nombres":"Juan","apellidos":"Pérez","cedula":"123-4567890-1"}'
+```
+
+### Características Específicas de Formularios
+
+#### Formateo Automático de Datos
+```javascript
+// Formato de cédula: XXX-XXXXXXX-X
+const formatCedula = (value) => {
+  const cleanValue = value.replace(/\D/g, "");
+  let formattedValue = cleanValue;
+  if (cleanValue.length > 3 && cleanValue.length <= 10) {
+    formattedValue = `${cleanValue.slice(0, 3)}-${cleanValue.slice(3, 10)}-${cleanValue.slice(10)}`;
+  } else if (cleanValue.length > 10) {
+    formattedValue = `${cleanValue.slice(0, 3)}-${cleanValue.slice(3, 10)}-${cleanValue.slice(10, 11)}`;
+  }
+  return formattedValue;
+};
+
+// Formato de teléfono: XXX-XXX-XXXX
+const formatTelefono = (value) => {
+  const cleanValue = value.replace(/\D/g, "");
+  let formattedValue = cleanValue;
+  if (cleanValue.length > 3 && cleanValue.length <= 6) {
+    formattedValue = `${cleanValue.slice(0, 3)}-${cleanValue.slice(3)}`;
+  } else if (cleanValue.length > 6) {
+    formattedValue = `${cleanValue.slice(0, 3)}-${cleanValue.slice(3, 6)}-${cleanValue.slice(6)}`;
+  }
+  return formattedValue;
+};
+```
+
+#### Validación de Campos
+- **Campos requeridos**: Marcados con asterisco rojo (*)
+- **Validación en tiempo real**: Bordes rojos para campos vacíos
+- **Validación de email**: Formato estándar de email
+- **Validación de archivos**: Solo imágenes permitidas
+
+#### Componentes de Formulario
+- **FormIndividual.jsx**: Formulario para socios individuales
+- **FormEmpresa.jsx**: Formulario para socios empresariales
+- **DepositInfo.jsx**: Componente de información de depósito
+
+#### Notificaciones de Usuario
+```javascript
+// Uso de React Hot Toast para notificaciones
+import toast, { Toaster } from "react-hot-toast";
+
+// Notificaciones de éxito
+toast.success("Formulario enviado exitosamente");
+
+// Notificaciones de error
+toast.error("Por favor, completa todos los campos requeridos.");
+```
+
+### Monitoreo y Logs
+
+#### Logs Recomendados
+```javascript
+// Logging de errores de API
+catch (error) {
+  console.error("Error al enviar formulario:", error);
+  console.error("Datos enviados:", formData);
+  toast.error("Hubo un problema al enviar el formulario");
+}
+```
+
+#### Métricas de Rendimiento
+- Tiempo de respuesta de APIs
+- Tasa de éxito de envíos
+- Errores por endpoint
+
 ## 🎯 Características SEO
 
 ### Configuración
